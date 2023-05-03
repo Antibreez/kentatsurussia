@@ -1,0 +1,96 @@
+.container
+	.breadcrumbs.breadcrumbs--margin
+		ul
+			li: a(href="#") Главная
+			li Контакты
+
+	.top-menu-list
+		ul
+			li.is-active Поддержка
+			li: a(href="#") Гарантия
+			li: a(href="#") Обслуживание и ремонт
+			li: a(href="#") Техническая поддержка
+
+	h1.page-title
+		| Поддержка
+
+	.page-support
+		.page-support__row
+			.page-support__col
+				a.page-support__item(href="#")
+					.h1.page-support__item__title
+						| Гарантия
+					.page-support__item__text
+						| На&nbsp;все оборудование Kentatsu, действует гарантия производителя.
+					.page-support__item__arrow
+						+svg('arrow-right-small')
+			.page-support__col.page-support__col--image
+				.page-support__item.page-support__item--image
+					.page-support__item__image
+						img(src="./images/support-2.jpg" alt="")
+			.page-support__col
+				a.page-support__item(href="#")
+					.h1.page-support__item__title
+						| Обслуживание и&nbsp;ремонт
+					.page-support__item__text
+						| Сервисные центры, расположенные в&nbsp;100 городах Российской Федерации.
+					.page-support__item__arrow
+						+svg('arrow-right-small')
+			.page-support__col
+				a.page-support__item(href="#")
+					.h1.page-support__item__title
+						| Техническая поддержка
+					.page-support__item__text
+						| Технические каталоги, коды ошибок, инструкции, видеообзоры и&nbsp;другое.
+					.page-support__item__arrow
+						+svg('arrow-right-small')
+
+		.modal-bid.modal-bid--page
+			.modal-bid__row
+				.modal-bid__content
+					.h1.modal-bid__title
+						| Задать вопрос
+					.modal-bid__text
+						| Расскажите нам, что Вас интересует и мы свяжемся с Вами в ближайшее время
+				form.modal-bid__form(action="./ajax/support.json" method="get" data-app="form" data-event="Question")
+					.modal-bid__form__item
+						.form__row
+							.form__col
+								.input
+									.input__label
+										| Имя#[span.form__imp *]
+									.input__field
+										input(type="text" name="firstname" placeholder="Имя" data-validation={
+											regex: ['^[^\\d]+$', 'ig'],
+											maxlength: 300,
+											messages: {
+												regex: "Поле может содержать только буквы и символы"
+											}
+										} required)
+							.form__col
+								.input
+									.input__label
+										| E-mail#[span.form__imp *]
+									.input__field
+										input(type="email" name="email" placeholder="E-mail" data-validation={
+											regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+											maxlength: 254,
+											messages: {
+												regex: "Неверный или некорректный e-mail адрес."
+											}
+										} required)
+							.form__col.form__col--width
+								.input
+									.input__label
+										| Сообщение#[span.form__imp *]
+									.input__field
+										textarea(name="message" placeholder="Ваш вопрос" data-validation={
+											maxlength: 500
+										} required)
+						.checkbox
+							label
+								input(type="checkbox" name="checkbox" required)
+								i
+								span Я согласен с #[a.link-text(href="#") политикой конфиденциальности]
+						.modal-bid__form__item__footer
+							button.button.modal-bid__form__item__send(type="submit") Отправить

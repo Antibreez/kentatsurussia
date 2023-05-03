@@ -1,0 +1,105 @@
+header.header(data-app="header")
+	.container
+		.header__logo
+			a(href="#")
+				img(src="./images/logo.svg" alt="")
+		.header__menu.for-desktop
+			ul
+				li
+					a(href="#") Каталог
+					ul
+						li: a(href="#") Бытовые сплит-системы
+						li: a(href="#") Мультисистемы
+						li: a(href="#") Полупромышленные системы
+						li: a(href="#") Системы VRF
+						li: a(href="#") Вентиляционные установки
+						li: a(href="#") Отопительные установки
+						li: a(href="#") Фанкойлы
+				li: a(href="#") О бренде
+				li
+					a(href="#") Партнерам
+					ul
+						li: a(href="#") Дилерам
+						li: a(href="#") Заказчикам
+						li: a(href="#") Проектировщикам
+						li: a(href="#") Девелоперам
+				li: a(href="#") Поддержка
+				li: a(href="#") Где купить
+				li: a(href="#") Контакты
+		.header__location.for-desktop
+			a.header__location__current(href="#")
+				+svg('location')
+				| Москва
+			.header__location__confirm.for-desktop
+				.header__location__confirm__title
+					| Ваш город Москва?
+				.header__location__confirm__footer
+					button.header__location__confirm__yes(type="button") Да
+					button.header__location__confirm__no(type="button") Нет
+			.header__location__change(data-param="change-city")
+				.header__location__change__title
+					| Выбор города
+				.header__location__change__field.input(data-app="select-location" data-ajax="./ajax/location.json")
+					.input__field.input__field--search
+						select(data-placeholder="Выберите город")
+							option(label=" ")
+				.header__location__change__list
+					ul
+						li: a(href="?change-city=Москва") Москва
+						li: a(href="?change-city=Петербург") Санкт-Петербург
+						li: a(href="?change-city=Казань") Казань
+						li: a(href="?change-city=Калининград") Калининград
+						li: a(href="?change-city=Ростов-на-Дону") Ростов-на-Дону
+						li: a(href="?change-city=Новосибирск") Новосибирск
+						li: a(href="?change-city=Екатеринбург") Екатеринбург
+		a.header__search-open.for-desktop(href="#"): +svg('search')
+		form.header__search.for-desktop(action="search.html")
+			input.header__search__field(type="text" name="q" autocomplete="off" placeholder="Поиск")
+			button.header__search__submit(type="submit"): +svg('search')
+		button.header__burger.for-mobile(type="button")
+			i
+			i
+			i
+
+.mobile-menu.for-mobile(data-app="mobile-menu")
+	.mobile-menu__list
+		ul
+			li
+				a(href="#") Каталог
+				button.mobile-menu__list__plus(type="button")
+				ul.mobile-menu__list__drop
+					li: a(href="#") Бытовые сплит-системы
+					li: a(href="#") Мультисистемы
+					li: a(href="#") Полупромышленные системы
+					li: a(href="#") Системы VRF
+					li: a(href="#") Вентиляционные установки
+					li: a(href="#") Отопительные установки
+					li: a(href="#") Фанкойлы
+			li: a(href="#") О бренде
+			li: a(href="#") Партнерам
+			li: a(href="#") Поддержка
+			li: a(href="#") Где купить
+			li: a(href="#") Контакты
+	.mobile-menu__location
+		a.mobile-menu__location__current(href="#")
+			+svg('location')
+			| Москва
+		.header__location__change(data-param="change-city")
+			.header__location__change__title
+				| Выбор города
+			.header__location__change__field.input(data-app="select-location" data-ajax="./ajax/location.json")
+				.input__field.input__field--search
+					select(data-placeholder="Выберите город")
+						option(label=" ")
+			.header__location__change__list
+				ul
+					li: a(href="?change-city=Москва") Москва
+					li: a(href="?change-city=Петербург") Санкт-Петербург
+					li: a(href="?change-city=Казань") Казань
+					li: a(href="?change-city=Калининград") Калининград
+					li: a(href="?change-city=Ростов-на-Дону") Ростов-на-Дону
+					li: a(href="?change-city=Новосибирск") Новосибирск
+					li: a(href="?change-city=Екатеринбург") Екатеринбург
+	form.mobile-menu__search(action="#" method="get")
+		input.mobile-menu__search__field(type="text" name="q" placeholder="Поиск")
+		button.mobile-menu__search__submit(type="submit"): +svg('search-2')

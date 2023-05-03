@@ -1,0 +1,52 @@
+.top-menu-list {
+	margin-bottom: vm(24);
+
+	ul {
+		display: flex;
+
+		li {
+			+ li {
+				padding-left: vm(24);
+
+				@include desktop {
+					margin-left: vw(32);
+					padding-left: 0;
+				}
+
+				@include desktop-xl {
+					margin-left: 32px;
+				}
+			}
+
+			&.is-active {
+				color: $color-pomegranate;
+			}
+
+			@include mobile {
+				border-top: 1px solid $color-cod-gray;
+				border-bottom: 1px solid $color-cod-gray;
+				padding: vm(9) 0;
+				height: vm(44);
+			}
+		}
+
+		@include mobile {
+			overflow: auto;
+			margin: 0 vm(-24);
+			padding: vm(10) vm(24);
+			white-space: nowrap;
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(80);
+		border-top: 1px solid $color-cod-gray;
+		border-bottom: 1px solid $color-cod-gray;
+		padding: vw(25) 0;
+	}
+
+	@include desktop-xl {
+		margin-bottom: 80px;
+		padding: 25px 0;
+	}
+}

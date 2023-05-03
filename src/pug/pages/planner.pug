@@ -1,0 +1,257 @@
+.container
+	.breadcrumbs
+		ul
+			li: a(href="#") Главная
+			li: a(href="#") Партнёрам
+			li Проектировщикам
+
+	.top-menu-list
+		ul
+			li: a(href="#") Партнерам
+			li: a(href="#") Дилерам
+			li: a(href="#") Девелоперам
+			li: a(href="#") Заказчикам
+			li.is-active Проектировщикам
+
+	.page-planner
+		.page-intro
+			h1.page-title.page-intro__title
+				| Проектировщикам
+			.page-intro__text
+				| В&nbsp;Российской Федерации Kentatsu успешно сотрудничает более чем с&nbsp;600 проектными организациями
+			.page-intro__button
+				a.button(href="#modal-planner" data-fancybox) Стать проектировщиком
+
+		.page-planner__task
+			.page-planner__task__content
+				.h3.page-planner__task__text
+					| Одной из&nbsp;своих ключевых задач на&nbsp;рынке систем кондиционирования и&nbsp;вентиляции компания Kentatsu считает всестороннюю работу с&nbsp;проектными организациями
+			.page-planner__task__image
+				img(src="./images/planner-task.jpg" alt="")
+
+		.page-planner__training
+			.page-planner__training__image
+				img(src="./images/planner-training.jpg" alt="")
+			.page-planner__training__content
+				h2.page-planner__training__title
+					| Поддержка и&nbsp;обучение
+				.page-planner__training__text
+					| Всесторонняя поддержка проектировщиков осуществляется силами отдела по&nbsp;работе с&nbsp;проектными организациями, Технического и&nbsp;и&nbsp;Учебного центров Kentatsu. Это, прежде всего, данные о&nbsp;поставляемом оборудовании, методах его подбора и&nbsp;проектирования, обучение представителей проектных организаций, сертификация и&nbsp;контроль качества оказываемых услуг.
+
+		.page-planner__equipment
+			.page-planner__equipment__image(style="background-image:url(./images/planner-equipment.jpg)")
+			.h2.page-planner__equipment__text
+				| Оборудование, предлагаемое Kentatsu&nbsp;&mdash; сложные инженерные системы, эффективная работа с&nbsp;которыми возможна только в&nbsp;тесном сотрудничестве с&nbsp;производителем оборудования и&nbsp;при постоянной информационной поддержке
+
+		.page-planner__activity
+			.page-planner__activity__content
+				h2.page-planner__activity__title
+					| Мероприятия
+				.page-planner__activity__text
+					| В&nbsp;качестве дистрибьютора климатической техники ведущих мировых производителей Даичи не&nbsp;только снабжает проектировщиков необходимыми информационными ресурсами, но&nbsp;и&nbsp;организует специальные мероприятия в&nbsp;России и&nbsp;за&nbsp;рубежом, на&nbsp;которых у&nbsp;наших партнёров есть возможность получать новые знания и&nbsp;повышать свой профессиональный уровень. Наша задача&nbsp;&mdash; поддержка профессионального сообщества проектировщиков и&nbsp;создание эффективной площадки для обмена опытом проектирования систем СКВ.
+			.page-planner__activity__image
+				img(src="./images/planner-activity.jpg" alt="")
+
+		.page-planner__offer
+			.page-planner__offer__image
+				img(src="./images/planner-offer.jpg" alt="")
+			.page-planner__offer__content
+				.h3.page-planner__offer__text
+					| Kentatsu предлагает как элитную технику, так и&nbsp;оборудование средней ценовой категории для объектов любого уровня бюджета
+
+		include ../components/project-support
+
+		include ../components/register
+
+.is-hidden
+	.modal.modal-bid#modal-planner(data-app="modal-bid")
+		.modal-bid__row
+			.modal-bid__content
+				.h2.modal-bid__title
+					| Стать проектировщиком
+				.modal-bid__text
+					| В ближайшее время с вами свяжется менеджер Даичи в Вашем регионе и предложит выгодные условия сотрудничества
+					.modal-bid__text__hidden.is-hidden
+						br
+						| Став нашим дилером, Вы будете работать с лучшим оборудованием на рынке и получите всестороннюю поддержку одного из крупнейших дистрибьюторов климатической техники в России
+						br
+						br
+						| Мы предоставляем нашим клиентам целый комплекс сервисов по поддержке продаж, включая онлайн сервисы в личном кабинете
+			form.modal-bid__form(action="./ajax/become-dealer.json" method="get" data-app="form")
+				.swiper-container
+					.swiper-wrapper
+						.swiper-slide
+							.modal-bid__form__item
+								.form__row
+									.form__col
+										.input
+											.input__label
+												| Имя#[span.form__imp *]
+											.input__field
+												input(type="text" name="firstname" placeholder="Имя" data-validation={
+													regex: ['^[^\\d]+$', 'ig'],
+													maxlength: 300,
+													messages: {
+														regex: "Поле может содержать только буквы и символы"
+													}
+												} required)
+									.form__col
+										.input
+											.input__label
+												| Фамилия#[span.form__imp *]
+											.input__field
+												input(type="text" name="surname" placeholder="Фамилия" data-validation={
+													regex: ['^[^\\d]+$', 'ig'],
+													maxlength: 300,
+													messages: {
+														regex: "Поле может содержать только буквы и символы"
+													}
+												} required)
+									.form__col
+										.input
+											.input__label
+												| Отчество#[span.form__imp *]
+											.input__field
+												input(type="text" name="middlename" placeholder="Отчество" data-validation={
+													regex: ['^[^\\d]+$', 'ig'],
+													maxlength: 300,
+													messages: {
+														regex: "Поле может содержать только буквы и символы"
+													}
+												} required)
+									.form__col
+										.input
+											.input__label
+												| Телефон#[span.form__imp *]
+											.input__field
+												input(type="tel" data-app="mask" data-mask="+7(999) 999 99-99" placeholder="+7(000) 000 00-00" name="tel" required)
+									.form__col
+										.input
+											.input__label
+												| E-mail#[span.form__imp *]
+											.input__field
+												input(type="email" name="email" placeholder="E-mail" data-validation={
+													regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+													maxlength: 254,
+													messages: {
+														regex: "Неверный или некорректный e-mail адрес."
+													}
+												} required)
+									.form__col
+										.input(data-app="select" data-type="outside")
+											.input__label
+												| Город#[span.form__imp *]
+											.input__field
+												select(name="select" data-placeholder="Город" required)
+													option(value="")
+													option(value="1" ) Москва
+													option(value="2") Москва 2
+													option(value="3") Москва 3
+													option(value="4") Москва 4
+													option(value="5") Москва 5
+								.modal-bid__form__item__footer
+									button.button.modal-bid__form__item__next(type="button") Далее
+						.swiper-slide
+							.modal-bid__form__item
+								.form__row
+									.form__col
+										.h4.modal-bid__form__item__subtitle
+											| Направление деятельности
+										.checkbox
+											label
+												input(type="checkbox" name="direction" value="1" required)
+												i
+												span Продажа
+										.checkbox
+											label
+												input(type="checkbox" name="direction" value="2" required)
+												i
+												span Монтаж
+										.checkbox
+											label
+												input(type="checkbox" name="direction" value="3" required)
+												i
+												span Проектирование
+										.checkbox
+											label
+												input(type="checkbox" name="direction" value="4" required)
+												i
+												span Сервис
+										.checkbox
+											label
+												input(type="checkbox" name="direction" value="5" required)
+												i
+												span Строительство
+										.checkbox
+											label
+												input(type="checkbox" name="direction" value="6" required)
+												i
+												span Дизайн
+									.form__col
+										.h4.modal-bid__form__item__subtitle
+											| Товарное направление
+										.checkbox
+											label
+												input(type="checkbox" name="direction2" value="1" required)
+												i
+												span Кондиционирование
+										.checkbox
+											label
+												input(type="checkbox" name="direction2" value="2" required)
+												i
+												span Вентиляция
+										.checkbox
+											label
+												input(type="checkbox" name="direction2" value="3" required)
+												i
+												span Увлажнение
+										.checkbox
+											label
+												input(type="checkbox" name="direction2" value="4" required)
+												i
+												span Отопление
+								.h4.modal-bid__form__item__subtitle
+									| Являетесь ли Вы частным лицом #[br]или представителем организации (юр. лицо/ИП)?
+								.radio
+									label
+										input(type="radio" name="legal[]" required)
+										i
+										span Частное лицо
+								.radio
+									label
+										input(type="radio" name="legal[]" required)
+										i
+										span Представляю организацию
+								.modal-bid__form__item__footer
+									button.button.button--gray.modal-bid__form__item__back(type="button") Назад
+									button.button.modal-bid__form__item__next(type="button") Далее
+						.swiper-slide
+							.modal-bid__form__item
+								.input
+									.h4.modal-bid__form__item__subtitle
+										| Меня интересует
+									.checkbox
+										label
+											input(type="checkbox" name="interesting" required)
+											i
+											span Условия сотрудничества
+									.checkbox
+										label
+											input(type="checkbox" name="interesting" required)
+											i
+											span Доступ к технической документации
+								.input
+									.input__label
+										| Сообщение
+									.input__field
+										textarea(name="subject" data-placeholder="Сообщение" data-validation={
+											maxlength: 300,
+										} required)
+								.checkbox
+									label
+										input(type="checkbox" name="checkbox" required)
+										i
+										span Я согласен с #[a.link-text(href="#" target="_blank") политикой конфиденциальности]
+								.modal-bid__form__item__footer
+									button.button.button--gray.modal-bid__form__item__back(type="button") Назад
+									button.button.modal-bid__form__item__send(type="submit") Отправить заявку

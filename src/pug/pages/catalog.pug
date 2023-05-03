@@ -1,0 +1,58 @@
+.container
+	.breadcrumbs.breadcrumbs--margin
+		ul
+			li: a(href="#") Главная
+			li Каталог
+
+	.top-menu(data-app="top-menu")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.top-menu__item
+						a.link-arrow(href="#") Весь каталог
+						button.top-menu__item__arrow.for-mobile(type="button")
+						.top-menu__item__drop
+							ul
+								li: a(href="#") Бытовые кондиционеры
+								li: a(href="#") Мультисистемы
+								li: a(href="#") Коммерческие кондиционеры
+								li: a(href="#") DX PRO системы
+				.swiper-slide
+					.top-menu__item
+						a.link-arrow(href="#") Кондиционирование
+						button.top-menu__item__arrow.for-mobile(type="button")
+						.top-menu__item__drop
+							ul
+								li: a(href="#") Кондиционирование
+								li: a(href="#") Кондиционирование
+
+	h1.page-title
+		| Каталог
+
+	.page-catalog
+		.page-catalog__row
+			.page-catalog__col
+				a.page-catalog__item(href="#")
+					h2.page-catalog__item__title
+						| Кондиционирование
+					.page-catalog__item__image
+						img(src="./images/catalog.png" alt="")
+					.page-catalog__item__text
+						| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного текста рыбы на&nbsp;русском языке,
+			.page-catalog__col
+				a.page-catalog__item.page-catalog__item--small(href="#")
+					.page-catalog__item__content
+						h2.page-catalog__item__title
+							| Вентиляция
+						.page-catalog__item__image
+							img(src="./images/catalog-2.png" alt="")
+						.page-catalog__item__text
+							| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более
+				a.page-catalog__item.page-catalog__item--small(href="#")
+					.page-catalog__item__content
+						h2.page-catalog__item__title
+							| Отопление
+						.page-catalog__item__image
+							img(src="./images/catalog-3.png" alt="")
+						.page-catalog__item__text
+							| Сайт рыбатекст поможет дизайнеру, верстальщику, вебмастеру сгенерировать несколько абзацев более менее осмысленного

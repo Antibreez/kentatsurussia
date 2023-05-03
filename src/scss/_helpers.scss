@@ -1,0 +1,1146 @@
+.is-hidden {
+	// stylelint-disable-next-line declaration-no-important
+	display: none !important;
+}
+
+.is-hide {
+	// stylelint-disable-next-line declaration-no-important
+	opacity: 0;
+}
+
+.for-desktop {
+	@include devices {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.for-tablet {
+	@include desktop {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+
+	@include mobile {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.for-mobile {
+	@include desktop {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.for-devices {
+	@include desktop {
+		// stylelint-disable-next-line declaration-no-important
+		display: none !important;
+	}
+}
+
+.clearfix {
+	overflow: auto;
+
+	&::after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+}
+
+.visually-hidden {
+	position: absolute;
+	overflow: hidden;
+	margin: -1px;
+	width: 1px;
+	height: 1px;
+	clip: rect(0 0 0 0);
+}
+
+/* stylelint-disable */
+.dont-break-out {
+	// Технически это одно и то же, но используйте и то, и другое
+	overflow-wrap: break-word;
+	word-wrap: break-word;
+	// Это самое опасное в WebKit, так как оно ломает вещи везде, где бы они ни были
+	word-break: break-all;
+	// Вместо этого используйте этот нестандартный:
+	word-break: break-word;
+	// Добавляет дефис там, где слово ломается, если поддерживается
+	hyphens: auto;
+}
+/* stylelint-enable */
+
+.main {
+	overflow: hidden;
+}
+
+.content {
+	padding: vm(70) 0 vm(56);
+
+	@include desktop {
+		padding: vw(90) 0 vw(95);
+		min-height: calc(100vh - 38.5vw);
+	}
+
+	@include desktop-xl {
+		padding: 90px 0 95px;
+		min-height: calc(100vh - 476px);
+	}
+}
+
+.content--index {
+	padding-bottom: 0;
+}
+
+.content--404 {
+	padding-bottom: 0;
+}
+
+.container {
+	margin: 0 auto;
+	padding: 0 vm(24);
+	width: 100%;
+
+	@include desktop {
+		padding: 0;
+		max-width: vw(1360);
+	}
+
+	@include desktop-xl {
+		max-width: 1360px;
+	}
+}
+
+.wrapper {
+	&__side {
+		@include desktop {
+			flex-shrink: 0;
+			margin-right: vw(40);
+			width: vw(300);
+		}
+
+		@include desktop-xl {
+			margin-right: 40px;
+			width: 300px;
+		}
+	}
+
+	&__content {
+		width: 100%;
+	}
+
+	@include desktop {
+		display: flex;
+	}
+}
+
+h1,
+.h1 {
+	margin: 0 0 vm(16);
+	font-weight: 700;
+	font-size: vm(32);
+	line-height: vm(35);
+	letter-spacing: -0.02em;
+
+	@include desktop {
+		margin: 0 0 vw(16);
+		font-size: vw(48);
+		line-height: vw(52);
+	}
+
+	@include desktop-xl {
+		margin: 0 0 16px;
+		font-size: 48px;
+		line-height: 52px;
+	}
+}
+
+h2,
+.h2 {
+	margin: vm(40) 0 vm(16);
+	font-weight: 700;
+	font-size: vm(24);
+	line-height: vm(30);
+	letter-spacing: -0.01em;
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	@include desktop {
+		margin: vw(96) 0 vw(16);
+		font-size: vw(32);
+		line-height: vw(40);
+	}
+
+	@include desktop-xl {
+		margin: 96px 0 16px;
+		font-size: 32px;
+		line-height: 40px;
+	}
+}
+
+h3,
+.h3 {
+	margin: vm(40) 0 vm(16);
+	font-weight: 700;
+	font-size: vm(20);
+	line-height: vm(25);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	@include desktop {
+		margin: vw(96) 0 vw(16);
+		font-size: vw(24);
+		line-height: vw(30);
+	}
+
+	@include desktop-xl {
+		margin: 96px 0 16px;
+		font-size: 24px;
+		line-height: 30px;
+	}
+}
+
+h4,
+.h4 {
+	margin: vm(40) 0 vm(8);
+	font-weight: 700;
+	font-size: vm(18);
+	line-height: vm(24);
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	@include desktop {
+		margin: vw(96) 0 vw(8);
+		font-size: vw(18);
+		line-height: vw(24);
+	}
+
+	@include desktop-xl {
+		margin: 96px 0 8px;
+		font-size: 18px;
+		line-height: 24px;
+	}
+}
+
+.page-title {
+	margin: 0 0 vm(22);
+	font-weight: 700;
+	font-size: vm(32);
+	line-height: vm(35);
+	letter-spacing: -0.02em;
+
+	@include desktop {
+		margin: 0 0 vw(80);
+		font-size: vw(64);
+		line-height: vw(67);
+	}
+
+	@include desktop-xl {
+		margin: 0 0 80px;
+		font-size: 64px;
+		line-height: 67px;
+	}
+}
+
+.page-title--border {
+	margin: 0 0 vm(16);
+	border-bottom: 1px solid $color-black;
+	padding-bottom: vm(20);
+
+	@include desktop {
+		margin: 0 0 vw(40);
+		padding-bottom: vw(80);
+	}
+
+	@include desktop-xl {
+		margin: 0 0 40px;
+		padding-bottom: 80px;
+	}
+}
+
+.page-subtext {
+	margin-bottom: vm(16);
+	font-size: vm(18);
+
+	@include desktop {
+		margin-bottom: vw(16);
+		font-size: vw(18);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 16px;
+		font-size: 18px;
+	}
+}
+
+.page-quote {
+	padding: vm(24) vm(20);
+	background: $color-concrete;
+
+	&__text {
+		margin-bottom: vm(22);
+		font-size: vm(14);
+		line-height: vm(21);
+
+		@include desktop {
+			margin-bottom: vw(24);
+			font-size: vw(18);
+			line-height: vw(27);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 24px;
+			font-size: 18px;
+			line-height: 27px;
+		}
+	}
+
+	&__signature {
+		font-weight: 700;
+
+		@include desktop {
+			font-size: vw(18);
+		}
+
+		@include desktop-xl {
+			font-size: 18px;
+		}
+	}
+
+	@include desktop {
+		padding: vw(54) vw(85);
+	}
+
+	@include desktop-xl {
+		padding: 54px 85px;
+	}
+}
+
+.page-text-list {
+	ul,
+	ol {
+		list-style-type: none;
+		margin: 0;
+		padding: 0;
+
+		li {
+			position: relative;
+			padding-left: vm(28);
+
+			+ li {
+				margin-top: vm(8);
+
+				@include desktop {
+					margin-top: vw(8);
+				}
+
+				@include desktop-xl {
+					margin-top: 8px;
+				}
+			}
+
+			@include desktop {
+				padding-left: vw(28);
+			}
+
+			@include desktop-xl {
+				padding-left: 28px;
+			}
+		}
+
+		ul,
+		ol {
+			margin-top: vm(8);
+
+			@include desktop {
+				margin-top: vw(8);
+			}
+
+			@include desktop-xl {
+				margin-top: 8px;
+			}
+		}
+	}
+
+	ul {
+		li {
+			position: relative;
+			padding-left: vm(20);
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: vm(9);
+				width: vm(4);
+				height: vm(4);
+				background: $color-pomegranate;
+
+				@include desktop {
+					top: vw(9);
+					width: vw(4);
+					height: vw(4);
+				}
+
+				@include desktop-xl {
+					top: 9px;
+					width: 4px;
+					height: 4px;
+				}
+			}
+
+			@include desktop {
+				padding-left: vw(20);
+			}
+
+			@include desktop-xl {
+				padding-left: 20px;
+			}
+		}
+	}
+
+	ol {
+		counter-reset: list;
+
+		li {
+			&::before {
+				counter-increment: list;
+				content: counter(list) ". ";
+				position: absolute;
+				left: 0;
+				top: 0;
+			}
+		}
+
+		ol {
+			counter-reset: sublist;
+
+			li {
+				&::before {
+					counter-increment: sublist;
+					content: counter(list) "." counter(sublist) ".";
+				}
+			}
+		}
+	}
+}
+
+.page-image {
+	margin-bottom: vm(40);
+
+	@include desktop {
+		margin-bottom: vw(40);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 40px;
+	}
+}
+
+.page-intro {
+	margin-bottom: vm(24);
+	border-bottom: 1px solid $color-black;
+	padding-bottom: vm(56);
+
+	&__title {
+		@include desktop {
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__text {
+		margin-bottom: vm(24);
+		letter-spacing: -0.006em;
+
+		@include desktop {
+			margin-bottom: vw(48);
+			max-width: vw(670);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 48px;
+			max-width: 670px;
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(40);
+		padding-bottom: vw(96);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 40px;
+		padding-bottom: 96px;
+	}
+}
+
+.page-detail {
+	&__title {
+		@include desktop {
+			margin-bottom: vw(16);
+			max-width: vw(855);
+			backface-visibility: hidden;
+		}
+
+		@include desktop-xl {
+			margin-bottom: 16px;
+			max-width: 855px;
+		}
+	}
+
+	&__date {
+		font-size: vm(12);
+
+		@include desktop {
+			font-size: vw(12);
+		}
+
+		@include desktop-xl {
+			font-size: 12px;
+		}
+	}
+
+	&__content {
+		margin-top: vm(32);
+		border-top: 1px solid $color-black;
+		padding-top: vm(24);
+
+		@include desktop {
+			margin-top: vw(80);
+			padding-top: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-top: 80px;
+			padding-top: 40px;
+		}
+	}
+
+	.wrapper__side {
+		display: flex;
+		flex-direction: column;
+	}
+
+	&__return {
+		@include mobile {
+			margin-bottom: vm(24);
+		}
+	}
+
+	&__return-bottom {
+		margin-top: vm(24);
+
+		@include desktop {
+			margin-top: auto;
+		}
+	}
+
+	&__label {
+		margin-bottom: vm(16);
+		font-weight: 600;
+
+		@include desktop {
+			margin-bottom: vw(16);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__info {
+		margin-bottom: vm(24);
+
+		ul {
+			li {
+				+ li {
+					margin-top: vm(8);
+
+					@include desktop {
+						margin-top: vw(8);
+					}
+
+					@include desktop-xl {
+						margin-top: 8px;
+					}
+				}
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(24);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__wrap {
+		h3 {
+			margin-top: vm(24);
+
+			@include desktop {
+				margin-top: vw(40);
+				margin-bottom: vw(32);
+			}
+
+			@include desktop-xl {
+				margin-top: 40px;
+				margin-bottom: 32px;
+			}
+		}
+
+		@include desktop {
+			max-width: vw(765);
+		}
+
+		@include desktop-xl {
+			max-width: 765px;
+		}
+	}
+
+	&__subtitle {
+		margin-top: 0;
+
+		@include desktop {
+			margin-bottom: vw(32);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__text {
+		margin-bottom: vm(24);
+		letter-spacing: -0.006em;
+
+		&:last-child {
+			margin-bottom: 0;
+		}
+
+		@include desktop {
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__list {
+		margin-bottom: vm(24);
+
+		@include desktop {
+			margin-bottom: vw(32);
+			max-width: vw(415);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 32px;
+			max-width: 415px;
+		}
+	}
+
+	&__image {
+		margin-bottom: vm(24);
+
+		img {
+			width: 100%;
+		}
+
+		@include desktop {
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__image--width-1020 {
+		@include desktop {
+			width: vw(1020);
+		}
+
+		@include desktop-xl {
+			width: 1020px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 vm(-12);
+
+		@include desktop {
+			margin: 0 vw(-12) vw(40);
+		}
+
+		@include desktop-xl {
+			margin: 0 -12px 40px;
+		}
+	}
+
+	&__col {
+		margin-bottom: vm(24);
+		padding: 0 vm(12);
+		width: 100%;
+
+		.page-detail__image {
+			margin-bottom: 0;
+		}
+
+		@include desktop {
+			margin-bottom: 0;
+			padding: 0 vw(12);
+			width: 50%;
+		}
+
+		@include desktop-xl {
+			padding: 0 12px;
+		}
+	}
+
+	&__contact {
+		margin-top: vm(56);
+		padding: vm(24) vm(16);
+		color: $color-white;
+		background: $color-mirage;
+
+		&__title {
+			margin-bottom: vm(32);
+			border-bottom: 1px solid rgba($color-white, 0.2);
+			padding-bottom: vm(24);
+
+			@include desktop {
+				margin-bottom: vw(124);
+				padding-bottom: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 124px;
+				padding-bottom: 24px;
+			}
+		}
+
+		&__phone {
+			margin-bottom: vm(10);
+			font-weight: 700;
+			font-size: vm(22);
+
+			@include desktop {
+				margin-bottom: vw(10);
+				font-size: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 10px;
+				font-size: 24px;
+			}
+		}
+
+		&__address {
+			margin-bottom: vm(10);
+			color: rgba($color-white, 0.9);
+
+			@include desktop {
+				margin-bottom: vw(10);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 10px;
+			}
+		}
+
+		@include desktop {
+			margin-top: vw(96);
+			padding: vw(40) vw(48);
+		}
+
+		@include desktop-xl {
+			margin-top: 96px;
+			padding: 40px 48px;
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(64);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 64px;
+	}
+}
+
+.button-tag {
+	position: relative;
+	display: inline-block;
+	outline: none;
+	border: none;
+	border-radius: vm(80);
+	padding: vm(9) vm(18);
+	font-size: vm(14);
+	letter-spacing: -0.006em;
+	color: $color-cod-gray;
+	background: $color-concrete;
+
+	&:hover {
+		color: $color-white;
+		background: $color-pomegranate;
+	}
+
+	@include desktop {
+		border-radius: vw(80);
+		padding: vw(9) vw(18);
+		font-size: vw(14);
+	}
+
+	@include desktop-xl {
+		border-radius: 80px;
+		padding: 9px 18px;
+		font-size: 14px;
+	}
+}
+
+.button-tag--close {
+	padding-right: vm(38);
+
+	&::before,
+	&::after {
+		content: "";
+		position: absolute;
+		right: vm(20);
+		top: 50%;
+		width: vm(12);
+		height: vm(2);
+		background: currentColor;
+		transform: rotate(45deg);
+
+		@include desktop {
+			right: vw(20);
+			width: vw(12);
+			height: vw(2);
+		}
+
+		@include desktop-xl {
+			right: 20px;
+			width: 12px;
+			height: 2px;
+		}
+	}
+
+	&::after {
+		transform: rotate(135deg);
+	}
+
+	@include desktop {
+		padding-right: vw(38);
+	}
+
+	@include desktop-xl {
+		padding-right: 38px;
+	}
+}
+
+.arrow-prev,
+.arrow-next {
+	content: "";
+	position: absolute;
+	left: 0;
+	top: 50%;
+	z-index: 10;
+	outline: none;
+	border: none;
+	border-radius: 50%;
+	padding: 0;
+	width: vm(30);
+	height: vm(30);
+	background: transparent;
+	transform: translateY(-50%);
+	transition: $duration-normal;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin-left: vm(3);
+		border-top: solid 1px $color-cod-gray;
+		border-right: solid 1px $color-cod-gray;
+		width: vm(12);
+		height: vm(12);
+		transform: translate(-50%, -50%) rotate(-135deg);
+
+		@include desktop {
+			margin-left: vw(3);
+			width: vw(12);
+			height: vw(12);
+		}
+
+		@include desktop-xl {
+			margin-left: 3px;
+			width: 12px;
+			height: 12px;
+		}
+	}
+
+	&.swiper-button-disabled {
+		opacity: 0;
+		visibility: hidden;
+		pointer-events: none;
+	}
+
+	@include desktop {
+		left: vw(40);
+		width: vw(64);
+		height: vw(64);
+
+		&:hover {
+			background: rgba($color-concrete, 0.5);
+		}
+	}
+
+	@include desktop-xl {
+		left: 40px;
+		width: 64px;
+		height: 64px;
+	}
+}
+
+.arrow-next {
+	left: auto;
+	right: 0;
+
+	&::before {
+		margin-left: vm(-3);
+		transform: translate(-50%, -50%) rotate(45deg);
+
+		@include desktop {
+			margin-left: vw(-3);
+		}
+
+		@include desktop-xl {
+			margin-left: -3px;
+		}
+	}
+
+	@include desktop {
+		right: vw(40);
+	}
+
+	@include desktop-xl {
+		right: 40px;
+	}
+}
+
+.file {
+	display: flex;
+
+	&__icon {
+		flex-shrink: 0;
+		margin-right: vm(8);
+
+		svg {
+			display: block;
+			margin-top: vm(-2);
+			width: vm(24);
+			height: vm(24);
+
+			@include desktop {
+				margin-top: vw(-2);
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-top: -2px;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@include desktop {
+			margin-right: vw(8);
+		}
+
+		@include desktop-xl {
+			margin-right: 8px;
+		}
+	}
+
+	&__name {
+		margin-bottom: vm(2);
+
+		@include desktop {
+			margin-bottom: vw(2);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 2px;
+		}
+	}
+
+	&__info {
+		font-size: vm(12);
+		color: rgba($color-bombay, 0.9);
+
+		@include desktop {
+			font-size: vw(12);
+		}
+
+		@include desktop-xl {
+			font-size: 12px;
+		}
+	}
+}
+
+.up {
+	position: fixed;
+	right: vm(15);
+	bottom: vm(15);
+	z-index: 99;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: 50%;
+	padding: 0;
+	width: vm(50);
+	height: vm(50);
+	background: $color-black;
+	opacity: 0;
+	visibility: hidden;
+	transition: $duration-normal;
+
+	&::before {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		margin: vm(-3) 0 0 vm(-7);
+		border-top: solid 2px $color-white;
+		border-left: solid 2px $color-white;
+		width: vm(14);
+		height: vm(14);
+		transform: rotate(45deg);
+
+		@include desktop {
+			margin: vw(-3) 0 0 vw(-7);
+			width: vw(14);
+			height: vw(14);
+		}
+
+		@include desktop-xl {
+			margin: -3px 0 0 -7px;
+			width: 14px;
+			height: 14px;
+		}
+	}
+
+	&.is-show {
+		opacity: 1;
+		visibility: visible;
+	}
+
+	@include desktop {
+		right: vw(30);
+		bottom: vw(62);
+		width: vw(64);
+		height: vw(64);
+
+		&:hover {
+			background: $color-pomegranate;
+		}
+	}
+
+	@include desktop-xl {
+		right: 30px;
+		bottom: 62px;
+		width: 64px;
+		height: 64px;
+	}
+}
+
+.fancybox-bg {
+	background: rgba($color-cod-gray, 0.5);
+}
+
+.fancybox-slide--html {
+	.fancybox-close-small {
+		right: vm(24);
+		top: vm(20);
+		padding: 0;
+		width: vm(24);
+		height: vm(24);
+		color: $color-cod-gray;
+		opacity: 1;
+		transition: $duration-normal;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 0;
+			top: 50%;
+			margin-top: -1px;
+			width: 100%;
+			height: 1px;
+			background: currentColor;
+		}
+
+		&::before {
+			transform: rotate(45deg);
+		}
+
+		&::after {
+			transform: rotate(-45deg);
+		}
+
+		svg {
+			display: none;
+		}
+
+		@include desktop {
+			right: vw(24);
+			top: vw(24);
+			width: vw(24);
+			height: vw(24);
+		}
+
+		@include desktop-xl {
+			right: 24px;
+			top: 24px;
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	@include mobile {
+		padding: 0;
+	}
+}
+
+@keyframes buttonLoading {
+	from {
+		transform: rotate(0deg);
+	}
+
+	to {
+		transform: rotate(360deg);
+	}
+}

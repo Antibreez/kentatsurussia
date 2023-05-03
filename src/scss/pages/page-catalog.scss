@@ -1,0 +1,235 @@
+.page-catalog {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1px vm(-24);
+
+		@include desktop {
+			margin: 0 -1px;
+		}
+	}
+
+	&__col {
+		margin-bottom: vm(24);
+		padding: 0 1px;
+		width: 100%;
+
+		@include desktop {
+			margin-bottom: 0;
+			width: 50%;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: block;
+		padding: vm(24) vm(16);
+		color: $color-white;
+		background: $color-cod-gray;
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			@include desktop {
+				max-width: vw(304);
+			}
+
+			@include desktop-xl {
+				max-width: 304px;
+			}
+		}
+
+		&__title {
+			@include desktop {
+				margin-bottom: vw(111);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 111px;
+			}
+		}
+
+		&__text {
+			margin-top: auto;
+			letter-spacing: -0.006em;
+			color: $color-white;
+
+			@include desktop {
+				max-width: vw(462);
+			}
+
+			@include desktop-xl {
+				max-width: 462px;
+			}
+		}
+
+		&__image {
+			margin-bottom: vm(24);
+			text-align: center;
+
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(521);
+				}
+
+				@include desktop-xl {
+					width: 521px;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: vw(73);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 73px;
+			}
+		}
+
+		&__image--2 {
+			img {
+				width: vm(216);
+
+				@include desktop {
+					width: vw(256);
+				}
+
+				@include desktop-xl {
+					width: 256px;
+				}
+			}
+
+			@include desktop {
+				position: absolute;
+				right: vw(22);
+				top: vw(68);
+				margin-bottom: 0;
+			}
+
+			@include desktop-xl {
+				right: 22px;
+				top: 68px;
+			}
+		}
+
+		&__image--3 {
+			img {
+				width: vm(187);
+
+				@include desktop {
+					width: vw(187);
+				}
+
+				@include desktop-xl {
+					width: 187px;
+				}
+			}
+
+			@include desktop {
+				position: absolute;
+				right: vw(70);
+				top: 0;
+				margin-bottom: 0;
+			}
+
+			@include desktop-xl {
+				right: 70px;
+			}
+		}
+
+		& + & {
+			margin-top: vm(24);
+
+			@include desktop {
+				margin-top: 2px;
+			}
+		}
+
+		@include desktop {
+			padding: vw(40) vw(48);
+			height: 100%;
+		}
+
+		@include desktop-xl {
+			padding: 40px 48px;
+		}
+	}
+
+	&__item--small {
+		.page-catalog__item__image {
+			img {
+				width: vm(216);
+
+				@include desktop {
+					width: vw(256);
+				}
+
+				@include desktop-xl {
+					width: 256px;
+				}
+			}
+
+			@include desktop {
+				position: absolute;
+				right: vw(22);
+				top: vw(68);
+				margin-bottom: 0;
+			}
+
+			@include desktop-xl {
+				right: 22px;
+				top: 68px;
+			}
+		}
+
+		.page-catalog__item__title,
+		.page-catalog__item__text {
+			@include desktop {
+				max-width: vw(304);
+			}
+
+			@include desktop-xl {
+				max-width: 304px;
+			}
+		}
+
+		&:nth-child(2) {
+			.page-catalog__item__image {
+				img {
+					width: vm(187);
+
+					@include desktop {
+						width: vw(187);
+					}
+
+					@include desktop-xl {
+						width: 187px;
+					}
+				}
+
+				@include desktop {
+					position: absolute;
+					right: vw(70);
+					top: 0;
+					margin-bottom: 0;
+				}
+
+				@include desktop-xl {
+					right: 70px;
+				}
+			}
+		}
+
+		@include desktop {
+			height: vw(339);
+		}
+
+		@include desktop-xl {
+			height: 339px;
+		}
+	}
+}

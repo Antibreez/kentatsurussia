@@ -1,0 +1,292 @@
+.footer {
+	padding-top: vm(40);
+	letter-spacing: -0.006em;
+	color: #cacbcd;
+	background: $color-cod-gray;
+
+	a {
+		color: inherit;
+
+		@include desktop {
+			&:hover {
+				color: $color-pomegranate;
+			}
+		}
+	}
+
+	&__top {
+		border-top: 1px solid #414141;
+
+		@include desktop {
+			display: flex;
+
+		}
+	}
+
+	&__contacts {
+		padding: vm(24) 0;
+
+		&__left {
+			@include desktop {
+				padding-top: vw(5);
+			}
+
+			@include desktop-xl {
+				padding-top: 5px;
+			}
+		}
+
+		&__menu {
+			display: flex;
+			flex-wrap: wrap;
+			margin-top: vm(56);
+			border-top: 1px solid #414141;
+			padding: vm(24) 0 vm(16);
+
+			li {
+				margin: 0 vm(16) vm(8) 0;
+
+				+ li {
+					@include desktop {
+						margin-top: vw(8);
+					}
+
+					@include desktop-xl {
+						margin-top: 8px;
+					}
+				}
+
+				@include desktop {
+					margin: 0;
+				}
+			}
+
+			@include desktop {
+				display: block;
+				margin-top: vw(84);
+				border-top: none;
+				padding: 0;
+			}
+
+			@include desktop-xl {
+				margin-top: 84px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			padding: vw(32) vw(56) vw(55) 0;
+			width: 50%;
+		}
+
+		@include desktop-xl {
+			padding: 32px 56px 55px 0;
+		}
+	}
+
+	&__logo {
+		margin-bottom: vm(32);
+
+		img {
+			width: vm(140);
+
+			@include desktop {
+				width: vw(211);
+			}
+
+			@include desktop-xl {
+				width: 211px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(27);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 27px;
+		}
+	}
+
+	&__phone {
+		margin-top: vm(16);
+		font-weight: 700;
+		font-size: vm(24);
+		line-height: vm(30);
+		letter-spacing: -0.01em;
+		color: #f3f3f3;
+
+		@include desktop {
+			margin-top: 0;
+			font-size: vw(32);
+			line-height: vw(40);
+		}
+
+		@include desktop-xl {
+			font-size: 32px;
+			line-height: 40px;
+		}
+	}
+
+	&__menu {
+		border-top: 1px solid #414141;
+		padding: vm(24) 0 0;
+
+		ul {
+			+ ul {
+				@include desktop {
+					margin-left: vw(98);
+				}
+
+				@include desktop-xl {
+					margin-left: 98px;
+				}
+			}
+
+			li {
+				+ li {
+					margin-top: vm(16);
+
+					@include desktop {
+						margin-top: vw(16);
+					}
+
+					@include desktop-xl {
+						margin-top: 16px;
+					}
+				}
+
+				a {
+					@include mobile {
+						font-weight: 700;
+						font-size: vm(18);
+						line-height: vm(24);
+					}
+				}
+			}
+
+			@include desktop {
+				max-width: vw(256);
+			}
+
+			@include desktop-xl {
+				max-width: 256px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			border-top: none;
+			border-left: 1px solid #414141;
+			padding: vw(32) 0 vw(55) vw(72);
+			width: 50%;
+		}
+
+		@include desktop-xl {
+			padding: 32px 0 55px 72px;
+		}
+	}
+
+	&__catalog {
+		margin-bottom: vm(16);
+
+		&__label {
+			position: relative;
+			display: block;
+			font-weight: 700;
+			font-size: vm(18);
+			line-height: vm(24);
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				right: vm(5);
+				top: 50%;
+				width: vm(12);
+				height: 1px;
+				background: $color-white;
+				transition: $duration-normal;
+			}
+
+			&::after {
+				transform: rotate(90deg);
+			}
+
+			&.is-active {
+				&::after {
+					transform: rotate(0);
+				}
+			}
+		}
+
+		&__list {
+			display: none;
+			padding: vm(24) 0 vm(8);
+			max-width: vm(200);
+		}
+
+		ul {
+			li {
+				a {
+					font-weight: 400;
+					font-size: vm(14);
+					line-height: vm(21);
+					letter-spacing: -0.006em;
+				}
+			}
+		}
+	}
+
+	&__bottom {
+		border-top: 1px solid #414141;
+		padding: vm(24) 0;
+		font-size: vm(12);
+		line-height: vm(18);
+		color: #616264;
+
+		&__menu {
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				margin: 0 vm(16) vm(8) 0;
+
+				@include desktop {
+					margin: 0 vw(16) 0 0;
+				}
+
+				@include desktop-xl {
+					margin-right: 16px;
+				}
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			justify-content: space-between;
+			padding: vw(24) 0;
+			font-size: vw(12);
+			line-height: vw(18);
+		}
+
+		@include desktop-xl {
+			padding: 24px 0;
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+
+	@include desktop {
+		padding-top: vw(48);
+		font-size: vw(15);
+		line-height: vw(22);
+	}
+
+	@include desktop-xl {
+		padding-top: 48px;
+		font-size: 15px;
+		line-height: 22px;
+	}
+}

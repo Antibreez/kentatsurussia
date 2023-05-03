@@ -1,0 +1,16 @@
+.register {
+	text-align: center;
+
+	&__title {
+		margin-right: auto;
+		margin-left: auto;
+
+		@include desktop {
+			max-width: vw(857);
+		}
+
+		@include desktop-xl {
+			max-width: 857px;
+		}
+	}
+}

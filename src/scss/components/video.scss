@@ -1,0 +1,48 @@
+.video {
+	position: relative;
+	display: block;
+
+	&__play {
+		content: "";
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		border-radius: 50%;
+		width: vm(44);
+		height: vm(44);
+		background: $color-white;
+		transform: translate(-50%, -50%);
+
+		svg {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			margin: 1px 0 0 vm(3);
+			width: vm(16);
+			height: vm(16);
+			transform: translate(-50%, -50%);
+
+			@include desktop {
+				margin: 1px 0 0 vw(3);
+				width: vw(19);
+				height: vw(25);
+			}
+
+			@include desktop-xl {
+				margin: 1px 0 0 3px;
+				width: 19px;
+				height: 25px;
+			}
+		}
+
+		@include desktop {
+			width: vw(80);
+			height: vw(80);
+		}
+
+		@include desktop-xl {
+			width: 80px;
+			height: 80px;
+		}
+	}
+}

@@ -1,0 +1,56 @@
+.breadcrumbs {
+	margin-bottom: vm(24);
+	letter-spacing: -0.006em;
+	color: $color-bombay;
+
+	ul {
+		li {
+			position: relative;
+			display: inline;
+			margin-right: vm(20);
+
+			+ li {
+				&::before {
+					content: "/";
+					position: relative;
+					left: vm(-11);
+					top: 0;
+
+					@include desktop {
+						left: vw(-11);
+					}
+
+					@include desktop-xl {
+						left: -11px;
+					}
+				}
+			}
+
+			@include desktop {
+				margin-right: vw(20);
+			}
+
+			@include desktop-xl {
+				margin-right: 20px;
+			}
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(80);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 80px;
+	}
+}
+
+.breadcrumbs--margin {
+	@include desktop {
+		margin-bottom: vw(40);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 40px;
+	}
+}

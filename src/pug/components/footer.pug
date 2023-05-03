@@ -1,0 +1,130 @@
+footer.footer(data-app="footer")
+	.container
+		.footer__top
+			.footer__contacts
+				.footer__contacts__left
+					.footer__logo
+						a(href="#")
+							img(src="./images/logo-light.svg" alt="")
+					.footer__address
+						| Россия, Москва,
+						br
+						| ул. Адмирала Макарова, д. 8
+					ul.footer__contacts__menu.for-desktop
+						li:  a(href="#") Контакты
+						li:  a(href="#callback" data-fancybox) Обратная связь
+						li:  a(href="#") Карта сайта
+				.footer__contacts__right
+					.footer__phone
+						a(href="tel:+74957373733") 8 495 737 37 33
+			.footer__menu
+				.footer__catalog.for-mobile
+					a.footer__catalog__label(href="#")
+						| Каталог
+					ul.footer__catalog__list
+						li: a(href="#") Бытовые сплит-системы
+						li: a(href="#") Мультисистемы
+						li: a(href="#") Полупромышленные системы
+						li: a(href="#") Системы VRF
+						li: a(href="#") Вентиляционные установки
+						li: a(href="#") Отопительные установки
+						li: a(href="#") Фанкойлы
+				ul
+					li: a(href="#") О бренде
+					li: a(href="#") Стать партнером
+					li: a(href="#") Технологии
+					li: a(href="#") Поддержка и гарантия
+					li: a(href="#") Где купить
+				ul.for-desktop
+					li: a(href="#") Бытовые сплит-системы
+					li: a(href="#") Мультисистемы
+					li: a(href="#") Полупромышленные системы
+					li: a(href="#") Системы VRF
+					li: a(href="#") Вентиляционные установки
+					li: a(href="#") Отопительные установки
+					li: a(href="#") Фанкойлы
+		ul.footer__contacts__menu.for-mobile
+			li:  a(href="#") Контакты
+			li:  a(href="#callback" data-fancybox) Обратная связь
+			li:  a(href="#") Карта сайта
+		.footer__bottom
+			ul.footer__bottom__menu
+				li © Daichi 2021.
+				li: a(href="#") Политика конфиденциальности
+				li: a(href="#") Пользовательское соглашение
+				li: a(href="#") Управление cookie
+			.footer__dev
+				| Разработано в #[a(href="https://itech-group.ru/" target="_blank") ITECH]
+
+.is-hidden
+	form.modal.modal-form#callback(action="./ajax/callback.json" method="get" data-app="form" data-event="Feedback")
+		.h3.modal-form__title
+			| Обратная связь
+		.modal-form__text
+			| Оставьте ваши контактные данные, и&nbsp;наш специалист свяжется с вами в течение 30 минут
+		.form__row
+			.form__col
+				.input
+					.input__label
+						| Ваше имя
+					.input__field
+						input(type="text" name="firstname" data-validation={
+							regex: ['^[^\\d]+$', 'ig'],
+							maxlength: 300,
+							messages: {
+								regex: "Поле может содержать только буквы и символы"
+							}
+						} required)
+			.form__col
+				.input
+					.input__label
+						| Фамилия
+					.input__field
+						input(type="text" name="surname" data-validation={
+							regex: ['^[^\\d]+$', 'ig'],
+							maxlength: 300,
+							messages: {
+								regex: "Поле может содержать только буквы и символы"
+							}
+						} required)
+		.input
+			.input__label
+				| Email
+			.input__field
+				input(type="email" name="email" data-validation={
+					regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+					maxlength: 254,
+					messages: {
+						regex: "Неверный или некорректный e-mail адрес."
+					}
+				} required)
+		.input
+			.input__label
+				| Телефон
+			.input__field
+				input(type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel" required)
+		.input
+			.input__label
+				| Текст
+			.input__field
+				textarea(name="text" data-validation={
+					maxlength: 300,
+				} required)
+		.checkbox
+			label
+				input(type="checkbox" name="checkbox" required)
+				i
+				span Разрешаю обработку #[a.link-text(href="#") персональных данных]
+		.modal-form__button
+			button.button(type="submit") Отправить
+
+a.up(href="#" data-app="up")
+
+.cookies(data-app="cookies")
+	.cookies__container
+		.cookies__text
+			| На&nbsp;сайте используются cookie-файлы, которые помогают показывать Вам самую актуальную информацию. Продолжая пользоваться сайтом, Вы&nbsp;даете согласие на&nbsp;использование ваших Метаданных и&nbsp;cookie-файлов. #[a.link-text(href="#") Побробнее о&nbsp;правилах использования cookie и&nbsp;Условиях сбора и&nbsp;обработки персональных данных].
+		.cookies__button
+			button.button.button--black(type="button") Согласен
+
+//- .cursor(data-app="cursor")

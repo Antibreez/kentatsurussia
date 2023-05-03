@@ -1,0 +1,130 @@
+.technology {
+	margin-bottom: vm(56);
+	background: $color-mirage;
+
+	&__image {
+		img {
+			width: 100%;
+
+			@include mobile {
+				height: vm(257);
+				object-fit: cover;
+			}
+		}
+	}
+
+	&__content {
+		position: relative;
+		display: block;
+		padding: vm(24) vm(16) vm(115);
+		color: $color-white;
+
+		@include desktop {
+			padding: vw(40) vw(48) vw(48);
+			height: vw(400);
+
+			&:hover {
+				color: $color-white;
+
+				.technology__arrow {
+					color: $color-cod-gray;
+					background: $color-white;
+				}
+			}
+		}
+
+		@include desktop-xl {
+			display: flex;
+			flex-direction: column;
+			padding: 40px 48px 48px;
+			height: 400px;
+		}
+	}
+
+	&__title {
+		margin-bottom: vm(16);
+		border-bottom: solid 1px #333e49;
+		padding-bottom: vm(8);
+		width: 100%;
+		color: $color-white;
+
+		@include desktop {
+			margin-bottom: vw(16);
+			padding-bottom: vw(24);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 16px;
+			padding-bottom: 24px;
+		}
+	}
+
+	&__text {
+		color: $color-white;
+
+		@include desktop {
+			margin-top: auto;
+			width: vw(546);
+			font-size: vw(18);
+			line-height: vw(24);
+		}
+
+		@include desktop-xl {
+			width: 546px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		left: vm(16);
+		bottom: vm(35);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: solid 1px currentColor;
+		border-radius: 50%;
+		width: vm(56);
+		height: vm(56);
+		transition: $duration-normal;
+
+		svg {
+			width: vm(24);
+			height: vm(24);
+
+			@include desktop {
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@include desktop {
+			left: auto;
+			right: vw(40);
+			bottom: vw(40);
+			width: vw(56);
+			height: vw(56);
+		}
+
+		@include desktop-xl {
+			right: 40px;
+			bottom: 40px;
+			width: 56px;
+			height: 56px;
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(96);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 96px;
+	}
+}

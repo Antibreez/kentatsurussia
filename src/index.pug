@@ -1,0 +1,20 @@
+extends pug/base
+
+prepend vars
+	//-
+
+append vars
+	//-
+
+block content
+	//- include pug/data
+
+	.main
+		include pug/components/header
+
+		.content.content--index
+			include pug/pages/index
+
+		include pug/components/footer
+
+	//- include pug/components/analytics

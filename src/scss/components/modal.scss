@@ -1,0 +1,316 @@
+.modal {
+	padding: vm(44) vm(24);
+	width: 100%;
+
+	@include desktop {
+		padding: vw(48) vw(40);
+	}
+
+	@include desktop-xl {
+		padding: 48px 40px;
+	}
+}
+
+.modal--alert {
+	width: auto;
+
+	@include desktop {
+		padding: vw(40);
+	}
+
+	@include desktop-xl {
+		padding: 40px;
+	}
+}
+
+.modal-form {
+	&__text {
+		margin-bottom: vm(24);
+
+		@include desktop {
+			margin-bottom: vw(32);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 32px;
+		}
+	}
+
+	.checkbox {
+		margin: vm(32) 0;
+
+		@include desktop {
+			margin: vw(32) 0;
+		}
+
+		@include desktop-xl {
+			margin: 32px 0;
+		}
+	}
+
+	&__button {
+		text-align: right;
+	}
+
+	@include desktop {
+		padding: vw(48) vw(40);
+		max-width: vw(456);
+	}
+
+	@include desktop-xl {
+		padding: 48px 40px;
+		max-width: 456px;
+	}
+}
+
+.modal-bid {
+	.fancybox-close-small {
+		@include desktop {
+			display: none;
+		}
+	}
+
+	&__row {
+		@include desktop {
+			display: flex;
+		}
+	}
+
+	&__content {
+		margin-bottom: vm(32);
+		width: 100%;
+
+		@include desktop {
+			flex-shrink: 0;
+			margin-right: vw(76);
+			margin-bottom: 0;
+			width: vw(380);
+		}
+
+		@include desktop-xl {
+			margin-right: 76px;
+			width: 380px;
+		}
+	}
+
+	&__title {
+		@include desktop {
+			margin-bottom: vw(24);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__text {
+		letter-spacing: -0.006em;
+	}
+
+	&__form {
+		width: 100%;
+		min-width: 0;
+
+		.swiper-slide {
+			@include desktop {
+				height: auto;
+			}
+		}
+
+		&__item {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+			box-sizing: border-box;
+
+			.form__col + .form__col {
+				@include mobile {
+					margin-top: vm(16);
+				}
+			}
+
+			.checkbox {
+				margin-bottom: vm(16);
+
+				@include desktop {
+					margin-bottom: vw(16);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 16px;
+				}
+			}
+
+			.radio {
+				@include desktop {
+					margin-bottom: vw(24);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 24px;
+				}
+			}
+
+			&__subtitle {
+				margin-top: vm(16);
+				margin-bottom: vm(24);
+
+				&:first-child {
+					margin-top: 0;
+				}
+
+				@include desktop {
+					margin-top: vw(16);
+					margin-bottom: vm(24);
+				}
+
+				@include desktop-xl {
+					margin-top: 16px;
+					margin-bottom: 24px;
+				}
+			}
+
+			.input__field {
+				textarea {
+					height: vm(170);
+
+					@include desktop {
+						height: vw(170);
+					}
+
+					@include desktop-xl {
+						height: 170px;
+					}
+				}
+			}
+
+			&__footer {
+				display: flex;
+				margin-top: vm(24);
+
+				.button + .button {
+					margin-top: vm(12);
+
+					@include desktop {
+						margin-top: 0;
+						margin-left: vw(24);
+					}
+
+					@include desktop-xl {
+						margin-left: 24px;
+					}
+				}
+
+				@include mobile {
+					flex-direction: column;
+				}
+
+				@include desktop {
+					align-items: center;
+					justify-content: flex-end;
+					margin-top: auto;
+				}
+			}
+
+			&__footer--margin {
+				margin-top: vm(20);
+
+				@include desktop {
+					margin-top: vw(165);
+				}
+
+				@include desktop-xl {
+					margin-top: 165px;
+				}
+			}
+
+			@include desktop {
+				padding-left: vw(5);
+			}
+
+			@include desktop-xl {
+				padding-left: 5px;
+			}
+		}
+
+		@include desktop {
+			border: 1px solid $color-iron;
+			padding: vw(40);
+		}
+
+		@include desktop-xl {
+			padding: 40px;
+		}
+	}
+
+	@include desktop {
+		padding: vw(40);
+		max-width: vw(1296);
+	}
+
+	@include desktop-xl {
+		padding: 40px;
+		max-width: 1296px;
+	}
+}
+
+.modal-bid--page {
+	margin-top: vm(60);
+
+	.modal-bid__content {
+		@include desktop {
+			margin-right: vw(77);
+			width: vw(523);
+		}
+
+		@include desktop-xl {
+			margin-right: 77px;
+			width: 523px;
+		}
+	}
+
+	.modal-bid__text {
+		@include desktop {
+			max-width: vw(333);
+		}
+
+		@include desktop-xl {
+			max-width: 333px;
+		}
+	}
+
+	.modal-bid__form__item__footer {
+		button {
+			font-weight: 600;
+			line-height: 1.5;
+
+			@include desktop {
+				padding: vw(16) vw(32);
+				font-size: vw(15);
+			}
+
+			@include desktop-xl {
+				padding: 16px 32px;
+				font-size: 15px;
+			}
+		}
+
+		@include desktop {
+			margin-top: vw(56);
+		}
+
+		@include desktop-xl {
+			margin-top: 56px;
+		}
+	}
+
+	@include desktop {
+		margin-top: vw(96);
+		padding: 0;
+		max-width: none;
+	}
+
+	@include desktop-xl {
+		margin-top: 96px;
+	}
+}

@@ -1,0 +1,1416 @@
+.page-series {
+	&__intro {
+		margin-bottom: vm(56);
+
+		&__content {
+			width: 100%;
+			padding: vm(24) vm(16);
+			color: $color-white;
+			background: $color-cod-gray;
+
+			@include desktop {
+				padding: vw(24) vw(47) vw(24) vw(24);
+			}
+
+			@include desktop-xl {
+				padding: 24px 47px 24px 24px;
+			}
+		}
+
+		&__title {
+			@include desktop {
+				margin-bottom: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__video {
+			width: 100%;
+
+			@include desktop {
+				flex-shrink: 0;
+				width: vw(1022);
+			}
+
+			@include desktop-xl {
+				width: 1022px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-bottom: vw(96);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__tech {
+		margin-bottom: vm(56);
+
+		&__title {
+			text-align: center;
+
+			@include mobile {
+				font-size: vm(28);
+				line-height: vm(31);
+			}
+
+			@include desktop {
+				margin-bottom: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__description {
+			margin-bottom: vm(24);
+			text-align: center;
+
+			h2 {
+				margin: 0 0 vm(16);
+				font-size: vm(28);
+				line-height: vm(31);
+				letter-spacing: -0.02em;
+
+				@include desktop {
+					margin: 0 0 vw(16);
+					font-size: vw(48);
+					line-height: vw(52);
+				}
+
+				@include desktop-xl {
+					margin: 0 0 16px;
+					font-size: 48px;
+					line-height: 52px;
+				}
+			}
+
+			p {
+				margin: 0 0 vm(24);
+
+				@include desktop {
+					margin: 0 auto vw(40);
+					max-width: vw(680);
+				}
+
+				@include desktop-xl {
+					margin: 0 auto 40px;
+					max-width: 680px;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 vm(-15) vm(40);
+
+			@include desktop {
+				margin: 0 vw(-15) vw(98);
+			}
+
+			@include desktop-xl {
+				margin: 0 -15px 98px;
+			}
+		}
+
+		&__col {
+			margin-bottom: vm(30);
+			padding: 0 vm(15);
+			width: 100%;
+
+			@include desktop {
+				margin-bottom: 0;
+				padding: 0 vw(15);
+				width: 25%;
+			}
+
+			@include desktop-xl {
+				padding: 0 15px;
+			}
+		}
+
+		&__item {
+			&__image {
+				margin-bottom: vm(18);
+
+				@include desktop {
+					margin-bottom: vw(18);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 18px;
+				}
+			}
+
+			@include mobile {
+				text-align: center;
+			}
+		}
+
+		&__slider {
+			position: relative;
+			margin-bottom: vm(24);
+
+			.arrow-prev,
+			.arrow-next {
+				top: vm(-50);
+				left: auto;
+				right: vm(34);
+				width: vm(44);
+				height: vm(44);
+				transform: none;
+
+				@include desktop {
+					top: vw(-60);
+					right: vw(34);
+					width: vw(44);
+					height: vw(44);
+				}
+
+				@include desktop-xl {
+					top: -60px;
+					right: 34px;
+					width: 44px;
+					height: 44px;
+				}
+			}
+
+			.arrow-next {
+				right: vm(-10);
+
+				@include desktop {
+					right: vw(-10);
+				}
+
+				@include desktop-xl {
+					right: -10px;
+				}
+			}
+
+			.swiper-slide {
+				@include desktop {
+					width: vw(711);
+				}
+
+				@include desktop-xl {
+					width: 711px;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__product {
+			&__image {
+				margin-right: vm(20);
+
+				img {
+					width: vm(300);
+
+					@include desktop {
+						width: vw(336);
+					}
+
+					@include desktop-xl {
+						width: 336px;
+					}
+				}
+
+				@include desktop {
+					flex-shrink: 0;
+					align-self: flex-end;
+					margin-right: vw(15);
+				}
+
+				@include desktop-xl {
+					margin-right: 15px;
+				}
+			}
+
+			&__top {
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				margin-bottom: vm(8);
+
+				@include desktop {
+					margin-bottom: vw(8);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 8px;
+				}
+			}
+
+			&__title {
+				margin-bottom: 0;
+				font-size: vm(16);
+
+				@include desktop {
+					font-size: vw(16);
+				}
+
+				@include desktop-xl {
+					font-size: 16px;
+				}
+			}
+
+			&__price {
+				margin-left: vm(15);
+				font-weight: 600;
+				white-space: nowrap;
+
+				@include desktop {
+					margin-left: vw(15);
+					width: vw(70);
+				}
+
+				@include desktop-xl {
+					margin-left: 15px;
+					width: 70px;
+				}
+			}
+
+			&__text {
+				margin-bottom: vm(20);
+
+				@include desktop {
+					margin-bottom: vw(24);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 24px;
+				}
+			}
+
+			&__info {
+				font-size: vm(14);
+				letter-spacing: -0.006em;
+
+				ul {
+					li {
+						display: flex;
+
+						+ li {
+							margin-top: vm(8);
+
+							@include desktop {
+								margin-top: vw(8);
+							}
+
+							@include desktop-xl {
+								margin-top: 8px;
+							}
+						}
+					}
+				}
+
+				&__label {
+					flex-shrink: 0;
+					margin-right: vm(20);
+					width: vm(215);
+
+					@include desktop {
+						margin-right: vw(22);
+						width: vw(262);
+					}
+
+					@include desktop-xl {
+						margin-right: 22px;
+						width: 262px;
+					}
+				}
+
+				@include desktop {
+					font-size: vw(14);
+				}
+
+				@include desktop-xl {
+					font-size: 14px;
+				}
+			}
+
+			@include desktop {
+				display: flex;
+			}
+		}
+
+		&__button {
+			text-align: center;
+		}
+
+		@include desktop {
+			margin-bottom: vw(96);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__development {
+		margin-bottom: vm(56);
+		text-align: center;
+
+		&__description {
+			margin-bottom: vm(24);
+			text-align: center;
+
+			h2 {
+				margin-bottom: vm(16);
+				font-weight: 700;
+				font-size: vm(32);
+				line-height: vm(35);
+				letter-spacing: -0.02em;
+
+				@include desktop {
+					margin-bottom: vw(24);
+					font-size: vw(40);
+					line-height: vw(42);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 24px;
+					font-size: 40px;
+					line-height: 42px;
+				}
+			}
+
+			p {
+				margin: 0 0 vm(24);
+
+				@include desktop {
+					margin: 0 auto vw(40);
+					max-width: vw(680);
+				}
+
+				@include desktop-xl {
+					margin: 0 auto 40px;
+					max-width: 680px;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__title {
+			margin-bottom: vm(16);
+			font-weight: 700;
+			font-size: vm(32);
+			line-height: vm(35);
+			letter-spacing: -0.02em;
+
+			@include desktop {
+				margin-bottom: vw(24);
+				font-size: vw(40);
+				line-height: vw(42);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 24px;
+				font-size: 40px;
+				line-height: 42px;
+			}
+		}
+
+		&__text {
+			margin: 0 0 vm(24);
+
+			@include desktop {
+				margin: 0 auto vw(40);
+				max-width: vw(680);
+			}
+
+			@include desktop-xl {
+				margin: 0 auto 40px;
+				max-width: 680px;
+			}
+		}
+
+		&__tag {
+			height: vm(40);
+
+			ul {
+				display: flex;
+
+				li {
+					margin-right: vm(8);
+
+					@include desktop {
+						margin-right: vw(16);
+					}
+
+					@include desktop-xl {
+						margin-right: 16px;
+					}
+				}
+
+				@include mobile {
+					overflow: auto;
+					margin: 0 vm(-24);
+					padding: 0 vm(24);
+					white-space: nowrap;
+				}
+
+				@include desktop {
+					flex-wrap: wrap;
+					justify-content: center;
+				}
+			}
+
+			&.is-fixed {
+				ul {
+					position: fixed;
+					left: vm(24);
+					top: vm(64);
+					z-index: 100;
+					padding: vm(10) vm(24) vm(15);
+					width: 100%;
+					background: $color-white;
+
+					@include desktop {
+						left: 0;
+						top: vw(64);
+						padding: vw(10) 0;
+					}
+
+					@include desktop-xl {
+						top: 64px;
+						padding: 10px 0;
+					}
+				}
+			}
+
+			@include desktop {
+				height: vw(40);
+			}
+
+			@include desktop-xl {
+				height: 40px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(80);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 80px;
+		}
+	}
+
+	&__subtitle {
+		@include mobile {
+			margin-top: vm(56);
+		}
+
+		@include desktop {
+			margin-bottom: vw(24);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 24px;
+		}
+	}
+
+	&__desing {
+		margin-bottom: vm(56);
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			padding: vm(24) vm(16);
+			width: 100%;
+			color: $color-white;
+			background: $color-mirage;
+
+			@include desktop {
+				padding: vw(40) vw(169) vw(40) vw(48);
+			}
+
+			@include desktop-xl {
+				padding: 40px 169px 40px 48px;
+			}
+		}
+
+		&__text {
+			margin-top: auto;
+		}
+
+		&__image {
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(680);
+				}
+
+				@include desktop-xl {
+					width: 680px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-bottom: vw(96);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__comfort {
+		display: flex;
+		margin-bottom: vm(40);
+
+		&__image {
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(680);
+				}
+
+				@include desktop-xl {
+					width: 680px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			border: 1px solid $color-iron;
+			padding: vm(24) vm(16);
+			width: 100%;
+
+			@include mobile {
+				border-top: none;
+			}
+
+			@include desktop {
+				padding: vw(40) vw(40) vw(40) vw(85);
+				border-left: none;
+			}
+
+			@include desktop-xl {
+				padding: 40px 40px 40px 85px;
+			}
+		}
+
+		&__text {
+			margin-top: auto;
+
+			@include desktop {
+				max-width: vw(358);
+			}
+
+			@include desktop-xl {
+				max-width: 358px;
+			}
+		}
+
+		@include mobile {
+			flex-direction: column;
+		}
+
+		@include desktop {
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__comfort--black {
+		.page-series__comfort__content {
+			border: none;
+			color: $color-white;
+			background: $color-mirage;
+
+			@include desktop {
+				padding: vw(40) vw(169) vw(40) vw(48);
+			}
+
+			@include desktop-xl {
+				padding: 40px 169px 40px 48px;
+			}
+		}
+	}
+
+	&__care {
+		margin-bottom: vm(40);
+
+		&__image {
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(680);
+				}
+
+				@include desktop-xl {
+					width: 680px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+			}
+		}
+
+		&__content {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid $color-iron;
+			padding: vm(24) vm(16);
+			width: 100%;
+
+			@include mobile {
+				border-top: none;
+			}
+
+			@include desktop {
+				border-left: none;
+				padding: vw(40) vw(168) vw(40) vw(48);
+			}
+
+			@include desktop-xl {
+				padding: 40px 168px 40px 48px;
+			}
+		}
+
+		&__text {
+			margin-top: auto;
+
+			@include desktop {
+				max-width: vw(376);
+			}
+
+			@include desktop-xl {
+				max-width: 376px;
+			}
+		}
+
+		&__icon {
+			margin-top: vm(24);
+
+			img {
+				width: vm(56);
+
+				@include desktop {
+					width: vw(85);
+				}
+
+				@include desktop-xl {
+					width: 85px;
+				}
+			}
+
+			@include desktop {
+				position: absolute;
+				right: vw(48);
+				bottom: vw(40);
+				margin-top: 0;
+			}
+
+			@include desktop-xl {
+				right: 48px;
+				bottom: 40px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__care--red {
+		.page-series__care__content {
+			border: none;
+			color: $color-white;
+			background: $color-pomegranate;
+		}
+
+		.page-series__care__text {
+			max-width: none;
+		}
+	}
+
+	&__care--black {
+		.page-series__care__content {
+			color: $color-white;
+			background: $color-mirage;
+		}
+	}
+
+	&__reliability {
+		margin-bottom: vm(56);
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+			margin: 0 vm(-85) vm(-40);
+
+			@include desktop {
+				margin: 0 vw(-85);
+			}
+
+			@include desktop-xl {
+				margin: 0 -85px;
+			}
+		}
+
+		&__col {
+			margin-bottom: vm(40);
+			padding: 0 vm(85);
+			width: 100%;
+
+			@include desktop {
+				margin-bottom: vw(40);
+				padding: 0 vw(85);
+				width: 50%;
+			}
+
+			@include desktop-xl {
+				margin-bottom: 40px;
+				padding: 0 85px;
+			}
+		}
+
+		&__item {
+			&__title {
+				@include desktop {
+					margin-bottom: vw(24);
+					max-width: vw(460);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 24px;
+					max-width: 460px;
+				}
+			}
+
+			&__row {
+				display: flex;
+			}
+
+			&__icon {
+				flex-shrink: 0;
+				margin-right: vm(20);
+
+				img {
+					width: vm(56);
+
+					@include desktop {
+						width: vw(85);
+					}
+
+					@include desktop-xl {
+						width: 85px;
+					}
+				}
+
+				@include desktop {
+					margin-right: vw(24);
+				}
+
+				@include desktop-xl {
+					margin-right: 24px;
+				}
+			}
+
+			&__text {
+				padding-right: 15px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(96);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__efficacy {
+		margin-bottom: vm(40);
+
+		&__image {
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(680);
+				}
+
+				@include desktop-xl {
+					width: 680px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+			}
+		}
+
+		&__content {
+			position: relative;
+			display: flex;
+			flex-direction: column;
+			border: 1px solid $color-iron;
+			padding: vm(24) vm(16);
+			width: 100%;
+
+			@include mobile {
+				border-bottom: none;
+			}
+
+			@include desktop {
+				border-right: none;
+				padding: vw(40) vw(133) vw(40) vw(48);
+			}
+
+			@include desktop-xl {
+				padding: 40px 133px 40px 48px;
+			}
+		}
+
+		&__text {
+			margin-top: auto;
+
+			@include desktop {
+				max-width: vw(450);
+			}
+
+			@include desktop-xl {
+				max-width: 450px;
+			}
+		}
+
+		&__icon {
+			margin-top: vm(24);
+
+			img {
+				width: vm(56);
+
+				@include desktop {
+					width: vw(85);
+				}
+
+				@include desktop-xl {
+					width: 85px;
+				}
+			}
+
+			@include desktop {
+				position: absolute;
+				right: vw(48);
+				bottom: vw(40);
+				margin-top: 0;
+			}
+
+			@include desktop-xl {
+				right: 48px;
+				bottom: 40px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__efficacy--red {
+		.page-series__efficacy__content {
+			border: none;
+			color: $color-white;
+			background: $color-pomegranate;
+
+			@include desktop {
+				padding: vw(154) vw(169) vw(40) vw(48);
+			}
+
+			@include desktop-xl {
+				padding: 154px 169px 40px 48px;
+			}
+		}
+
+		.page-series__efficacy__text {
+			@include desktop {
+				max-width: vw(375);
+			}
+
+			@include desktop-xl {
+				max-width: 375px;
+			}
+		}
+	}
+
+	&__app {
+		margin-bottom: vm(40);
+
+		&__image {
+			position: relative;
+
+			> img {
+				@include mobile {
+					height: vm(200);
+					object-fit: cover;
+				}
+			}
+
+			&__wifi {
+				position: absolute;
+				right: vm(16);
+				top: vm(16);
+
+				img {
+					width: vm(40);
+
+					@include desktop {
+						width: vw(78);
+					}
+
+					@include desktop-xl {
+						width: 78px;
+					}
+				}
+
+				@include desktop {
+					right: vw(40);
+					top: vw(48);
+				}
+
+				@include desktop-xl {
+					right: 40px;
+					top: 48px;
+				}
+			}
+		}
+
+		&__content {
+			padding: vm(24) vm(16);
+			color: $color-white;
+			background: $color-mirage;
+
+			@include desktop {
+				padding: vw(80) vw(48) vw(40);
+			}
+
+			@include desktop-xl {
+				padding: 80px 48px 40px;
+			}
+		}
+
+		&__title {
+			margin-bottom: vm(24);
+			border-bottom: 1px solid rgba($color-white, 0.2);
+			padding-bottom: vm(24);
+
+			@include desktop {
+				margin-bottom: vw(100);
+				padding-bottom: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 100px;
+				padding-bottom: 24px;
+			}
+		}
+
+		&__row {
+			@include desktop {
+				display: flex;
+				align-items: flex-end;
+			}
+		}
+
+		&__text {
+			@include desktop {
+				max-width: vw(546);
+				font-size: vw(18);
+				line-height: vw(24);
+			}
+
+			@include desktop-xl {
+				max-width: 546px;
+				font-size: 18px;
+				line-height: 24px;
+			}
+		}
+
+		&__daichi {
+			display: flex;
+			margin-top: vm(24);
+			padding: vm(16);
+			background: $color-white;
+
+			&__image {
+				flex-shrink: 0;
+				margin-right: vm(16);
+
+				img {
+					width: vm(70);
+
+					@include desktop {
+						width: vw(70);
+					}
+
+					@include desktop-xl {
+						width: 70px;
+					}
+				}
+
+				@include desktop {
+					margin-right: vw(16);
+				}
+
+				@include desktop-xl {
+					margin-right: 16px;
+				}
+			}
+
+			&__content {
+				width: 100%;
+				color: $color-cod-gray;
+			}
+
+			&__title {
+				font-size: vm(12);
+				font-weight: 600;
+
+				@include desktop {
+					font-size: vw(12);
+				}
+
+				@include desktop-xl {
+					font-size: 12px;
+				}
+			}
+
+			&__text {
+				margin-bottom: vm(12);
+				font-size: vm(8);
+				line-height: vm(12);
+
+				@include desktop {
+					margin-bottom: vw(12);
+					font-size: vw(8);
+					line-height: vw(12);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 12px;
+					font-size: 8px;
+					line-height: 12px;
+				}
+			}
+
+			&__list {
+				ul {
+					display: flex;
+
+					li {
+						+ li {
+							margin-left: vm(9);
+
+							@include desktop {
+								margin-left: vw(9);
+							}
+
+							@include desktop-xl {
+								margin-left: 9px;
+							}
+						}
+
+						a {
+							display: block;
+						}
+					}
+				}
+			}
+
+			&__app-store {
+				img {
+					width: vm(70);
+
+					@include desktop {
+						width: vw(70);
+					}
+
+					@include desktop-xl {
+						width: 70px;
+					}
+				}
+			}
+
+			&__google-play {
+				img {
+					width: vm(81);
+
+					@include desktop {
+						width: vw(81);
+					}
+
+					@include desktop-xl {
+						width: 81px;
+					}
+				}
+			}
+
+			@include desktop {
+				margin-top: 0;
+				margin-left: auto;
+				padding: vw(16);
+			}
+
+			@include desktop-xl {
+				padding: 16px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__console {
+		position: relative;
+		z-index: 1;
+		margin-bottom: vm(40);
+		padding: vm(24) vm(16);
+		background: #c5e5f4;
+
+		&__image {
+			position: absolute;
+			right: 0;
+			top: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background: 50% 50% no-repeat;
+			background-size: cover;
+
+			@include desktop {
+				width: vw(795);
+			}
+
+			@include desktop-xl {
+				width: 795px;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+
+			@include desktop {
+				max-width: vw(480);
+			}
+
+			@include desktop-xl {
+				max-width: 480px;
+			}
+		}
+
+		&__text {
+			max-width: vm(200);
+
+			@include desktop {
+				max-width: vw(462);
+			}
+
+			@include desktop-xl {
+				max-width: 462px;
+			}
+		}
+
+		&__desc {
+			margin-top: vm(24);
+			max-width: vm(200);
+			font-size: vm(12);
+			line-height: vm(18);
+
+			@include desktop {
+				margin-top: auto;
+				max-width: none;
+				font-size: vw(12);
+				line-height: vw(18);
+			}
+
+			@include desktop-xl {
+				font-size: 12px;
+				line-height: 18px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(40);
+			padding: vw(40) vw(48);
+			height: vw(600);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+			padding: 40px 48px;
+			height: 600px;
+		}
+	}
+
+	&__range {
+		text-align: center;
+
+		&__description {
+			margin-bottom: vm(24);
+			text-align: center;
+
+			h2 {
+				margin: 0 0 vm(22);
+				font-weight: 700;
+				font-size: vm(32);
+				line-height: vm(35);
+				letter-spacing: -0.02em;
+
+				@include desktop {
+					margin: 0 auto vw(80);
+					max-width: vw(850);
+					font-size: vw(64);
+					line-height: vw(67);
+				}
+
+				@include desktop-xl {
+					margin: 0 auto 80px;
+					max-width: 850px;
+					font-size: 64px;
+					line-height: 67px;
+				}
+			}
+
+			p {
+				margin: 0 0 vm(24);
+
+				@include desktop {
+					margin: 0 auto vw(40);
+					max-width: vw(680);
+				}
+
+				@include desktop-xl {
+					margin: 0 auto 40px;
+					max-width: 680px;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 40px;
+			}
+		}
+
+		&__subtitle {
+			@include desktop {
+				margin-bottom: vw(16);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 16px;
+			}
+		}
+
+		&__title {
+			@include desktop {
+				margin: 0 auto vw(80);
+				max-width: vw(850);
+			}
+
+			@include desktop-xl {
+				margin: 0 auto 80px;
+				max-width: 850px;
+			}
+		}
+
+		&__image {
+			margin-bottom: vm(10);
+
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(429);
+				}
+
+				@include desktop-xl {
+					width: 429px;
+				}
+			}
+
+			@include desktop {
+				margin-bottom: vw(10);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 10px;
+			}
+		}
+	}
+}

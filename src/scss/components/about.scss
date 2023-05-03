@@ -1,0 +1,176 @@
+.about {
+	position: relative;
+	z-index: 5;
+	margin-bottom: vm(56);
+	padding: vm(24) vm(16);
+	background: linear-gradient(90deg, #ededed 0%, #e1e1e1 100%);
+
+	&__image {
+		position: absolute;
+		right: 0;
+		bottom: 0;
+		z-index: -1;
+		width: 100%;
+		height: vm(360);
+		background: 50% 50% no-repeat;
+		background-size: cover;
+
+		@include desktop {
+			top: 0;
+			bottom: auto;
+			width: vw(765);
+			height: 100%;
+		}
+
+		@include desktop-xl {
+			width: 765px;
+		}
+	}
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		height: 100%;
+
+		@include desktop {
+			max-width: vw(470);
+		}
+
+		@include desktop-xl {
+			max-width: 470px;
+		}
+	}
+
+	&__title {
+		sup {
+			top: -0.1em;
+		}
+
+		img {
+			width: vm(16);
+
+			@include desktop {
+				width: vw(24);
+			}
+
+			@include desktop-xl {
+				width: 24px;
+			}
+		}
+	}
+
+	&__text {
+		@include desktop {
+			font-size: vw(18);
+			line-height: vw(24);
+		}
+
+		@include desktop-xl {
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	&__link {
+		margin-top: vm(24);
+		font-weight: 700;
+		font-size: vm(18);
+
+		a {
+			svg {
+				display: inline-block;
+				vertical-align: middle;
+				margin-left: 16px;
+				width: 24px;
+				height: 24px;
+
+				@include desktop {
+					margin-left: vw(16);
+					width: vw(24);
+					height: vw(24);
+				}
+
+				@include desktop-xl {
+					margin-left: 16px;
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			@include desktop {
+				&:hover {
+					color: $color-pomegranate;
+				}
+			}
+		}
+
+		@include desktop {
+			margin-top: vw(64);
+			font-size: vw(18);
+		}
+
+		@include desktop-xl {
+			margin-top: 64px;
+			font-size: 18px;
+		}
+	}
+
+	&__footnote {
+		margin-top: vm(256);
+		font-size: vm(12);
+		line-height: vm(18);
+
+		@include desktop {
+			margin-top: auto;
+			font-size: vw(12);
+			line-height: vw(18);
+		}
+
+		@include desktop-xl {
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+
+	&.anime {
+		.about {
+			&__title {
+				transform: translateY(50px);
+				transition: $duration-normal * 2;
+			}
+
+			&__text {
+				transform: translateY(50px);
+				transition: $duration-normal * 3;
+			}
+
+			&__link {
+				transform: translateY(50px);
+				transition: $duration-normal * 3;
+			}
+		}
+
+		&.animated {
+			.about {
+				&__title,
+				&__text,
+				&__link {
+					transform: translateY(0);
+				}
+			}
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(96);
+		padding: vw(40) vw(48) vw(32);
+		height: vw(600);
+		background: linear-gradient(180deg, #EDEDED 0%, #EDEDED 27.08%, #EDEDED 64.26%, #E9E9E9 75.52%, #E3E3E3 85.55%, #DCDCDC 94.91%, #DADADA 100%);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 96px;
+		padding: 40px 48px 32px;
+		height: 600px;
+	}
+}

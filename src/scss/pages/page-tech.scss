@@ -1,0 +1,555 @@
+.page-tech {
+	&__intro {
+		margin-bottom: vm(56);
+		padding: vm(24) vm(16);
+		color: $color-white;
+		background: $color-pomegranate;
+
+		&__content {
+			@include desktop {
+				max-width: vw(544);
+			}
+
+			@include desktop-xl {
+				max-width: 544px;
+			}
+		}
+
+		&__title {
+			@include desktop {
+				margin-bottom: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__text {
+			@include desktop {
+				padding-right: vw(50);
+			}
+
+			@include desktop-xl {
+				padding-right: 50px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(80);
+			padding: vw(40);
+			height: vw(452);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 80px;
+			padding: 40px;
+			height: 452px;
+		}
+	}
+
+	&__list {
+		overflow: hidden;
+
+		&__row {
+			display: flex;
+			flex-wrap: wrap;
+
+			@include desktop {
+				margin-right: vw(-12);
+				margin-left: vw(-12);
+			}
+
+			@include desktop-xl {
+				margin-right: -12px;
+				margin-left: -12px;
+			}
+		}
+
+		&__col {
+			border-top: 1px solid $color-black;
+			padding-top: vm(40);
+			width: 100%;
+
+			& + & {
+				margin-top: vm(40);
+
+				@include desktop {
+					margin-top: vw(40);
+				}
+
+				@include desktop-xl {
+					margin-top: 40px;
+				}
+			}
+
+			@include desktop {
+				display: flex;
+				padding-top: vw(40);
+				padding-right: vw(12);
+				padding-left: vw(12);
+
+				&--half {
+					width: 50%;
+
+					.page-tech__item__inner {
+						flex-direction: column;
+					}
+				}
+			}
+
+			@include desktop-xl {
+				padding-top: 40px;
+				padding-right: 12px;
+				padding-left: 12px;
+			}
+		}
+	}
+
+	&__item {
+		display: block;
+		width: 100%;
+
+		&__number {
+			margin-bottom: vm(13);
+			font-size: vm(12);
+
+			@include desktop {
+				margin-bottom: vw(13);
+				font-size: vw(12);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 13px;
+				font-size: 12px;
+			}
+		}
+
+		&__image {
+			margin-bottom: vm(24);
+
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(426);
+				}
+
+				@include desktop-xl {
+					width: 426px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+				margin-right: vw(255);
+				margin-bottom: 0;
+			}
+
+			@include desktop-xl {
+				margin-right: 255px;
+			}
+		}
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+
+			@include desktop {
+				max-width: vw(531);
+			}
+
+			@include desktop-xl {
+				max-width: 531px;
+			}
+		}
+
+		&__title {
+			margin-top: auto;
+			transition: $duration-normal;
+		}
+
+		&__text {
+			letter-spacing: -0.006em;
+		}
+
+		&__desc {
+			font-size: vm(12);
+			letter-spacing: -0.006em;
+			color: $color-bombay;
+
+			@include desktop {
+				font-size: vw(12);
+			}
+
+			@include desktop-xl {
+				font-size: 12px;
+			}
+		}
+
+		&__inner {
+			position: relative;
+			padding: vm(24) vm(16);
+			width: 100%;
+			background: $color-concrete;
+
+			&__image {
+				margin-bottom: vm(24);
+
+				img {
+					max-height: vm(168);
+
+					@include desktop {
+						max-height: vw(268);
+					}
+
+					@include desktop-xl {
+						max-height: 268px;
+					}
+				}
+
+				@include desktop {
+					margin-bottom: vw(37);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 37px;
+				}
+			}
+
+			@include desktop {
+				display: flex;
+				padding: vw(40);
+			}
+
+			@include desktop-xl {
+				padding: 40px;
+			}
+		}
+
+		&__inner--wifi {
+			.page-tech__item__title {
+				margin-top: 0;
+			}
+
+			@include desktop {
+				padding-bottom: vw(60);
+			}
+
+			@include desktop-xl {
+				padding-bottom: 60px;
+			}
+		}
+
+		&__table {
+			margin: vm(24) 0 0;
+			width: 100%;
+
+			table {
+				tr {
+					vertical-align: top;
+				}
+
+				th {
+					font-weight: 600;
+					color: $color-cod-gray;
+
+					&:first-child {
+						padding-left: 0;
+					}
+				}
+
+				td {
+					span {
+						display: block;
+					}
+
+					&:first-child {
+						padding-left: 0;
+						font-weight: 600;
+					}
+				}
+			}
+
+			&__class {
+				display: inline-block;
+				border-radius: vm(80);
+				padding: vm(2) vm(8);
+				color: $color-white;
+				background: #1ed77e;
+
+				@include desktop {
+					border-radius: vw(80);
+					padding: vw(2) vw(8);
+				}
+
+				@include desktop-xl {
+					border-radius: 80px;
+					padding: 2px 8px;
+				}
+			}
+
+			&__class--2 {
+				background: #91d71e;
+			}
+
+			&__class--1 {
+				background: #bdd71e;
+			}
+
+			@include desktop {
+				margin: vw(118) 0 0 vw(135);
+			}
+
+			@include desktop-xl {
+				margin: 118px 0 0 135px;
+			}
+		}
+
+		&__pic {
+			position: relative;
+			padding: vm(24) vm(16);
+			width: 100%;
+			height: vm(315);
+
+			&__image {
+				position: absolute;
+				left: 0;
+				top: 0;
+				z-index: -1;
+				width: 100%;
+				height: 100%;
+				background: 40% 50% no-repeat;
+				background-size: cover;
+
+				@include desktop {
+					background: 50% 50% no-repeat;
+					background-size: cover;
+				}
+			}
+
+			.page-tech__item__content {
+				height: 100%;
+			}
+
+			@include desktop {
+				padding: vw(40);
+				height: vw(496);
+			}
+
+			@include desktop-xl {
+				padding: 40px;
+				height: 496px;
+			}
+		}
+
+		&__app {
+			margin-top: vm(24);
+
+			&__list {
+				ul {
+					display: flex;
+					align-items: center;
+
+					li {
+						+ li {
+							margin-left: vm(16);
+
+							@include desktop {
+								margin-left: vw(16);
+							}
+
+							@include desktop-xl {
+								margin-left: 16px;
+							}
+						}
+
+						a {
+							display: flex;
+						}
+					}
+				}
+			}
+
+			&__daichi {
+				img {
+					width: vm(54);
+					height: vm(54);
+
+					@include desktop {
+						width: vw(64);
+						height: vw(64);
+					}
+
+					@include desktop {
+						width: 64px;
+						height: 64px;
+					}
+				}
+			}
+
+			&__app-store {
+				img {
+					width: vm(104);
+					height: vm(38);
+
+					@include desktop {
+						width: vw(120);
+						height: vw(38);
+					}
+
+					@include desktop {
+						width: 120px;
+						height: 38px;
+					}
+				}
+
+				@include desktop {
+					display: inline-block;
+					vertical-align: middle;
+					transition: $duration-normal;
+
+					&:hover {
+						transform: scale(1.05);
+					}
+				}
+			}
+
+			&__google-play {
+				img {
+					width: vm(104);
+					height: vm(39);
+
+					@include desktop {
+						width: vw(133);
+						height: vw(39);
+					}
+
+					@include desktop {
+						width: 133px;
+						height: 39px;
+					}
+				}
+
+				@include desktop {
+					display: inline-block;
+					vertical-align: middle;
+					transition: $duration-normal;
+
+					&:hover {
+						transform: scale(1.05);
+					}
+				}
+			}
+
+			&__title {
+				margin-top: vm(16);
+				margin-bottom: vm(4);
+
+				@include desktop {
+					margin-top: vw(16);
+					margin-bottom: vw(4);
+				}
+
+				@include desktop-xl {
+					margin-top: 16px;
+					margin-bottom: 4px;
+				}
+			}
+
+			@include desktop {
+				margin-top: auto;
+			}
+		}
+
+		&__list {
+			margin-top: vm(24);
+
+			&__title {
+				margin-bottom: vm(16);
+				font-weight: 600;
+
+				@include desktop {
+					margin-bottom: vw(16);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 16px;
+				}
+			}
+
+			.page-text-list {
+				@include desktop {
+					padding-right: vw(75);
+				}
+
+				@include desktop-xl {
+					padding-right: 75px;
+				}
+			}
+
+			@include desktop {
+				margin-top: vw(71);
+				margin-left: vw(107);
+				max-width: vw(510);
+			}
+
+			@include desktop-xl {
+				margin-top: 71px;
+				margin-left: 107px;
+				max-width: 510px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+
+			&:hover {
+				color: $color-cod-gray;
+
+				.page-tech__item__title {
+					color: $color-crimson;
+				}
+			}
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 vm(-12) vm(-30);
+
+		@include desktop {
+			margin: 0 vw(-12);
+			width: 100%;
+		}
+
+		@include desktop-xl {
+			margin: 0 -12px;
+		}
+	}
+
+	&__col {
+		margin-bottom: vm(30);
+		padding: 0 vm(12);
+		width: 100%;
+
+		.page-tech__item__inner {
+			flex-direction: column;
+		}
+
+		.page-tech__item__content {
+			height: 100%;
+		}
+
+		@include desktop {
+			margin-bottom: 0;
+			padding: 0 vw(12);
+			width: 50%;
+		}
+
+		@include desktop-xl {
+			padding: 0 12px;
+		}
+	}
+}

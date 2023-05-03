@@ -1,0 +1,142 @@
+.support {
+	margin-bottom: vm(56);
+	color: $color-white;
+	background: $color-mirage;
+
+	&__container {
+		@include desktop {
+			display: flex;
+		}
+	}
+
+	&__content {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: vm(24) vm(16) vm(120);
+		width: 100%;
+
+		@include desktop {
+			padding: vw(40) vw(48) vw(48);
+
+			&:hover {
+				color: $color-white;
+	
+				.support__arrow {
+					color: $color-cod-gray;
+					background: $color-white;
+				}
+			}
+		}
+
+		@include desktop-xl {
+			padding: 40px 48px 48px;
+		}
+	}
+
+	&__image {
+		height: vm(278);
+		background: 50% 50% no-repeat;
+		background-size: cover;
+		opacity: 0.9;
+
+		@include desktop {
+			flex-shrink: 0;
+			width: 50%;
+			height: auto;
+			min-height: vw(448);
+		}
+
+		@include desktop-xl {
+			min-height: 448px;
+		}
+	}
+
+	&__title {
+		width: 100%;
+		color: $color-white;
+
+		@include mobile {
+			margin-bottom: vm(64);
+		}
+
+		@include desktop {
+			max-width: vw(320);
+		}
+
+		@include desktop-xl {
+			max-width: 320px;
+		}
+	}
+
+	&__text {
+		margin-top: auto;
+		width: 100%;
+		letter-spacing: -0.006em;
+		color: $color-white;
+
+		@include desktop {
+			max-width: vw(384);
+			font-size: vw(15);
+			line-height: vw(22);
+		}
+
+		@include desktop-xl {
+			max-width: 384px;
+			font-size: 15px;
+			line-height: 22px;
+		}
+	}
+
+	&__arrow {
+		position: absolute;
+		left: vm(16);
+		bottom: vm(40);
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		border: solid 1px currentColor;
+		border-radius: 50%;
+		width: vm(56);
+		height: vm(56);
+		transition: $duration-normal;
+
+		svg {
+			width: vm(24);
+			height: vm(24);
+
+			@include desktop {
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@include desktop {
+			left: auto;
+			right: vw(40);
+			bottom: vw(40);
+			width: vw(56);
+			height: vw(56);
+		}
+
+		@include desktop-xl {
+			right: 40px;
+			bottom: 40px;
+			width: 56px;
+			height: 56px;
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(96);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 96px;
+	}
+}

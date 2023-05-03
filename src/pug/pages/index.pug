@@ -1,0 +1,242 @@
+.container
+	.slider.anime(data-app="slider")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide(data-mod="light")
+					.slider__item
+						.slider__item__image(style="background-image:url(./images/slider.jpg)")
+						.slider__item__content
+							h1.slider__item__title
+								| Технологии Функиональность Надежность
+							.h4.slider__item__text
+								| Климатическое оборудование KENTATSU
+				.swiper-slide(data-mod="dark")
+					.slider__item
+						.slider__item__image(style="background-image:url(./images/slider-dark.jpg)")
+						.slider__item__content
+							h1.slider__item__title
+								| Идеальный #[br.for-desktop]комфорт в&nbsp;любом помещении
+							.h4.slider__item__text
+								| Климатическое оборудование KENTATSU
+				.swiper-slide(data-mod="light")
+					.slider__item
+						.slider__item__image(style="background-image:url(./images/slider.jpg)")
+						.slider__item__content
+							h1.slider__item__title
+								| Технологии Функиональность Надежность
+							.h4.slider__item__text
+								| Климатическое оборудование KENTATSU
+				.swiper-slide(data-mod="dark")
+					.slider__item
+						.slider__item__image(style="background-image:url(./images/slider-dark.jpg)")
+						.slider__item__content
+							h1.slider__item__title
+								| Идеальный #[br.for-desktop]комфорт в&nbsp;любом помещении
+							.h4.slider__item__text
+								| Климатическое оборудование KENTATSU
+
+		.slider__pager
+
+	.category(data-app="category")
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					a.category__item(href="#")
+						.category__item__image(style="background-image:url(./images/category-1.jpg)")
+							.category__item__image__hover(style="background-image:url(./images/category-1-hover.jpg)")
+						.h4.category__item__title
+							| Кондиционирование
+				.swiper-slide
+					a.category__item(href="#")
+						.category__item__image(style="background-image:url(./images/category-2.jpg)")
+							.category__item__image__hover(style="background-image:url(./images/category-2-hover.jpg)")
+						.h4.category__item__title
+							| Отопление
+				.swiper-slide
+					a.category__item(href="#")
+						.category__item__image(style="background-image:url(./images/category-3.jpg)")
+							.category__item__image__hover(style="background-image:url(./images/category-3-hover.jpg)")
+						.h4.category__item__title
+							| Вентиляция
+				.swiper-slide
+					a.category__item(href="#")
+						.category__item__image(style="background-image:url(./images/category-4.jpg)")
+							.category__item__image__hover(style="background-image:url(./images/category-4-hover.jpg)")
+						.h4.category__item__title
+							| Весь каталог
+
+	.about.anime(data-offset="25")
+		.about__image.for-desktop(style="background-image:url(./images/about.jpg)")
+		.about__image.for-mobile(style="background-image:url(./images/about-mobile.jpg)")
+		.about__content
+			.h1.about__title
+				| Разумная достаточность#[sup: img(src="./images/icon.svg" alt="")]
+			.about__text
+				| Философия бренда основывается на том, чтобы техника соответствовала реальным потребностям: была надежной, экономичной, удобной, а главное — создавала идеальный комфорт в любом помещении.
+			.about__link
+				a(href="#") О бренде
+					+svg('arrow-right')
+			.about__footnote
+				| С 2005 года в России Kentatsu поставляет кондиционеры воздуха бытового, коммерческого и промышленного назначения, сплит-системы и системы VRF, вентиляционные установки и отопительное оборудование.
+
+	.technology
+		.technology__image
+			img(src="./images/technology.jpg" alt="")
+		a.technology__content(href="#")
+			.h1.technology__title
+				| Технологии
+			.technology__text
+				| Все продукты от Kentatsu несут в себе передовые разработки, которые гарантируют их высокое качество, функциональность и экологичность.
+			.technology__arrow
+				+svg('arrow-right-small')
+
+	.become-partner(data-app="become-partner")
+		.become-partner__content
+			.become-partner__container
+				.h1.become-partner__title
+					| Стать партнером
+				.become-partner__text-container
+					.become-partner__text.is-active
+						| Мы предлагаем партнерам выгодные условия сотрудничества: удобную форму оплаты, помощь в подборе оборудования, каталоги, рекламные материалы, оперативную и бережную доставку оборудования в любой регион РФ.
+					.become-partner__text
+						| Разнообразный и богатый опыт укрепление и развитие структуры позволяет оценить значение новых предложений. Не следует, однако забывать, что реализация намеченных плановых заданий требуют от нас анализа направлений прогрессивного развития.
+					.become-partner__text
+						| Повседневная практика показывает, что консультация с широким активом позволяет оценить значение позиций, занимаемых участниками в отношении поставленных задач.
+					.become-partner__text
+						| С другой стороны укрепление и развитие структуры требуют определения и уточнения систем массового участия. Таким образом сложившаяся структура организации способствует подготовки и реализации систем массового участия.
+					.become-partner__text
+						| Таким образом консультация с широким активом требуют от нас анализа новых предложений. Задача организации, в особенности же дальнейшее развитие различных форм деятельности требуют от нас анализа существенных финансовых.
+			ul.become-partner__links
+				li: a(href="#") Дилерам
+					+svg('arrow-right')
+				li: a(href="#") Девелоперам
+					+svg('arrow-right')
+				li: a(href="#") Заказчикам
+					+svg('arrow-right')
+				li: a(href="#") Проектировщикам
+					+svg('arrow-right')
+		.become-partner__image
+			img(src="./images/become-partner.jpg" alt="")
+
+	.objects(data-app="objects")
+		.h1.objects__title
+			| Kentatsu в России
+		.objects__link.for-desktop
+			a(href="#") Объекты
+				+svg('arrow-right')
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					.objects__item
+						a.objects__item__image(style="background-image:url(./images/temp/4.jpg)" href="#")
+						.objects__item__content
+							.objects__item__title
+								a(href="#") Торгово-развлекательный центр «Европа 34»
+							.objects__item__city
+								| Старый Оскол
+							.objects__item__type
+								a(href="#") DX Pro II Kentatsu
+				.swiper-slide
+					.objects__item
+						a.objects__item__image(style="background-image:url(./images/temp/5.jpg)" href="#")
+						.objects__item__content
+							.objects__item__title
+								a(href="#") Бизнес-центр «Лига наций»
+							.objects__item__city
+								| Ростов-на-Дону
+							.objects__item__type
+								a(href="#") Мультизональные системы Kentatsu DX PRO
+				.swiper-slide
+					.objects__item
+						a.objects__item__image(style="background-image:url(./images/temp/6.jpg)" href="#")
+						.objects__item__content
+							.objects__item__title
+								a(href="#") Торговый центр «Апекс плюс»
+							.objects__item__city
+								| Ростов-на-Дону
+							.objects__item__type
+								a(href="#") Kentatsu DX PRO IV
+		.objects__link.for-mobile
+			a(href="#") Объекты
+				+svg('arrow-right')
+
+	.support
+		.support__container
+			a.support__content(href="#")
+				.h1.support__title
+					| Техническая поддержка
+				.support__text
+					| Техническая документация, инструкции, видеообзоры и многое другое — все для пользователей и специалистов
+				.support__arrow
+					+svg('arrow-right-small')
+			.support__image(style="background-image:url(./images/support.jpg)")
+
+	.news(data-app="news")
+		.news__head
+			.h1.news__title
+				| Новости
+			.news__all.for-desktop
+				a(href="#") Все новости
+		.swiper-container
+			.swiper-wrapper
+				.swiper-slide
+					a.news__item(href="#")
+						.news__item__image
+							img(src="./images/temp/1.jpg" alt="")
+						.news__item__content
+							.news__item__date
+								| 29.04.2021
+							.news__item__caption
+								.h4.news__item__title
+									| Заголовок новости
+								.news__item__text
+									| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+							+svg('arrow-right').news__item__arrow
+				.swiper-slide
+					a.news__item(href="#")
+						.news__item__image
+							img(src="./images/temp/2.jpg" alt="")
+						.news__item__content
+							.news__item__date
+								| 29.04.2021
+							.news__item__caption
+								.h4.news__item__title
+									| Длиный заголовок новости  в несколько строчек: в две или даже три
+								.news__item__text
+									| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+							+svg('arrow-right').news__item__arrow
+				.swiper-slide
+					a.news__item(href="#")
+						.news__item__image
+							img(src="./images/temp/3.jpg" alt="")
+						.news__item__content
+							.news__item__date
+								| 29.04.2021
+							.news__item__caption
+								.h4.news__item__title
+									| Заголовок новости
+								.news__item__text
+									| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+							+svg('arrow-right').news__item__arrow
+		.news__all.for-mobile
+			a(href="#") Все новости
+				+svg('arrow-right')
+
+.dealers(data-app="dealers" data-ajax="./ajax/dealers.json")
+	.container
+		.dealers__content
+			.h1.dealers__title
+				| Авторизованные дилеры
+			.dealers__city
+				.input(data-app="select")
+					.input__field
+						select.js-city(name="city")
+							option(value="1") Город 1
+							option(value="2") Город 2
+							option(value="3" selected) Москва
+							option(value="4") Город 3
+							option(value="5") Город 4
+							option(value="6") Город 5
+							option(value="7") Город 6
+	.dealers__map(data-lat=55.753827 data-lng=37.621364 data-icon="./images/pin.svg")
+	.dealers__map-list

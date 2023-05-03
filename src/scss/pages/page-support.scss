@@ -1,0 +1,136 @@
+.page-support {
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 -1px -2px;
+	}
+
+	&__col {
+		margin-bottom: 2px;
+		padding: 0 1px;
+		width: 100%;
+
+		@include desktop {
+			width: 50%;
+		}
+	}
+
+	&__col--image {
+		@include mobile {
+			order: -1;
+		}
+	}
+
+	&__item {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+		padding: vm(24) vm(16) vm(120);
+		background: $color-mirage;
+
+		&__image {
+			img {
+				width: 100%;
+				object-fit: cover;
+			}
+		}
+
+		&__title {
+			width: 100%;
+			color: $color-white;
+
+			@include mobile {
+				margin-bottom: vm(64);
+			}
+
+			@include desktop {
+				max-width: vw(461);
+			}
+
+			@include desktop-xl {
+				max-width: 461px;
+			}
+		}
+
+		&__text {
+			margin-top: auto;
+			width: 100%;
+			letter-spacing: -0.006em;
+			color: $color-white;
+
+			@include desktop {
+				max-width: vw(284);
+			}
+
+			@include desktop-xl {
+				max-width: 284px;
+			}
+		}
+
+		&__arrow {
+			position: absolute;
+			left: vm(16);
+			bottom: vm(40);
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			border: solid 1px currentColor;
+			border-radius: 50%;
+			width: vm(56);
+			height: vm(56);
+			color: $color-white;
+			transition: $duration-normal;
+
+			svg {
+				width: vm(24);
+				height: vm(24);
+
+				@include desktop {
+					width: vw(24);
+					height: vw(24);
+				}
+
+				@include desktop-xl {
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			@include desktop {
+				left: auto;
+				right: vw(40);
+				bottom: vw(40);
+				width: vw(56);
+				height: vw(56);
+			}
+
+			@include desktop-xl {
+				right: 40px;
+				bottom: 40px;
+				width: 56px;
+				height: 56px;
+			}
+		}
+
+		@include desktop {
+			padding: vw(48) vw(110) vw(53) vw(48);
+			height: vw(448);
+
+			&:hover {
+				.page-support__item__arrow {
+					color: $color-cod-gray;
+					background: $color-white;
+				}
+			}
+		}
+
+		@include desktop-xl {
+			padding: 48px 110px 53px 48px;
+			height: 448px;
+		}
+	}
+
+	&__item--image {
+		padding: 0;
+	}
+}

@@ -1,0 +1,139 @@
+.tab {
+	&__list {
+		margin-bottom: vm(40);
+
+		ul {
+			display: flex;
+
+			li {
+				flex-shrink: 0;
+
+				+ li {
+					margin-left: vm(32);
+
+					@include desktop {
+						margin-left: vw(32);
+					}
+
+					@include desktop-xl {
+						margin-left: 32px;
+					}
+				}
+
+				a {
+					position: relative;
+
+					&::after {
+						content: "";
+						position: absolute;
+						left: 0;
+						bottom: vm(-20);
+						width: 100%;
+						height: vm(2);
+						background: $color-cod-gray;
+						opacity: 0;
+						visibility: hidden;
+						transition: $duration-normal;
+
+						@include desktop {
+							bottom: vw(-20);
+							height: vw(2);
+						}
+
+						@include desktop-xl {
+							bottom: -20px;
+							height: 2px;
+						}
+					}
+
+					&.is-active {
+						color: $color-cod-gray;
+
+						&::after {
+							opacity: 1;
+							visibility: visible;
+						}
+
+						.tab__list__number {
+							color: $color-white;
+							background: $color-cod-gray;
+						}
+
+						&:hover {
+							.tab__list__number {
+								color: $color-white;
+								background: $color-cod-gray;
+							}
+						}
+					}
+
+					@include desktop {
+						&:hover {
+							.tab__list__number {
+								color: $color-white;
+								background: $color-pomegranate;
+							}
+						}
+					}
+				}
+			}
+
+			@include mobile {
+				overflow: auto;
+				margin: 0 vm(-20);
+				padding: 0 vm(20) vm(18);
+			}
+		}
+
+		&__number {
+			display: inline-block;
+			margin-left: vm(8);
+			border-radius: vm(80);
+			padding: 1px vm(8);
+			font-size: vm(12);
+			background: $color-iron;
+			transition: $duration-normal;
+
+			@include desktop {
+				margin-left: vw(8);
+				border-radius: vw(80);
+				padding: 1px vw(8);
+				font-size: vw(12);
+			}
+
+			@include desktop-xl {
+				margin-left: 8px;
+				border-radius: 80px;
+				padding: 1px 8px;
+				font-size: 12px;
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(56);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 56px;
+		}
+	}
+
+	&__item {
+		display: none;
+
+		&.is-active {
+			display: block;
+			animation: tabShow $duration-normal;
+		}
+	}
+}
+
+@keyframes tabShow {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

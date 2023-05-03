@@ -1,0 +1,224 @@
+.top-menu {
+	position: relative;
+	z-index: 20;
+	margin-bottom: vm(24);
+
+	.swiper-wrapper {
+		@include desktop {
+			flex-wrap: wrap;
+		}
+	}
+
+	.swiper-container {
+		overflow: visible;
+	}
+
+	.swiper-slide {
+		width: auto;
+
+		@include mobile {
+			&:last-child {
+				padding-right: 0;
+
+				.top-menu__item {
+					padding-right: 0;
+				}
+			}
+
+			.top-menu__item {
+				padding-right: vm(16);
+			}
+		}
+
+		@include desktop {
+			margin-right: vw(42);
+			margin-bottom: vm(15);
+		}
+
+		@include desktop-xl {
+			margin-right: 42px;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__item {
+		position: relative;
+		flex-shrink: 0;
+		box-sizing: border-box;
+
+		.link-arrow {
+			&::after {
+				right: 0;
+				display: none;
+
+				@include desktop {
+					display: block;
+					top: vw(5);
+					transform: rotate(135deg);
+					transition: $duration-normal;
+				}
+
+				@include desktop-xl {
+					top: 5px;
+				}
+			}
+
+			@include desktop {
+				padding-right: vw(22);
+			}
+
+			@include desktop-xl {
+				padding-right: 22px;
+			}
+		}
+
+		&__arrow {
+			position: relative;
+			vertical-align: middle;
+			margin-left: vm(4);
+			outline: none;
+			border: none;
+			padding: 0;
+			width: vm(24);
+			height: vm(24);
+			background: transparent;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: vm(-2);
+				border-right: 1px solid $color-cod-gray;
+				border-bottom: 1px solid $color-cod-gray;
+				width: vm(8);
+				height: vm(8);
+				transform: translate(-50%, -50%) rotate(45deg);
+				transition: $duration-normal;
+			}
+		}
+
+		&__drop {
+			position: absolute;
+			left: 0;
+			top: 100%;
+			z-index: 5;
+			display: block;
+			margin-top: vm(8);
+			border: 1px solid $color-iron;
+			padding: vm(16);
+			letter-spacing: -0.006em;
+			white-space: nowrap;
+			background: $color-white;
+			opacity: 0;
+			visibility: hidden;
+			transition: $duration-normal;
+			pointer-events: none;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: 100%;
+				margin-bottom: 1px;
+				width: 100%;
+				height: vm(8);
+
+				@include desktop {
+					height: vm(8);
+				}
+
+				@include desktop-xl {
+					height: 8px;
+				}
+			}
+
+			ul {
+				li {
+					+ li {
+						margin-top: vm(8);
+
+						@include desktop {
+							margin-top: vw(8);
+						}
+
+						@include desktop-xl {
+							margin-top: 8px;
+						}
+					}
+				}
+			}
+
+			@include desktop {
+				margin-top: vw(8);
+				padding: vw(16);
+			}
+
+			@include desktop-xl {
+				margin-top: 8px;
+				padding: 16px;
+			}
+		}
+
+		&:hover {
+			@include desktop {
+				.link-arrow {
+					&::after {
+						top: vw(7);
+						border-color: $color-pomegranate;
+						transform: rotate(315deg);
+					}
+				}
+
+				.top-menu__item__drop {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: auto;
+				}
+			}
+
+			@include desktop-xl {
+				.link-arrow {
+					&::after {
+						top: 7px;
+					}
+				}
+			}
+		}
+
+		@include mobile {
+			border-top: 1px solid $color-cod-gray;
+			border-bottom: 1px solid $color-cod-gray;
+			padding: vm(9) 0;
+			height: vm(44);
+
+			&.is-active {
+				.top-menu__item__arrow {
+					&::before {
+						margin-left: vm(-4);
+						border-color: $color-pomegranate;
+						transform: rotate(225deg);
+					}
+				}
+
+				.top-menu__item__drop {
+					opacity: 1;
+					visibility: visible;
+					pointer-events: auto;
+				}
+			}
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(40);
+		border-top: 1px solid $color-cod-gray;
+		border-bottom: 1px solid $color-cod-gray;
+		padding: vw(25) 0 vw(10);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 40px;
+		padding: 25px 0 10px;
+	}
+}

@@ -1,0 +1,40 @@
+.container
+	.breadcrumbs
+		ul
+			li: a(href="#") Главная
+			li Где купить
+
+	h1.page-title.page-title--border
+		| Где купить-#[br]розничные продажи
+
+	.page-buyers(data-app="buyers")
+		.wrapper
+			.wrapper__side
+				.page-buyers__type
+					ul
+						li: a.is-active(href="#" data-type="type-1") Кондиционирование
+						li: a(href="#" data-type="type-2") Вентиляция
+						li: a(href="#" data-type="type-3") Отопление
+			.wrapper__content
+				form.page-buyers__filter(action="./ajax/buyers.json" method="get")
+					.page-buyers__filter__select
+						.input(data-app="select")
+							.input__field
+								select(data-placeholder="Выберите город")
+									option(value="")
+									option(value="1") Москва
+									option(value="2") Москва
+									option(value="3") Москва
+					.page-buyers__filter__type
+						ul
+							li: a.is-active(href="#" data-target="") Карта
+							li: a(href="#" data-target="is-show-list") Список
+					input.js-filter-type(type="hidden" name="type" value="type-1")
+				.page-buyers__map-container
+					.page-buyers__map(data-lat=55.755829 data-lng=37.617627 data-pin="./images/pin.svg" data-pin-active="./images/pin-active.svg")
+					.page-buyers__map-list
+
+				.page-buyers__list
+					.page-buyers__list__row
+					.page-buyers__list__more
+						a.button.button--black.js-show-hide(href="#" data-on="Скрыть" data-off="Показать еще" data-target=".page-buyers__list__col--hidden") Показать еще

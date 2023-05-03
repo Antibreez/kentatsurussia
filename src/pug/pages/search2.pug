@@ -1,0 +1,48 @@
+.container
+	.breadcrumbs
+		ul
+			li: a(href="#") Главная
+			li Хлебные крошки
+
+	h1.page-title.page-title--border
+		| Результаты поиска
+
+	.page-search
+		form.page-search__field.input(action="#" data-app="form" data-type="submit")
+			.input__field.input__field--search
+				input(type="text" name="q" placeholder="Поиск" value="Kanami inverter" data-validation={
+					maxlength: 300,
+					messages: {
+						required: "Введите поисковый запрос"
+					}
+				} required)
+				button.input__field__reset(type="button")
+				button.input__field__submit(type="submit"): +svg('search')
+		.page-search__found
+			| Найдено: 2 результата
+		.tab
+			.tab__list
+				ul
+					li: a(href="#") Дизайн
+					li: a.is-active(href="#") Забота о здоровье
+					li: a(href="#") Комфорт
+		.styles-content
+			h2 Заголовок
+			| Не следует открывать окна и&nbsp;двери при включенной сплит-системе. Приток свежего воздуха, безусловно, необходим. Но&nbsp;кондиционер, вынужденный постоянно охлаждать поступающие извне теплые потоки, не&nbsp;может достигнуть запрограммированных пользователем параметров и&nbsp;работает на&nbsp;полную мощность длительное время. Подобный подход способен сократить срок эксплуатации изделия на&nbsp;несколько лет.
+			br
+			br
+			a(href="#") Подробнее
+
+			h2 Заголовок
+			br
+			| Не&nbsp;направляйте холодный воздух на&nbsp;человека. Данный вопрос следует решить уже на&nbsp;этапе монтажа устройства. Сама сплит-система не&nbsp;относится к&nbsp;причинам возникновения простудных заболеваний, а&nbsp;только ее&nbsp;неправильное использования. Потоки кондиционера должны быть направлены в&nbsp;сторону от&nbsp;спальных, рабочих мест обитателей помещения.
+			br
+			br
+			a(href="#") Подробнее
+		.navigation
+			ul
+				li: a.is-active(href="#") 1
+				li: a(href="#") 2
+				li: a(href="#") 3
+				li ...
+				li: a(href="#") 16

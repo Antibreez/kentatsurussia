@@ -1,0 +1,147 @@
+.gallery {
+	&__preview {
+		position: relative;
+		margin-bottom: vm(16);
+
+		&__item {
+			&__play {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				border-radius: 50%;
+				width: vm(44);
+				height: vm(44);
+				background: $color-white;
+				transform: translate(-50%, -50%);
+
+				svg {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin: 1px 0 0 vm(3);
+					width: vm(16);
+					height: vm(16);
+					transform: translate(-50%, -50%);
+
+					@include desktop {
+						margin: 1px 0 0 vw(3);
+						width: vw(19);
+						height: vw(25);
+					}
+
+					@include desktop-xl {
+						margin: 1px 0 0 3px;
+						width: 19px;
+						height: 25px;
+					}
+				}
+
+				@include desktop {
+					width: vw(80);
+					height: vw(80);
+				}
+
+				@include desktop-xl {
+					width: 80px;
+					height: 80px;
+				}
+			}
+		}
+
+		@include desktop {
+			margin-bottom: vw(16);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__thumbs {
+		.swiper-slide {
+			position: relative;
+			width: vm(102);
+			cursor: pointer;
+
+			&::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				right: 0;
+				z-index: 5;
+				bottom: 0;
+				border: 1px solid $color-bombay;
+				opacity: 0;
+				transition: $duration-normal;
+			}
+
+			&-thumb-active {
+				&::after {
+					opacity: 1;
+				}
+			}
+
+			@include desktop {
+				width: vw(102);
+			}
+
+			@include desktop-xl {
+				width: 102px;
+			}
+		}
+
+		&__item {
+			position: relative;
+
+			a {
+				display: block;
+			}
+
+			&__play {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				border-radius: 50%;
+				width: vm(32);
+				height: vm(32);
+				background: $color-white;
+				transform: translate(-50%, -50%);
+
+				svg {
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					margin: 0 0 0 vm(2);
+					width: vm(12);
+					height: vm(12);
+					transform: translate(-50%, -50%);
+
+					@include desktop {
+						margin: 0 0 0 vw(2);
+						width: vw(12);
+						height: vw(12);
+					}
+
+					@include desktop-xl {
+						margin: 0 0 0 2px;
+						width: 12px;
+						height: 12px;
+					}
+				}
+
+				@include desktop {
+					width: vw(32);
+					height: vw(32);
+				}
+
+				@include desktop-xl {
+					width: 32px;
+					height: 32px;
+				}
+			}
+		}
+	}
+}

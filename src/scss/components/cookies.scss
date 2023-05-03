@@ -1,0 +1,87 @@
+.cookies {
+	position: fixed;
+	bottom: 0;
+	z-index: 50;
+	display: none;
+	width: 100%;
+	box-shadow: 0 0 vm(15) rgba($color-black, 0.15);
+
+	&__container {
+		display: flex;
+		align-items: center;
+		padding: vm(24);
+		background: $color-white;
+
+		@include mobile {
+			flex-wrap: wrap;
+		}
+
+		@include desktop {
+			padding: vw(24) vw(32);
+		}
+
+		@include desktop-xl {
+			padding: 24px 32px;
+		}
+	}
+
+	&__text {
+		margin-bottom: vm(15);
+		width: 100%;
+		font-size: vm(12);
+		line-height: vm(18);
+
+		@include desktop {
+			margin-bottom: 0;
+			font-size: vw(12);
+			line-height: vw(18);
+		}
+
+		@include desktop-xl {
+			font-size: 12px;
+			line-height: 18px;
+		}
+	}
+
+	&__button {
+		flex-shrink: 0;
+		margin: 0 auto;
+
+		.button {
+			padding: vm(12) vm(20);
+			font-size: vm(15);
+
+			@include desktop {
+				padding: vw(12) vw(20);
+				font-size: vw(15);
+			}
+
+			@include desktop-xl {
+				padding: 12px 20px;
+				font-size: 15px;
+			}
+		}
+
+		@include desktop {
+			margin: 0 0 0 vw(46);
+		}
+
+		@include desktop-xl {
+			margin: 0 0 0 46px;
+		}
+	}
+
+	@include desktop {
+		left: 50%;
+		bottom: vw(8);
+		width: vw(1190);
+		box-shadow: 0 0 vw(15) rgba($color-black, 0.15);
+		transform: translateX(-50%);
+	}
+
+	@include desktop-xl {
+		bottom: 8px;
+		width: 1190px;
+		box-shadow: 0 0 15px rgba($color-black, 0.15);
+	}
+}

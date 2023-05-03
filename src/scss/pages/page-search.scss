@@ -1,0 +1,133 @@
+.page-search {
+	&__field {
+		margin-bottom: vm(8);
+
+		@include desktop {
+			margin-bottom: vw(8);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 8px;
+		}
+	}
+
+	&__found {
+		margin-bottom: vm(24);
+		font-size: vm(12);
+		color: $color-bombay;
+
+		@include desktop {
+			margin-bottom: vw(40);
+			font-size: vw(12);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+			font-size: 12px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 vm(-85);
+
+		@include desktop {
+			margin: 0 vw(-85);
+		}
+
+		@include desktop-xl {
+			margin: 0 -85px;
+		}
+	}
+
+	&__col {
+		margin-bottom: vm(20);
+		padding: 0 vm(85);
+		width: 100%;
+
+		@include desktop {
+			margin-bottom: vw(40);
+			padding: 0 vw(85);
+			width: 33.33334%;
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+			padding: 0 85px;
+		}
+	}
+
+	&__item {
+		text-align: center;
+		border: 1px solid transparent;
+		transition: $duration-normal;
+
+		&__image {
+			margin-bottom: vm(8);
+
+			@include desktop {
+				margin-bottom: vw(8);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 8px;
+			}
+		}
+
+		&__title {
+			margin-top: 0;
+		}
+
+		&__text {
+			margin-bottom: vm(15);
+
+			@include desktop {
+				margin-bottom: vw(15);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 15px;
+			}
+		}
+
+		&__link {
+			a {
+				font-weight: 600;
+				color: $color-pomegranate;
+
+				&:hover {
+					color: $color-crimson;
+				}
+			}
+		}
+
+		@include desktop {
+			padding: vw(22) vw(21) vw(15);
+
+			&:hover {
+				border-color: $color-concrete;
+			}
+		}
+
+		@include desktop-xl {
+			padding: 22px 21px 15px;
+		}
+	}
+
+	.navigation {
+		margin-top: vm(30);
+
+		ul {
+			justify-content: center;
+		}
+
+		@include desktop {
+			margin-top: vw(56);
+		}
+
+		@include desktop-xl {
+			margin-top: 56px;
+		}
+	}
+}

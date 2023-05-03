@@ -1,0 +1,178 @@
+.slider {
+	position: relative;
+	margin-bottom: vm(4);
+	transition: $duration-normal;
+
+	.swiper-slide {
+		height: auto;
+	}
+
+	&__item {
+		position: relative;
+		z-index: 5;
+		padding: vm(24) vm(16) vm(330);
+		height: 100%;
+		box-sizing: border-box;
+		background: #eee;
+		transition: background $duration-normal;
+
+		&__image {
+			position: absolute;
+			left: 0;
+			bottom: 0;
+			z-index: -1;
+			width: 100%;
+			height: 100%;
+			background: 50% 50% no-repeat;
+			background-size: cover;
+
+			@include mobile {
+				height: vm(320);
+				background: 91% 50% no-repeat;
+				background-size: auto 100%;
+			}
+
+			@include desktop {
+				top: 0;
+				bottom: auto;
+			}
+		}
+
+		&__content {
+			max-width: 594px;
+
+			@include desktop {
+				max-width: vw(594);
+			}
+
+			@include desktop-xl {
+				max-width: 594px;
+			}
+		}
+
+		&__title {
+			margin-bottom: 24px;
+
+			@include desktop {
+				margin-bottom: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__text {
+			margin: 0;
+			max-width: 250px;
+
+			@include desktop {
+				max-width: vw(250);
+			}
+
+			@include desktop-xl {
+				max-width: 250px;
+			}
+		}
+
+		@include desktop {
+			padding: vw(40);
+			height: vw(585);
+			background: none;
+		}
+
+		@include desktop-xl {
+			padding: 40px;
+			height: 585px;
+		}
+	}
+
+	&__pager {
+		position: absolute;
+		left: vm(16);
+		bottom: vm(16);
+		z-index: 5;
+		user-select: none;
+
+		.swiper-pagination-bullet {
+			display: inline-block;
+			vertical-align: middle;
+			width: vm(8);
+			height: vm(8);
+			background: currentColor;
+			cursor: pointer;
+
+			+ .swiper-pagination-bullet {
+				margin-left: vm(16);
+
+				@include desktop {
+					margin-left: vw(16);
+				}
+
+				@include desktop-xl {
+					margin-left: 16px;
+				}
+			}
+
+			&.swiper-pagination-bullet-active {
+				background: $color-pomegranate;
+			}
+
+			@include desktop {
+				width: vw(8);
+				height: vw(8);
+			}
+
+			@include desktop-xl {
+				width: 8px;
+				height: 8px;
+			}
+		}
+
+		@include desktop {
+			left: vw(45);
+			bottom: vw(32);
+		}
+
+		@include desktop-xl {
+			left: 45px;
+			bottom: 32px;
+		}
+	}
+
+	&--dark {
+		color: $color-white;
+
+		@include mobile {
+			.slider__item {
+				background: #131212;
+			}
+		}
+	}
+
+	&.anime {
+		opacity: 0;
+		transition: opacity $duration-normal * 2;
+
+		.slider__item__content {
+			transform: translateY(50px);
+			transition: transform $duration-normal * 3;
+		}
+
+		&.animated {
+			opacity: 1;
+
+			.slider__item__content {
+				transform: translateY(0);
+			}
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(7);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 7px;
+	}
+}

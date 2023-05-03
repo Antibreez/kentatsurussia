@@ -1,0 +1,153 @@
+.become-partner {
+	margin-bottom: vm(56);
+	color: $color-white;
+	background: $color-pomegranate;
+
+	&__content {
+		padding: vm(24) vm(16);
+
+		@include desktop {
+			padding: vw(52) vw(48) vw(40);
+		}
+	
+		@include desktop-xl {
+			padding: 52px 48px 40px;
+		}
+	}
+
+	&__container {
+		@include desktop {
+			display: flex;
+		}
+	}
+
+	&__title {
+		@include desktop {
+			flex-shrink: 0;
+			margin-right: vw(30);
+			width: vw(603);
+		}
+	
+		@include desktop-xl {
+			margin-right: 30px;
+			width: 603px;
+		}
+	}
+
+	&__text {
+		display: none;
+
+		&-container {
+			margin-bottom: vm(40);
+
+			@include desktop {
+				margin-bottom: vw(60);
+				padding-top: vw(4);
+				width: 100%;
+				min-height: vw(220);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 60px;
+				padding-top: 4px;
+				min-height: 220px;
+			}
+		}
+
+		&.is-active {
+			display: block;
+			animation: becomePartnerText $duration-normal;
+		}
+
+		@include desktop {
+			max-width: vw(434);
+			font-size: vw(18);
+			line-height: vw(24);
+		}
+	
+		@include desktop-xl {
+			max-width: 434px;
+			font-size: 18px;
+			line-height: 24px;
+		}
+	}
+
+	&__links {
+		font-weight: 700;
+		font-size: vm(18);
+
+		li {
+			flex: 1;
+
+			+ li {
+				@include mobile {
+					margin-top: vm(24);
+				}
+			}
+
+			a {
+				color: $color-white;
+
+				svg {
+					display: inline-block;
+					vertical-align: middle;
+					margin-left: vm(16);
+					width: vm(24);
+					height: vm(24);
+
+					@include desktop {
+						margin-left: vw(16);
+						width: vw(24);
+						height: vw(24);
+					}
+				
+					@include desktop-xl {
+						margin-left: 16px;
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-top: auto;
+			font-size: vw(18);
+		}
+	
+		@include desktop-xl {
+			font-size: 18px;
+		}
+	}
+
+	&__image {
+		img {
+			width: 100%;
+
+			@include mobile {
+				height: vm(220);
+				object-fit: cover;
+				object-position: 9% 50%;
+			}
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(96);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 96px;
+	}
+}
+
+@keyframes becomePartnerText {
+	0% {
+		opacity: 0;
+	}
+
+	100% {
+		opacity: 1;
+	}
+}

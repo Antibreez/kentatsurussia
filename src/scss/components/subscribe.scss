@@ -1,0 +1,159 @@
+.subscribe {
+	margin: vm(56) 0 0;
+	padding: vm(24) vm(16);
+	background: $color-concrete;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__title {
+		sup {
+			top: vm(-3);
+
+			img {
+				width: vm(20);
+
+				@include desktop {
+					width: vw(20);
+				}
+
+				@include desktop-xl {
+					width: 20px;
+				}
+			}
+
+			@include desktop {
+				top: vw(-3);
+			}
+
+			@include desktop-xl {
+				top: -3px;
+			}
+		}
+	}
+
+	&__text {
+		margin-bottom: vm(36);
+
+		@include desktop {
+			margin-bottom: vw(56);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 56px;
+		}
+	}
+
+	&__form {
+		margin-top: auto;
+
+		&__row {
+			margin-bottom: vm(17);
+
+			@include desktop {
+				display: flex;
+				margin-bottom: vw(17);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 17px;
+			}
+		}
+
+		&__input {
+			.input__field {
+				input {
+					padding-right: vm(20);
+					background: $color-white;
+
+					&::placeholder {
+						color: $color-bombay;
+					}
+
+					@include desktop {
+						padding-right: vw(20);
+						width: vw(280);
+					}
+
+					@include desktop-xl {
+						padding-right: 20px;
+						width: 280px;
+					}
+				}
+			}
+		}
+
+		&__button {
+			.button {
+				padding: vm(18) vm(32);
+				width: 100%;
+
+				@include desktop {
+					padding: vw(18) vw(32);
+					width: auto;
+				}
+
+				@include desktop-xl {
+					padding: 18px 32px;
+				}
+			}
+		}
+
+		&__checkbox {
+			.checkbox {
+				label {
+					i {
+						background: $color-white;
+					}
+				}
+			}
+		}
+	}
+
+	&__image {
+		flex-shrink: 0;
+		margin-top: vm(24);
+		text-align: center;
+
+		img {
+			width: vm(200);
+
+			@include desktop {
+				width: vw(360);
+			}
+
+			@include desktop-xl {
+				width: 360px;
+			}
+		}
+
+		@include desktop {
+			margin-top: 0;
+			margin-left: vw(136);
+		}
+
+		@include desktop-xl {
+			margin-left: 136px;
+		}
+	}
+
+	&:first-child {
+		margin-top: 0;
+	}
+
+	@include desktop {
+		display: flex;
+		margin: vw(120) auto 0;
+		padding: vw(40) vw(96) vw(40) vw(48);
+		width: vw(1105);
+	}
+
+	@include desktop-xl {
+		margin: 120px auto 0;
+		padding: 40px 96px 40px 48px;
+		width: 1105px;
+	}
+}

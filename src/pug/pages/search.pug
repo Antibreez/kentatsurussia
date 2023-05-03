@@ -1,0 +1,130 @@
+.container
+	.breadcrumbs
+		ul
+			li: a(href="#") Главная
+			li Хлебные крошки
+
+	h1.page-title.page-title--border
+		| Результаты поиска
+
+	.page-search
+		form.page-search__field.input(action="#" data-app="form" data-type="submit")
+			.input__field.input__field--search
+				input(type="text" name="q" placeholder="Поиск" data-validation={
+					maxlength: 300,
+					messages: {
+						required: "Введите поисковый запрос"
+					}
+				} required)
+				button.input__field__reset(type="button")
+				button.input__field__submit(type="submit"): +svg('search')
+		.page-search__found
+			| Найдено: 2 результата
+		.tab
+			.tab__list
+				ul
+					li: a.is-active(href="#")
+						| Каталог
+						span.tab__list__number 16
+					li: a(href="#") Новости
+						span.tab__list__number 8
+					li: a(href="#") Техническая документация
+						span.tab__list__number 32
+		.page-search__row
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+			.page-search__col
+				.page-search__item
+					.page-search__item__image
+						img(src="./images/product-2.png" alt="")
+					.h4.page-search__item__title
+						| KSGP35HZRN1
+					.page-search__item__text
+						| SEMPAI
+					.page-search__item__link
+						a(href="#") Где купить
+		.navigation
+			ul
+				li: a.is-active(href="#") 1
+				li: a(href="#") 2
+				li: a(href="#") 3
+				li ...
+				li: a(href="#") 16

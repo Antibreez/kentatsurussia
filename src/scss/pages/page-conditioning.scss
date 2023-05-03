@@ -1,0 +1,432 @@
+.page-conditioning {
+	.page-title {
+		@include desktop {
+			margin-bottom: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+		}
+	}
+
+	&__intro {
+		display: flex;
+		justify-content: space-between;
+		margin-bottom: vm(56);
+		padding: vm(32) vm(16);
+		color: $color-white;
+		background: $color-cod-gray;
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			width: 100%;
+
+			@include desktop {
+				width: vw(538);
+			}
+
+			@include desktop-xl {
+				width: 538px;
+			}
+		}
+
+		&__text {
+			margin-bottom: vm(32);
+			font-size: vm(14);
+			letter-spacing: -0.006em;
+
+			@include desktop {
+				margin-bottom: vw(80);
+				font-size: vw(14);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 80px;
+				font-size: 14px;
+			}
+		}
+
+		&__subtext {
+			margin-top: auto;
+			font-weight: 600;
+		}
+
+		&__image {
+			img {
+				max-height: vm(300);
+
+				@include desktop {
+					max-width: vw(465);
+					max-height: vw(465);
+				}
+
+				@include desktop-xl {
+					max-width: 465px;
+					max-height: 465px;
+				}
+			}
+
+			@include mobile {
+				order: -1;
+				margin-bottom: vm(32);
+				width: 100%;
+				text-align: center;
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+				margin-left: auto;
+			}
+		}
+
+		@include mobile {
+			flex-wrap: wrap;
+		}
+
+		@include desktop {
+			margin-bottom: vw(96);
+			padding: vw(40) vw(85) vw(40) vw(48);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+			padding: 40px 85px 40px 48px;
+		}
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 vm(-12);
+
+		@include desktop {
+			margin: 0 vw(-12);
+		}
+
+		@include desktop-xl {
+			margin: 0 -12px;
+		}
+	}
+
+	&__col {
+		margin-bottom: vm(24);
+		padding: 0 vm(12);
+		width: 100%;
+
+		@include desktop {
+			margin-bottom: vw(24);
+			padding: 0 vw(12);
+			width: 50%;
+		}
+
+		@include desktop-xl {
+			margin-bottom: 24px;
+			padding: 0 12px;
+		}
+	}
+
+	&__col--width-100 {
+		.page-conditioning__item {
+			&__content {
+				@include desktop {
+					max-width: vw(547);
+				}
+
+				@include desktop-xl {
+					max-width: 547px;
+				}
+			}
+
+			&__title,
+			&__tag,
+			&__benefits,
+			&__text {
+				max-width: none;
+			}
+
+			&__benefits {
+				ul {
+					flex-direction: row;
+					flex-wrap: wrap;
+				}
+			}
+
+			&__image {
+				margin-right: 0;
+
+				@include desktop {
+					position: relative;
+					top: 0;
+					margin-left: vw(230);
+					transform: none;
+				}
+
+				@include desktop-xl {
+					margin-left: 230px;
+				}
+			}
+
+			@include desktop {
+				display: flex;
+				align-items: center;
+			}
+		}
+
+		@include desktop {
+			width: 100%;
+		}
+	}
+
+	&__item {
+		position: relative;
+		z-index: 5;
+		overflow: hidden;
+		padding: vm(32) vm(16);
+		background: $color-concrete;
+
+		&__content {
+			display: flex;
+			flex-direction: column;
+			height: 100%;
+		}
+
+		&__benefits {
+			margin: vm(24) 0 vm(12);
+
+			ul {
+				display: flex;
+				flex-direction: column;
+				align-items: flex-start;
+
+				li {
+					margin-top: vm(8);
+					margin-right: vm(8);
+					border-radius: vm(80);
+					padding: vm(9) vm(18);
+					font-size: vm(14);
+					letter-spacing: -0.006em;
+					white-space: nowrap;
+					color: $color-cod-gray;
+					background: $color-white;
+
+					@include desktop {
+						margin-top: vw(8);
+						margin-right: vw(8);
+						border-radius: vw(80);
+						padding: vw(6) vw(12);
+						font-size: vw(14);
+					}
+
+					@include desktop-xl {
+						margin-top: 8px;
+						margin-right: 8px;
+						border-radius: 80px;
+						padding: 6px 12px;
+						font-size: 14px;
+					}
+				}
+			}
+
+			@include desktop {
+				margin: auto 0 0;
+				max-width: vw(350);
+			}
+
+			@include desktop-xl {
+				max-width: 350px;
+			}
+		}
+
+		&__tag {
+			margin: vm(16) 0 vm(12);
+
+			ul {
+				display: flex;
+				flex-wrap: wrap;
+
+				li {
+					margin-top: vm(8);
+					margin-right: vm(8);
+
+					a {
+						display: block;
+						border-radius: vm(80);
+						padding: vm(9) vm(18);
+						font-size: vm(14);
+						letter-spacing: -0.006em;
+						white-space: nowrap;
+						color: $color-cod-gray;
+						background: $color-white;
+
+						&:hover {
+							color: $color-white;
+							background: $color-pomegranate;
+						}
+
+						@include desktop {
+							border-radius: vw(80);
+							padding: vw(6) vw(12);
+							font-size: vw(14);
+						}
+
+						@include desktop-xl {
+							border-radius: 80px;
+							padding: 6px 12px;
+							font-size: 14px;
+						}
+					}
+
+					@include desktop {
+						margin-top: vw(8);
+						margin-right: vw(8);
+					}
+
+					@include desktop-xl {
+						margin-top: 8px;
+						margin-right: 8px;
+					}
+				}
+			}
+
+			@include desktop {
+				margin: auto 0 0;
+				max-width: vw(350);
+			}
+
+			@include desktop-xl {
+				max-width: 350px;
+			}
+		}
+
+		&__title {
+			@include desktop {
+				max-width: vw(304);
+			}
+
+			@include desktop-xl {
+				max-width: 304px;
+			}
+		}
+
+		&__text {
+			@include desktop {
+				max-width: vw(304);
+			}
+
+			@include desktop-xl {
+				max-width: 304px;
+			}
+		}
+
+		&__image {
+			margin-top: vm(16);
+			margin-right: vm(-16);
+
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(316);
+				}
+
+				@include desktop-xl {
+					width: 316px;
+				}
+			}
+
+			@include desktop {
+				position: absolute;
+				right: 0;
+				top: 50%;
+				z-index: -1;
+				margin-top: 0;
+				margin-right: 0;
+				transform: translateY(-50%);
+			}
+		}
+
+		&__image--2 {
+			img {
+				@include desktop {
+					width: vw(265);
+				}
+
+				@include desktop-xl {
+					width: 265px;
+				}
+			}
+		}
+
+		&__image--3 {
+			img {
+				@include desktop {
+					width: vw(372);
+				}
+
+				@include desktop-xl {
+					width: 372px;
+				}
+			}
+		}
+
+		&__image--4 {
+			img {
+				@include desktop {
+					width: vw(300);
+				}
+
+				@include desktop-xl {
+					width: 300px;
+				}
+			}
+		}
+
+		&__image--5 {
+			img {
+				@include desktop {
+					width: vw(245);
+				}
+
+				@include desktop-xl {
+					width: 245px;
+				}
+			}
+		}
+
+		&__image--6 {
+			img {
+				@include desktop {
+					width: vw(358);
+				}
+
+				@include desktop-xl {
+					width: 358px;
+				}
+			}
+		}
+
+		&__image--7 {
+			img {
+				@include desktop {
+					width: vw(428);
+				}
+
+				@include desktop-xl {
+					width: 428px;
+				}
+			}
+		}
+
+		@include desktop {
+			padding: vw(40) vw(48);
+			height: 100%;
+			min-height: vw(440);
+		}
+
+		@include desktop-xl {
+			padding: 40px 48px;
+			min-height: 440px;
+		}
+	}
+}

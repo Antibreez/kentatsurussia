@@ -1,0 +1,1233 @@
+.form {
+	.checkbox {
+		font-size: 12px;
+	}
+
+	.button {
+		margin-top: 16px;
+		padding: 20px 30px;
+		font-size: 15px;
+	}
+
+	&__row {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 0 vm(-12);
+
+		@include desktop {
+			margin: 0 vw(-12);
+		}
+
+		@include desktop-xl {
+			margin: 0 -12px;
+		}
+	}
+
+	&__col {
+		padding: 0 vm(12);
+		width: 100%;
+
+		@include desktop {
+			padding: 0 vw(12);
+			width: 50%;
+		}
+
+		@include desktop-xl {
+			padding: 0 12px;
+		}
+	}
+
+	&__col--width {
+		width: 100%;
+	}
+
+	&__imp {
+		color: $color-pomegranate;
+	}
+}
+
+.input {
+	position: relative;
+	margin-bottom: vm(20);
+
+	&__label {
+		margin-bottom: vm(5);
+		font-size: vm(14);
+		color: $color-bombay;
+
+		@include desktop {
+			margin-bottom: vw(5);
+			font-size: vw(14);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+	}
+
+	&__field {
+		position: relative;
+		display: flex;
+		flex-direction: column;
+
+		input,
+		textarea {
+			appearance: none;
+			outline: none;
+			border: 1px solid transparent;
+			padding: 0 vm(50) 0 vm(20);
+			width: 100%;
+			height: vm(56);
+			background: $color-concrete;
+			transition: $duration-normal;
+
+			&::-ms-clear {
+				display: none;
+			}
+
+			&::placeholder {
+				color: $color-bombay;
+			}
+
+			&:focus {
+				border-color: $color-bombay;
+
+				~ .input__field__submit {
+					color: $color-cod-gray;
+
+					&:hover {
+						color: $color-pomegranate;
+					}
+				}
+			}
+
+			&:disabled {
+				background: $color-iron;
+				pointer-events: none;
+			}
+
+			&.error {
+				border-color: $color-red-orange;
+			}
+
+			@include desktop {
+				padding: 0 vw(50) 0 vw(20);
+				height: vw(56);
+			}
+
+			@include desktop-xl {
+				padding: 0 50px 0 20px;
+				height: 56px;
+			}
+		}
+
+		textarea {
+			padding: vm(16) vm(20) 0;
+			height: vm(104);
+			resize: none;
+
+			@include desktop {
+				padding: vw(16) vw(20) 0;
+				height: vw(104);
+			}
+
+			@include desktop-xl {
+				padding: 16px 20px 0;
+				height: 104px;
+			}
+		}
+
+		select {
+			appearance: none;
+			border: none;
+			padding: 0 vm(50) 0 vm(20);
+			width: 100%;
+			height: vm(56);
+			background: url("../images/triangle-fill.svg") #f3f3f3 92% 55% no-repeat;
+			background-size: vw(10) vw(6);
+
+			&.error ~ {
+				.select2-container--default {
+					.select2-selection {
+						&__rendered {
+							border-color: $color-red-orange;
+						}
+					}
+				}
+			}
+
+			@include desktop {
+				padding: 0 vw(50) 0 vw(20);
+				height: vw(56);
+				background-size: vw(10) vw(6);
+			}
+
+			@include desktop-xl {
+				padding: 0 50px 0 20px;
+				height: 56px;
+				background-size: 10px 6px;
+			}
+		}
+
+		.select2-container {
+			display: inline-block;
+			vertical-align: middle;
+			width: 100% !important;
+
+			&--focus {
+				&.select2-container--default {
+					.select2-selection {
+						&__rendered {
+							border-color: $color-bombay;
+						}
+					}
+				}
+			}
+
+			&--open {
+				&.select2-container--default {
+					.select2-selection {
+						&__arrow {
+							transform: rotate(180deg);
+						}
+					}
+				}
+			}
+		}
+
+		.select2-container--default {
+			.select2-selection {
+				outline: none;
+				border: none;
+				border-radius: 0;
+				background-color: transparent;
+
+				&__rendered {
+					display: flex;
+					align-items: center;
+					border: solid 1px transparent;
+					padding: 0 vm(50) 0 vm(20);
+					height: 100%;
+					color: $color-cod-gray;
+					background: $color-concrete;
+					transition: $duration-normal;
+
+					@include desktop {
+						padding: 0 vw(50) 0 vw(20);
+					}
+
+					@include desktop-xl {
+						padding: 0 50px 0 20px;
+					}
+				}
+
+				&__placeholder {
+					color: $color-bombay;
+				}
+
+				&__arrow {
+					right: vm(26);
+					top: 50%;
+					border: vm(5.1) solid transparent;
+					border-top: vm(5.1) solid $color-cod-gray;
+					width: 0;
+					height: 0;
+					transform-origin: 50% 25%;
+					transition: $duration-normal;
+
+					b {
+						display: none;
+					}
+
+					@include desktop {
+						right: vw(26);
+						border: vw(5) solid transparent;
+						border-top: vw(5) solid $color-cod-gray;
+					}
+
+					@include desktop-xl {
+						right: 26px;
+						border: 5px solid transparent;
+						border-top: 5px solid $color-cod-gray;
+					}
+				}
+
+				&--single {
+					height: vm(56);
+
+					@include desktop {
+						height: vw(56);
+					}
+
+					@include desktop-xl {
+						height: 56px;
+					}
+				}
+			}
+
+			.select2-dropdown {
+				margin-top: vm(8);
+				border: 1px solid $color-bombay;
+				padding: vm(8) 0;
+				background: $color-white;
+
+				@include desktop {
+					margin-top: vw(8);
+					padding: vw(8) 0;
+				}
+
+				@include desktop-xl {
+					margin-top: 8px;
+					padding: 8px 0;
+				}
+			}
+
+			.select2-results__options {
+				max-height: vm(190);
+
+				&::-webkit-scrollbar {
+					width: vm(8);
+					height: vm(8);
+					background-color: transparent;
+
+					@include desktop {
+						width: vw(8);
+						height: vw(8);
+					}
+
+					@include desktop-xl {
+						width: 8px;
+						height: 8px;
+					}
+				}
+
+				&::-webkit-scrollbar-track {
+					background-color: transparent;
+				}
+
+				&::-webkit-scrollbar-thumb {
+					border-right: solid vm(4) $color-white;
+					background-color: rgba($color-black, 0.3);
+					opacity: 0;
+
+					@include desktop {
+						border-right: solid vw(4) $color-white;
+					}
+
+					@include desktop-xl {
+						border-right: solid 4px $color-white;
+					}
+				}
+
+				@include desktop {
+					max-height: vw(190);
+				}
+
+				@include desktop-xl {
+					max-height: 190px;
+				}
+			}
+
+			.select2-results__option {
+				padding: vm(8) vm(20);
+				background: none;
+				transition: $duration-normal;
+
+				&--highlighted,
+				&[aria-selected="true"] {
+					color: $color-cod-gray;
+					background: $color-concrete;
+				}
+
+				@include desktop {
+					padding: vw(8) vw(20);
+				}
+
+				@include desktop-xl {
+					padding: 8px 20px;
+				}
+			}
+		}
+
+		.select2-search--dropdown {
+			padding: 0;
+
+			.select2-search__field {
+				outline: none;
+				border: none;
+				padding: 0 vm(50) 0 vm(20);
+
+				@include desktop {
+					padding: 0 vw(50) 0 vw(20);
+				}
+
+				@include desktop-xl {
+					padding: 0 50px 0 20px;
+				}
+			}
+		}
+
+		&__eye {
+			position: absolute;
+			right: vm(20);
+			top: vm(16);
+			display: inline-block;
+			width: vm(24);
+			height: vm(24);
+			background: url("../images/sprites/svg/eye-off.svg") 0 0 no-repeat;
+			background-size: cover;
+
+			&.is-eye-view {
+				background: url("../images/sprites/svg/eye.svg") 0 0 no-repeat;
+				background-size: cover;
+			}
+
+			@include desktop {
+				right: vw(20);
+				top: vw(16);
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				right: 20px;
+				top: 16px;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&__calendar {
+			position: absolute;
+			right: vm(20);
+			top: vm(16);
+			width: vm(24);
+			height: vm(24);
+			pointer-events: none;
+
+			@include desktop {
+				right: vw(20);
+				top: vw(16);
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				right: 20px;
+				top: 16px;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&__reset {
+			position: absolute;
+			right: vm(50);
+			top: vm(16);
+			z-index: 5;
+			display: none;
+			outline: none;
+			border: none;
+			padding: 0;
+			width: vm(24);
+			height: vm(24);
+			background: none;
+			transition: $duration-normal;
+
+			&::before,
+			&::after {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin: -1px 0 0 vm(-9);
+				width: vm(17);
+				height: 1px;
+				background: currentColor;
+
+				@include desktop {
+					margin: -1px 0 0 vw(-9);
+					width: vw(17);
+				}
+
+				@include desktop-xl {
+					margin: -1px 0 0 -9px;
+					width: 17px;
+				}
+			}
+
+			&::before {
+				transform: rotate(45deg);
+			}
+
+			&::after {
+				transform: rotate(-45deg);
+			}
+
+			.is-filled & {
+				display: block;
+			}
+
+			@include desktop {
+				right: vw(56);
+				top: vw(16);
+				width: vw(24);
+				height: vw(24);
+
+				&:hover {
+					color: $color-pomegranate;
+				}
+			}
+
+			@include desktop-xl {
+				right: 56px;
+				top: 16px;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		&__submit {
+			position: absolute;
+			right: vm(16);
+			top: vm(16);
+			outline: none;
+			border: none;
+			padding: 0;
+			color: $color-bombay;
+			background: none;
+
+			svg {
+				display: block;
+				padding-bottom: 2px;
+				width: vm(24);
+				height: vm(24);
+
+				@include desktop {
+					width: vw(24);
+					height: vw(24);
+				}
+
+				@include desktop-xl {
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			.is-filled & {
+				color: $color-cod-gray;
+			}
+
+			@include desktop {
+				right: vw(16);
+				top: vw(16);
+
+				&:hover {
+					color: $color-pomegranate;
+				}
+			}
+
+			@include desktop-xl {
+				right: 16px;
+				top: 16px;
+			}
+		}
+
+		label.error {
+			display: block;
+			order: 2;
+			margin-top: vm(8);
+			font-size: vm(12);
+			color: $color-red-orange;
+
+			@include desktop {
+				margin-top: vw(8);
+				font-size: vw(12);
+			}
+
+			@include desktop-xl {
+				margin-top: 8px;
+				font-size: 12px;
+			}
+		}
+
+		&.is-disabled {
+			opacity: 0.5;
+			pointer-events: none;
+		}
+
+		&.is-loading {
+			pointer-events: none;
+
+			&::after {
+				content: "";
+				position: absolute;
+				right: vm(18);
+				top: vm(18);
+				z-index: 5;
+				border: solid 2px $color-pomegranate;
+				border-bottom-color: rgba($color-pomegranate, 0.2);
+				border-radius: 50%;
+				width: vm(20);
+				height: vm(20);
+				animation: buttonLoading linear 1s infinite;
+
+				@include desktop {
+					right: vw(18);
+					top: vw(18);
+					width: vw(20);
+					height: vw(20);
+				}
+
+				@include desktop-xl {
+					right: 18px;
+					top: 18px;
+					width: 20px;
+					height: 20px;
+				}
+			}
+
+			.select2-container--default {
+				.select2-selection {
+					&__arrow {
+						opacity: 0;
+						visibility: hidden;
+					}
+				}
+			}
+		}
+
+		&--search {
+			.select2-selection__arrow {
+				display: none;
+			}
+
+			.select2-container--default {
+				.select2-dropdown {
+					margin-top: vm(-56);
+					border-radius: 0;
+					padding: 0;
+					box-shadow: none;
+					background: transparent;
+
+					.select2-search--dropdown {
+						margin-bottom: vm(8);
+
+						@include desktop {
+							margin-bottom: vw(8);
+						}
+
+						@include desktop-xl {
+							margin-bottom: 0;
+						}
+					}
+
+					.select2-results {
+						box-shadow: 0 vm(4) vm(24) rgba(67, 72, 78, 0.2);
+						background: $color-white;
+
+						.select2-results__message {
+							padding: vm(12);
+							font-size: vm(12);
+							text-align: center;
+							color: #999;
+
+							@include desktop {
+								padding: vw(12);
+								font-size: vw(12);
+							}
+
+							@include desktop-xl {
+								padding: 12px;
+								font-size: 12px;
+							}
+						}
+
+						@include desktop {
+							box-shadow: 0 vw(4) vw(24) rgba(67, 72, 78, 0.2);
+						}
+
+						@include desktop-xl {
+							box-shadow: 0 4px 24px rgba(67, 72, 78, 0.2);
+						}
+					}
+
+					@include desktop {
+						margin-top: vw(-56);
+					}
+
+					@include desktop-xl {
+						margin-top: -56px;
+					}
+				}
+			}
+		}
+	}
+
+	&__field--search {
+		input {
+			padding-right: vm(85);
+
+			@include desktop {
+				padding-right: vw(90);
+			}
+
+			@include desktop-xl {
+				padding-right: 90px;
+			}
+		}
+	}
+
+	@include desktop {
+		margin-bottom: vw(20);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 20px;
+	}
+}
+
+.checkbox {
+	margin-bottom: vw(24);
+
+	label {
+		position: relative;
+		display: inline-block;
+		padding: 0 0 0 vm(35);
+		transition: $duration-normal;
+		cursor: pointer;
+
+		input {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+			transform: translate(-50%, -50%);
+
+			&:checked ~ i {
+				background: $color-cod-gray;
+
+				&::before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			&:focus {
+				~ i {
+					@include desktop {
+						box-shadow: 0 0 0 2px $color-white, 0 0 0 vw(4) $color-pomegranate;
+					}
+
+					@include desktop-xl {
+						box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-pomegranate;
+					}
+				}
+			}
+
+			&:disabled {
+				~ i {
+					background: $color-iron;
+
+					&::before {
+						border-color: $color-cod-gray;
+					}
+				}
+
+				~ span {
+					color: $color-bombay;
+				}
+			}
+
+			&.error ~ i {
+				border-color: $color-red-orange;
+			}
+		}
+
+		i {
+			position: absolute;
+			left: 0;
+			top: -1px;
+			border: solid 1px transparent;
+			width: vm(24);
+			height: vm(24);
+			background: $color-concrete;
+			transition: background-color $duration-normal;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				margin-top: -2px;
+				border-right: 1px solid $color-white;
+				border-bottom: 1px solid $color-white;
+				width: vm(6);
+				height: vm(10);
+				opacity: 0;
+				visibility: hidden;
+				transform: translate3d(-50%, -50%, 0) rotate(45deg);
+				transition: $duration-normal;
+
+				@include desktop {
+					width: vw(6);
+					height: vw(10);
+				}
+
+				@include desktop-xl {
+					width: 6px;
+					height: 10px;
+				}
+			}
+
+			@include desktop {
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@include desktop {
+			padding: 0 0 0 vw(35);
+		}
+
+		@include desktop-xl {
+			padding: 0 0 0 35px;
+		}
+	}
+
+	label.error {
+		display: none !important;
+	}
+
+	@include desktop {
+		margin-bottom: vw(24);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 24px;
+	}
+}
+
+.radio {
+	margin-bottom: vm(24);
+
+	label {
+		position: relative;
+		display: inline-block;
+		padding: 0 0 0 vm(35);
+		transition: $duration-normal;
+		cursor: pointer;
+
+		input {
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			z-index: -1;
+			width: 1px;
+			height: 1px;
+			opacity: 0;
+			transform: translate(-50%, -50%);
+
+			&:checked ~ i {
+				background: $color-cod-gray;
+
+				&::before {
+					opacity: 1;
+					visibility: visible;
+				}
+			}
+
+			&:focus {
+				~ i {
+					@include desktop {
+						box-shadow: 0 0 0 2px $color-white, 0 0 0 vw(4) $color-pomegranate;
+					}
+
+					@include desktop-xl {
+						box-shadow: 0 0 0 2px $color-white, 0 0 0 4px $color-pomegranate;
+					}
+				}
+			}
+
+			&:disabled {
+				~ i {
+					background: $color-iron;
+
+					&::before {
+						border-color: $color-bombay;
+					}
+				}
+
+				~ span {
+					color: $color-bombay;
+				}
+			}
+
+			&.error ~ i {
+				border-color: $color-red-orange;
+			}
+		}
+
+		i {
+			position: absolute;
+			left: 0;
+			top: -1px;
+			border: 1px solid transparent;
+			border-radius: 50%;
+			width: vm(24);
+			height: vm(24);
+			background: $color-concrete;
+			transition: background-color $duration-normal;
+
+			&::before {
+				content: "";
+				position: absolute;
+				left: 50%;
+				top: 50%;
+				border-radius: 50%;
+				width: vm(8);
+				height: vm(8);
+				background: $color-white;
+				opacity: 0;
+				visibility: hidden;
+				transform: translate(-50%, -50%);
+
+				@include desktop {
+					width: vw(8);
+					height: vw(8);
+				}
+
+				@include desktop-xl {
+					width: 8px;
+					height: 8px;
+				}
+			}
+
+			@include desktop {
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@include desktop {
+			padding: 0 0 0 vw(35);
+		}
+
+		@include desktop-xl {
+			padding: 0 0 0 35px;
+		}
+	}
+
+	label.error {
+		display: none !important;
+	}
+
+	@include desktop {
+		margin-bottom: vw(24);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 24px;
+	}
+}
+
+.multiple-file {
+	&__label {
+		margin-bottom: vm(5);
+		font-size: vm(14);
+		color: $color-bombay;
+
+		@include desktop {
+			margin-bottom: vw(5);
+			font-size: vw(14);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 5px;
+			font-size: 14px;
+		}
+	}
+
+	&__item {
+		&__upload {
+			position: relative;
+			display: block;
+			padding: vm(16) vm(20);
+			min-height: vm(120);
+			background: $color-concrete;
+			transition: $duration-normal;
+
+			input {
+				position: absolute;
+				right: 0;
+				top: 0;
+				z-index: 5;
+				width: 100%;
+				height: 100%;
+				text-indent: -9999px;
+				opacity: 0;
+				cursor: pointer;
+			}
+
+			label.error {
+				position: absolute;
+				left: 0;
+				bottom: vm(-30);
+				font-size: vm(12);
+				color: $color-red-orange;
+
+				@include desktop {
+					bottom: vw(-30);
+					font-size: vw(12);
+				}
+
+				@include desktop-xl {
+					bottom: -30px;
+					font-size: 12px;
+				}
+			}
+
+			&__row {
+				display: flex;
+				margin-bottom: vm(25);
+
+				@include desktop {
+					margin-bottom: vw(25);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 25px;
+				}
+			}
+
+			&__title {
+				max-width: vm(200);
+
+				@include desktop {
+					max-width: vw(200);
+				}
+
+				@include desktop-xl {
+					max-width: 200px;
+				}
+			}
+
+			&__icon {
+				margin-left: auto;
+
+				svg {
+					display: block;
+					width: vm(24);
+					height: vm(24);
+
+					@include desktop {
+						width: vw(24);
+						height: vw(24);
+					}
+
+					@include desktop-xl {
+						width: 24px;
+						height: 24px;
+					}
+				}
+			}
+
+			&__info {
+				font-size: vm(12);
+				color: $color-bombay;
+
+				@include desktop {
+					font-size: vw(12);
+				}
+
+				@include desktop-xl {
+					font-size: 12px;
+				}
+			}
+
+			@include desktop {
+				padding: vw(16) vw(20);
+				min-height: vw(120);
+			}
+
+			@include desktop-xl {
+				padding: 16px 20px;
+				min-height: 120px;
+			}
+		}
+
+		&__file {
+			position: relative;
+			display: none;
+			align-items: center;
+			border: solid 1px #1ed77e;
+			padding: 0 vm(50) 0 vm(20);
+			width: 100%;
+			height: vm(56);
+			background: $color-white;
+			transition: $duration-normal;
+
+			&__remove {
+				position: absolute;
+				right: vm(20);
+				top: vm(16);
+				z-index: 5;
+				display: block;
+				outline: none;
+				border: none;
+				padding: 0;
+				width: vm(24);
+				height: vm(24);
+				background: transparent;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					left: 50%;
+					top: 50%;
+					width: vm(14);
+					height: 1px;
+					background: $color-cod-gray;
+					transform: translate(-50%, -50%) rotate(45deg);
+
+					@include desktop {
+						width: vw(14);
+					}
+
+					@include desktop-xl {
+						width: 14px;
+					}
+				}
+
+				&::after {
+					transform: translate(-50%, -50%) rotate(-45deg);
+				}
+
+				@include desktop {
+					right: vw(20);
+					top: vw(16);
+					width: vw(24);
+					height: vw(24);
+				}
+
+				@include desktop-xl {
+					right: 20px;
+					top: 16px;
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			&.is-loading {
+				position: relative;
+				pointer-events: none;
+
+				&::before {
+					content: "";
+					position: absolute;
+					right: vm(20);
+					top: vm(18);
+					border: solid 2px $color-pomegranate;
+					border-bottom-color: rgba($color-pomegranate, 0.2);
+					border-radius: 50%;
+					width: vm(20);
+					height: vm(20);
+					animation: buttonLoading linear 1s infinite;
+
+					@include desktop {
+						right: vw(20);
+						top: vw(18);
+						width: vw(20);
+						height: vw(20);
+					}
+
+					@include desktop-xl {
+						right: 20px;
+						top: 18px;
+						width: 20px;
+						height: 20px;
+					}
+				}
+
+				.multiple-file__item__file__remove {
+					opacity: 0;
+					visibility: hidden;
+				}
+			}
+
+			@include desktop {
+				padding: 0 vw(50) 0 vw(20);
+				height: vw(56);
+			}
+
+			@include desktop-xl {
+				padding: 0 50px 0 20px;
+				height: 56px;
+			}
+		}
+
+		&__error {
+			display: none;
+			margin-top: vm(8);
+			font-size: vm(12);
+			color: $color-red-orange;
+
+			@include desktop {
+				margin-top: vw(8);
+				font-size: vw(12);
+			}
+
+			@include desktop-xl {
+				margin-top: 8px;
+				font-size: 12px;
+			}
+		}
+
+		&.is-active {
+			.multiple-file__item__upload {
+				display: none;
+			}
+
+			.multiple-file__item__file {
+				display: flex;
+			}
+		}
+
+		&.is-error {
+			.multiple-file__item__upload {
+				border-color: $color-red-orange;
+			}
+
+			.multiple-file__item__error {
+				display: block;
+			}
+		}
+
+		& + & {
+			margin-top: vm(8);
+
+			@include desktop {
+				margin-top: vw(8);
+			}
+
+			@include desktop-xl {
+				margin-top: 8px;
+			}
+		}
+	}
+}

@@ -1,0 +1,77 @@
+.page-guarantee {
+	&__title {
+		@include desktop {
+			margin-bottom: vw(64);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 64px;
+		}
+	}
+
+	&__intro {
+		&__content {
+			display: flex;
+			flex-direction: column;
+			padding: vm(24) vm(16);
+			width: 100%;
+			color: $color-white;
+			background: $color-pomegranate;
+
+			@include desktop {
+				padding: vw(48) vw(170) vw(48) vw(48);
+			}
+
+			@include desktop-xl {
+				padding: 48px 170px 48px 48px;
+			}
+		}
+
+		&__text {
+			margin-bottom: vm(24);
+			letter-spacing: -0.006em;
+
+			@include desktop {
+				margin-bottom: vw(24);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 24px;
+			}
+		}
+
+		&__button {
+			margin-top: auto;
+
+			.button {
+				@include desktop {
+					&:hover {
+						background: rgba($color-cod-gray, 0.7);
+					}
+				}
+			}
+		}
+
+		&__image {
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(680);
+				}
+
+				@include desktop-xl {
+					width: 680px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+		}
+	}
+}

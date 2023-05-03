@@ -1,0 +1,299 @@
+*,
+*::before,
+*::after {
+	box-sizing: inherit;
+}
+
+*::selection {
+	color: $color-white;
+	background: $color-pomegranate;
+}
+
+html {
+	position: relative;
+	min-height: 100vh;
+	box-sizing: border-box;
+	font-family: $font-primary;
+	scroll-behavior: smooth;
+
+	&.has-cursor,
+	&.has-cursor * {
+		// stylelint-disable-next-line
+		cursor: none !important;
+	}
+
+	&.is-lock-scroll,
+	&.is-lock-scroll body {
+		overflow: hidden;
+	}
+}
+
+body {
+	font-family: "Inter", sans-serif;
+	-webkit-font-smoothing: antialiased;
+	font-size: vm(15);
+	line-height: vm(22);
+	text-decoration-skip: objects;
+	text-rendering: optimizeLegibility;
+	text-size-adjust: 100%;
+	color: $color-cod-gray;
+	-webkit-tap-highlight-color: transparent;
+
+	.is-show-mobile-menu & {
+		overflow: hidden;
+	}
+
+	@include desktop {
+		font-size: vw(15);
+		line-height: vw(22);
+	}
+
+	@include desktop-xl {
+		font-size: 15px;
+		line-height: 22px;
+	}
+}
+
+main {
+	flex: 1;
+}
+
+// p {
+//	margin: 0;
+// }
+
+a,
+button {
+	outline: none;
+	transition: $duration-normal;
+	cursor: pointer;
+}
+
+a {
+	text-decoration: none;
+	color: currentColor;
+
+	&.link-icon {
+		svg {
+			display: inline-block;
+			vertical-align: middle;
+			margin: vm(-2) vm(8) 0 0;
+			width: vm(24);
+			height: vm(24);
+
+			@include desktop {
+				margin: vw(-2) vw(8) 0 0;
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				margin: -2px 8px 0 0;
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	&.link-arrow {
+		position: relative;
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: vm(-16);
+			top: vm(7);
+			border-top: solid 1px currentColor;
+			border-right: solid 1px currentColor;
+			width: vm(7);
+			height: vm(7);
+			transform: rotate(45deg);
+
+			@include desktop {
+				right: vw(-16);
+				top: vw(7);
+				width: vw(7);
+				height: vw(7);
+			}
+
+			@include desktop-xl {
+				right: -16px;
+				top: 7px;
+				width: 7px;
+				height: 7px;
+			}
+		}
+	}
+
+	&.link-return {
+		position: relative;
+		padding-left: vm(22);
+
+		&::before {
+			content: "";
+			position: absolute;
+			left: 2px;
+			top: 50%;
+			border-bottom: 1px solid $color-cod-gray;
+			border-left: 1px solid $color-cod-gray;
+			width: vm(7);
+			height: vm(7);
+			transform: translateY(-50%) rotate(45deg);
+			transition: $duration-normal;
+
+			@include desktop {
+				width: vw(7);
+				height: vw(7);
+			}
+
+			@include desktop-xl {
+				width: 7px;
+				height: 7px;
+			}
+		}
+
+		@include desktop {
+			padding-left: vw(22);
+
+			&:hover {
+				&::before {
+					border-color: $color-pomegranate;
+				}
+			}
+		}
+
+		@include desktop-xl {
+			padding-left: 22px;
+		}
+	}
+
+	&.link-text {
+		border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+
+		@include desktop {
+			&:hover {
+				border-bottom-color: transparent;
+			}
+		}
+	}
+
+	@include desktop {
+		&:hover {
+			color: $color-pomegranate;
+		}
+	}
+}
+
+svg {
+	display: block;
+	flex: 0 0 auto;
+	width: 100%;
+	height: 100%;
+	fill: currentColor;
+}
+
+figure,
+picture {
+	display: inline-block;
+	margin: 0;
+	line-height: 0;
+
+	img {
+		width: 100%;
+	}
+}
+
+img {
+	vertical-align: top;
+	max-width: 100%;
+	user-select: none;
+}
+
+img[draggable="false"] {
+	pointer-events: none;
+	// stylelint-disable-next-line
+	-webkit-user-drag: none;
+}
+
+fieldset {
+	margin: 0;
+	border: 0;
+	padding: 0;
+}
+
+ul,
+li {
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+video {
+	outline: none;
+	width: 100%;
+	height: 100%;
+}
+
+iframe {
+	display: block;
+}
+
+.btn {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin: 0;
+	border: 0;
+	padding: 0;
+	text-align: center;
+	background-color: transparent;
+	transition: $duration-normal;
+	user-select: none;
+
+	&__content {
+		position: relative;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		min-width: 100%;
+		color: currentColor;
+		transform: translateZ(0);
+	}
+}
+
+.js-lazy-load:not(.is-loaded) {
+	max-height: 50vh;
+}
+
+.container {
+	position: relative;
+	z-index: 1;
+	margin: 0 auto;
+	width: 100%;
+	max-width: 100%;
+}
+
+.site {
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh; // fallback
+	// stylelint-disable-next-line
+	min-height: var(--vh);
+}
+
+/* stylelint-disable */
+/*
+* Немедленно переместите любую анимацию в конечную точку, если пользователь установил свое устройство в положение "prefers reduced motion".
+* Это может привести к плохим(непреднамеренным) последствиям. Удалите по мере необходимости и напишите свой собственный код для prefers-reduced-motion.
+*/
+@media (prefers-reduced-motion: reduce) {
+	*,
+	*:before,
+	*:after {
+		animation-duration: 0.001s !important;
+		animation-delay: 0s !important;
+		transition-duration: 0.001s !important;
+		transition-delay: 0s !important;
+	}
+}
+/* stylelint-enable */

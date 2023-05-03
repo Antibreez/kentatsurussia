@@ -1,0 +1,174 @@
+.page-dealer {
+	.page-intro {
+		@include desktop {
+			padding-bottom: vw(80);
+		}
+
+		@include desktop-xl {
+			padding-bottom: 80px;
+		}
+	}
+
+	&__countrywide {
+		margin-bottom: vm(56);
+
+		&__content {
+			width: 100%;
+		}
+
+		&__title {
+			@include desktop {
+				margin-bottom: vw(32);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 32px;
+			}
+		}
+
+		&__image {
+			margin-top: vm(24);
+
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(766);
+				}
+
+				@include desktop-xl {
+					width: 766px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+				margin-top: 0;
+				margin-left: vw(167);
+			}
+
+			@include desktop-xl {
+				margin-left: 167px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(96);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__technics {
+		margin-bottom: vm(56);
+		background: $color-concrete;
+
+		&__image {
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(596);
+				}
+
+				@include desktop-xl {
+					width: 596px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+			}
+		}
+
+		&__content {
+			padding: vm(24) vm(16);
+			width: 100%;
+
+			@include desktop {
+				align-self: center;
+				padding: vw(45) vw(252) vw(45) vw(85);
+			}
+
+			@include desktop-xl {
+				padding: 45px 252px 45px 85px;
+			}
+		}
+
+		&__title {
+			@include desktop {
+				margin-bottom: vw(32);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 32px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-bottom: vw(96);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 96px;
+		}
+	}
+
+	&__train {
+		margin-bottom: vm(56);
+
+		&__content {
+			width: 100%;
+		}
+
+		&__title {
+			@include desktop {
+				margin-bottom: vw(32);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 32px;
+			}
+		}
+
+		&__image {
+			margin-top: vm(24);
+
+			img {
+				width: 100%;
+
+				@include desktop {
+					width: vw(766);
+				}
+
+				@include desktop-xl {
+					width: 766px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+				margin-left: vw(148);
+			}
+
+			@include desktop-xl {
+				margin-left: 148px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			align-items: center;
+			margin-bottom: vw(120);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 120px;
+		}
+	}
+}

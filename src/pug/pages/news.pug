@@ -1,0 +1,35 @@
+.container
+	.breadcrumbs
+		ul
+			li: a(href="#") О бренде
+			li Блог
+
+	h1.page-title.page-title--border
+		| Блог
+
+	.news(data-list="news-list" data-ajax="news-load.html")
+
+	.subscribe
+		.subscribe__content
+			.h2.subscribe__title
+				| Подписаться на&nbsp;рассылку#[sup: img(src="./images/icon.svg" alt="")]
+			.subscribe__text
+				| Получать актуальные новости и&nbsp;статьи
+			form.subscribe__form(action="./ajax/subscribe.json" method="get" data-app="form" data-event="Subscribe")
+				.subscribe__form__row
+					.subscribe__form__input
+						.input__field
+							input(type="email" placeholder="Ваш email" name="email" data-validation={
+								regex: ['^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$', 'i'],
+								maxlength: 254,
+							} required)
+					.subscribe__form__button
+						button.button.button--black(type="submit") Подписаться
+				.subscribe__form__checkbox
+					.checkbox
+						label
+							input(type="checkbox" name="checkbox" required)
+							i
+							span Даю согласие на #[a.link-text(href="#") обработку персональных данных]
+		.subscribe__image
+			img(src="./images/subscribe.png" alt="")

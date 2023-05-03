@@ -1,0 +1,56 @@
+include pug/mixins
+
+.news__col
+	a.news__item(href="#")
+		.news__item__image
+			img(src="./images/temp/1.jpg" alt="")
+		.news__item__content
+			.news__item__date
+				| 29.04.2021
+			.news__item__caption
+				.h4.news__item__title
+					| Заголовок новости
+				.news__item__text
+					| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+			+svg('arrow-right').news__item__arrow
+.news__col
+	a.news__item(href="#")
+		.news__item__image
+			img(src="./images/temp/2.jpg" alt="")
+		.news__item__content
+			.news__item__date
+				| 29.04.2021
+			.news__item__caption
+				.h4.news__item__title
+					| Длиный заголовок новости  в несколько строчек: в две или даже три
+				.news__item__text
+					| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+			+svg('arrow-right').news__item__arrow
+.news__col
+	a.news__item(href="#")
+		.news__item__image
+			img(src="./images/temp/3.jpg" alt="")
+		.news__item__content
+			.news__item__date
+				| 29.04.2021
+			.news__item__caption
+				.h4.news__item__title
+					| Заголовок новости
+				.news__item__text
+					| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+			+svg('arrow-right').news__item__arrow
+.news__col
+	a.news__item(href="#")
+		.news__item__image
+			img(src="./images/temp/3.jpg" alt="")
+		.news__item__content
+			.news__item__date
+				| 29.04.2021
+			.news__item__caption
+				.h4.news__item__title
+					| Заголовок новости
+				.news__item__text
+					| Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.
+			+svg('arrow-right').news__item__arrow
+.news__more.js-load-more(data-target="news-list")
+	a.button.button--black(href="#" data-page="3") Показать еще

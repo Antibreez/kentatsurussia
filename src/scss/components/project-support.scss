@@ -1,0 +1,113 @@
+.project-support {
+	margin-bottom: vm(56);
+	padding: vm(24) vm(16);
+	background: $color-concrete;
+
+	&__content {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+	}
+
+	&__title {
+		@include desktop {
+			margin-bottom: vw(32);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 32px;
+		}
+	}
+
+	&__text {
+		letter-spacing: -0.006em;
+	}
+
+	&__links {
+		margin-top: vm(24);
+
+		ul {
+			display: flex;
+			flex-wrap: wrap;
+
+			li {
+				margin-right: vm(32);
+
+				a {
+					font-weight: 700;
+
+					svg {
+						display: inline-block;
+						vertical-align: middle;
+						margin-left: vm(16);
+						width: vm(24);
+						height: vm(24);
+
+						@include desktop {
+							margin-left: vw(16);
+							width: vw(24);
+							height: vw(24);
+						}
+
+						@include desktop-xl {
+							margin-left: 16px;
+							width: 24px;
+							height: 24px;
+						}
+					}
+				}
+
+				@include desktop {
+					margin-right: vw(72);
+				}
+
+				@include desktop-xl {
+					margin-right: 72px;
+				}
+			}
+		}
+
+		@include desktop {
+			margin-top: auto;
+		}
+	}
+
+	&__image {
+		margin-top: vm(24);
+
+		img {
+			width: 100%;
+
+			@include desktop {
+				width: vw(771);
+			}
+
+			@include desktop-xl {
+				width: 771px;
+			}
+		}
+
+		@include desktop {
+			flex-shrink: 0;
+			align-self: center;
+			margin-left: vw(24);
+		}
+
+		@include desktop-xl {
+			margin-left: 24px;
+		}
+	}
+
+	@include desktop {
+		display: flex;
+		margin-bottom: vw(120);
+		padding: vw(48);
+		height: vw(600);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 120px;
+		padding: 48px;
+		height: 600px;
+	}
+}

@@ -1,0 +1,421 @@
+.styles-slider {
+	margin-bottom: vm(56);
+
+	@include desktop {
+		margin-bottom: vw(95);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 95px;
+	}
+}
+
+.styles-content {
+	margin-bottom: vm(56);
+
+	@include desktop {
+		margin-bottom: vw(95);
+		max-width: vw(680);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 95px;
+		max-width: 680px;
+	}
+}
+
+.styles-page-quote {
+	margin-bottom: vm(56);
+
+	@include desktop {
+		margin-bottom: vw(110);
+		max-width: vw(850);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 110px;
+		max-width: 850px;
+	}
+}
+
+.styles-list {
+	margin-bottom: vm(56);
+
+	.h3 {
+		@include desktop {
+			margin: vw(40) 0 vw(24);
+		}
+
+		@include desktop-xl {
+			margin: 40px 0 24px;
+		}
+	}
+
+	@include desktop {
+		max-width: vw(420);
+	}
+
+	@include desktop-xl {
+		max-width: 420px;
+	}
+}
+
+.styles-image {
+	margin-top: vm(40);
+	margin-bottom: vm(56);
+	width: 100%;
+
+	.page-text {
+		@include desktop {
+			max-width: vw(686);
+		}
+
+		@include desktop-xl {
+			max-width: 686px;
+		}
+	}
+
+	@include desktop {
+		margin-top: vw(40);
+		margin-bottom: 0;
+		width: vw(1020);
+	}
+
+	@include desktop-xl {
+		margin-top: 40px;
+		width: 1020px;
+	}
+}
+
+.styles-buttons {
+	margin-top: vm(40);
+	margin-bottom: vm(56);
+
+	&__left {
+		margin-bottom: vm(50);
+
+		@include desktop {
+			margin-right: vw(80);
+		}
+
+		@include desktop-xl {
+			margin-right: 80px;
+		}
+	}
+
+	&__item {
+		& + & {
+			margin-top: vm(36);
+
+			@include desktop {
+				margin-top: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-top: 40px;
+			}
+		}
+
+		@include mobile {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+		}
+	}
+
+	.button + .button {
+		margin-top: vm(22);
+
+		@include desktop {
+			margin-top: 0;
+			margin-left: vw(15);
+		}
+
+		@include desktop-xl {
+			margin-left: 15px;
+		}
+	}
+
+	&__links {
+		margin-top: vm(50);
+
+		&__row {
+			margin-bottom: vm(24);
+
+			@include desktop {
+				display: flex;
+				margin-bottom: vw(26);
+			}
+
+			@include desktop-xl {
+				margin-bottom: 26px;
+			}
+		}
+
+		&__item {
+			& + & {
+				margin-top: vm(24);
+
+				@include desktop {
+					margin-left: vw(100);
+				}
+
+				@include desktop-xl {
+					margin-left: 100px;
+				}
+			}
+		}
+
+		@include desktop {
+			margin-top: vw(53);
+		}
+
+		@include desktop-xl {
+			margin-top: 53px;
+		}
+	}
+
+	@include desktop {
+		display: flex;
+		margin-top: vw(40);
+		margin-bottom: 0;
+	}
+
+	@include desktop-xl {
+		margin-top: 40px;
+	}
+}
+
+.styles-accordion {
+	margin-bottom: vm(56);
+
+	@include desktop {
+		margin-bottom: 0;
+		max-width: vw(1020);
+	}
+
+	@include desktop-xl {
+		max-width: 1020px;
+	}
+}
+
+.styles-tab {
+	margin-top: vm(40);
+
+	@include desktop {
+		margin-top: vw(40);
+		max-width: vw(680);
+	}
+
+	@include desktop-xl {
+		margin-top: 40px;
+		max-width: 680px;
+	}
+}
+
+.styles-gallery {
+	margin-top: vm(24);
+	margin-bottom: vm(56);
+
+	@include desktop {
+		margin-top: vw(40);
+		margin-bottom: 0;
+		max-width: vw(1020);
+	}
+
+	@include desktop-xl {
+		margin-top: 40px;
+		max-width: 1020px;
+	}
+}
+
+.styles-video {
+	margin-top: vm(24);
+	margin-bottom: vm(56);
+
+	@include desktop {
+		margin-top: vw(40);
+		margin-bottom: vw(96);
+		max-width: vw(1020);
+	}
+
+	@include desktop-xl {
+		margin-top: 40px;
+		margin-bottom: 96px;
+		max-width: 1020px;
+	}
+}
+
+.styles-table {
+	.page-text {
+		margin-top: vm(24);
+		margin-bottom: vm(40);
+
+		@include desktop {
+			margin-top: 0;
+			margin-bottom: vw(40);
+			max-width: vw(680);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 40px;
+			max-width: 680px;
+		}
+	}
+
+	.table {
+		@include desktop {
+			border: 1px solid $color-iron;
+			padding: vw(40) vw(64);
+		}
+
+		@include desktop-xl {
+			padding: 40px 64px;
+		}
+	}
+
+	.table--option {
+		margin: vm(40) 0;
+
+		@include desktop {
+			margin: vw(40) 0;
+			width: vw(680);
+		}
+
+		@include desktop-xl {
+			margin: 40px 0;
+			width: 680px;
+		}
+	}
+
+	.button-tag--close {
+		margin-left: vm(8);
+
+		@include desktop {
+			margin-left: vw(8);
+		}
+
+		@include desktop-xl {
+			margin-left: 8px;
+		}
+	}
+
+	@include desktop {
+		max-width: vw(1020);
+	}
+
+	@include desktop-xl {
+		max-width: 1020px;
+	}
+}
+
+.styles-form {
+	margin-bottom: vm(56);
+
+	&__item {
+		display: flex;
+
+		.form {
+			width: 100%;
+
+			@include desktop {
+				width: vw(328);
+			}
+
+			@include desktop-xl {
+				width: 328px;
+			}
+		}
+
+		&__right {
+			margin-left: vm(50);
+
+			@include desktop {
+				margin-left: vw(50);
+			}
+
+			@include desktop-xl {
+				margin-left: 50px;
+			}
+		}
+
+		& + & {
+			margin-top: vm(56);
+
+			@include desktop {
+				margin-top: 0;
+				margin-left: vw(97);
+			}
+
+			@include desktop-xl {
+				margin-left: 97px;
+			}
+		}
+	}
+
+	@include desktop {
+		display: flex;
+		margin-bottom: vw(95);
+	}
+
+	@include desktop-xl {
+		margin-bottom: 95px;
+	}
+}
+
+.styles-icons {
+	.h2 {
+		margin-bottom: vm(16);
+
+		@include desktop {
+			margin-bottom: vw(16);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 16px;
+		}
+	}
+
+	&__row {
+		margin-top: vm(40);
+
+		@include desktop {
+			display: flex;
+			margin-top: vw(40);
+		}
+
+		@include desktop-xl {
+			margin-top: 40px;
+		}
+	}
+
+	&__item {
+		display: flex;
+		flex-direction: column;
+
+		& + & {
+			margin-top: vm(24);
+
+			@include desktop {
+				margin-top: 0;
+				margin-left: vw(80);
+			}
+
+			@include desktop-xl {
+				margin-left: 80px;
+			}
+		}
+	}
+
+	.file + .file {
+		margin-top: vm(24);
+
+		@include desktop {
+			margin-top: vw(30);
+		}
+
+		@include desktop-xl {
+			margin-top: 30px;
+		}
+	}
+}

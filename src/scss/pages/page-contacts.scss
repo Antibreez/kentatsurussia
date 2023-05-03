@@ -1,0 +1,113 @@
+.page-contacts {
+	&__intro {
+		margin-bottom: vm(56);
+		padding: vm(32) vm(16) vm(16);
+		background: $color-concrete;
+
+		&__title {
+			@include desktop {
+				margin-top: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-top: 40px;
+			}
+		}
+
+		&__image {
+			text-align: center;
+
+			img {
+				width: vm(160);
+
+				@include desktop {
+					width: vw(258);
+				}
+
+				@include desktop-xl {
+					width: 258px;
+				}
+			}
+
+			@include desktop {
+				flex-shrink: 0;
+				margin-left: auto;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			margin-bottom: vw(64);
+			padding: vw(15) vw(80) vw(15) vw(48);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 64px;
+			padding: 15px 80px 15px 48px;
+		}
+	}
+
+	&__info {
+		&__label {
+			width: 100%;
+			font-weight: 600;
+
+			@include desktop {
+				flex-shrink: 0;
+				margin-right: vw(215);
+				width: vw(380);
+			}
+
+			@include desktop-xl {
+				margin-right: 215px;
+				width: 380px;
+			}
+		}
+
+		&__list {
+			width: 100%;
+
+			ul {
+				li {
+					+ li {
+						margin-top: vm(16);
+
+						@include desktop {
+							margin-top: vw(16);
+						}
+
+						@include desktop-xl {
+							margin-top: 16px;
+						}
+					}
+
+					a {
+						span {
+							font-weight: 600;
+						}
+					}
+				}
+			}
+		}
+
+		& + & {
+			margin-top: vm(24);
+			border-top: 1px solid $color-iron;
+			padding-top: vm(24);
+
+			@include desktop {
+				margin-top: vw(40);
+				padding-top: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-top: 40px;
+				padding-top: 40px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+		}
+	}
+}

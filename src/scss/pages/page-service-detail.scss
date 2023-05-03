@@ -1,0 +1,434 @@
+.page-service-detail {
+	&__title {
+		@include desktop {
+			margin-bottom: vw(64);
+			max-width: vw(625);
+		}
+
+		@include desktop-xl {
+			margin-bottom: 64px;
+			max-width: 625px;
+		}
+	}
+
+	&__filter {
+		display: flex;
+		align-items: flex-start;
+		flex-direction: column;
+		margin-bottom: vm(24);
+		border-top: 1px solid #d1d8e1;
+		border-bottom: 1px solid #d1d8e1;
+		padding: vm(20) 0;
+
+		&__region {
+			display: flex;
+			align-items: center;
+			margin-bottom: vm(12);
+
+			&__label {
+				margin-right: vm(8);
+				color: $color-bombay;
+
+				@include desktop {
+					margin-right: vw(8);
+				}
+
+				@include desktop-xl {
+					margin-right: 8px;
+				}
+			}
+
+			@include desktop {
+				margin-right: auto;
+				margin-bottom: 0;
+			}
+		}
+
+		&__select {
+			.input {
+				margin: 0;
+
+				&__field {
+					select {
+						appearance: none;
+						border: none;
+						padding: 0;
+						padding-right: vm(18);
+						width: 100%;
+						height: vm(22);
+						font-weight: 400;
+						font-size: vm(15);
+						background: url("../images/triangle.svg") 100% 50% no-repeat;
+
+						@include desktop {
+							padding-right: vw(18);
+							height: vw(22);
+							font-size: vw(15);
+							background-size: vw(11) vw(8);
+						}
+
+						@include desktop-xl {
+							padding-right: 18px;
+							height: 22px;
+							font-size: 15px;
+							background-size: 11px 8px;
+						}
+					}
+
+					.select2-container {
+						&--open {
+							&.select2-container--default {
+								.select2-selection {
+									&__arrow {
+										transform: rotate(225deg);
+									}
+								}
+							}
+						}
+					}
+
+					.select2-container--default {
+						.select2-selection {
+							&__rendered {
+								padding: 0 vm(20) 0 0;
+								background: none;
+								border: none;
+
+								@include desktop {
+									padding: 0 vw(20) 0 0;
+								}
+
+								@include desktop-xl {
+									padding: 0 20px 0 0;
+								}
+							}
+
+							&__arrow {
+								right: 0;
+								border: none;
+								margin-top: -2px;
+								border-right: solid 1px currentColor;
+								border-bottom: solid 1px currentColor;
+								width: vm(7);
+								height: vm(7);
+								transform: translateY(-50%) rotate(45deg);
+
+								@include desktop {
+									width: vw(7);
+									height: vw(7);
+								}
+
+								@include desktop-xl {
+									width: 7px;
+									height: 7px;
+								}
+							}
+
+							&--single {
+								height: auto;
+							}
+						}
+
+						.select2-dropdown {
+							min-width: vm(180);
+
+							@include desktop {
+								min-width: vw(180);
+							}
+
+							@include desktop-xl {
+								min-width: 180px;
+							}
+						}
+					}
+				}
+			}
+		}
+
+		&__type {
+			margin-top: vm(12);
+
+			@include desktop {
+				margin-top: 0;
+				margin-left: vw(40);
+			}
+
+			@include desktop-xl {
+				margin-left: 40px;
+			}
+		}
+
+		@include desktop {
+			display: flex;
+			align-items: center;
+			flex-direction: row;
+			margin-bottom: vw(30);
+			padding: vw(25) 0;
+		}
+
+		@include desktop-xl {
+			margin-bottom: 30px;
+			padding: 25px 0;
+		}
+	}
+
+	&__map {
+		height: vm(300);
+
+		[class*="ymaps-2-1"][class*="-ground-pane"] {
+			filter: grayscale(100%);
+		}
+
+		&-container {
+			position: relative;
+		}
+
+		&-item {
+			position: relative;
+			display: none;
+			padding: vm(30) 0 0;
+			width: 100%;
+			background: $color-white;
+
+			&__close {
+				position: absolute;
+				right: vm(10);
+				top: vm(6);
+				outline: none;
+				border: none;
+				padding: 0;
+				width: vm(20);
+				height: vm(20);
+				background: none;
+
+				&::before,
+				&::after {
+					content: "";
+					position: absolute;
+					left: 0;
+					top: 50%;
+					margin-top: -1px;
+					width: 100%;
+					height: 1px;
+					background: currentColor;
+				}
+
+				&::before {
+					transform: rotate(45deg);
+				}
+
+				&::after {
+					transform: rotate(-45deg);
+				}
+
+				@include desktop {
+					right: vw(24);
+					top: vw(24);
+					width: vw(24);
+					height: vw(24);
+
+					&:hover {
+						color: $color-pomegranate;
+					}
+				}
+
+				@include desktop-xl {
+					right: 24px;
+					top: 24px;
+					width: 24px;
+					height: 24px;
+				}
+			}
+
+			&__title {
+				margin-top: 0;
+
+				@include desktop {
+					margin-bottom: vw(34);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 34px;
+				}
+			}
+
+			&__list {
+				list-style-type: none;
+				margin: 0;
+				padding: 0;
+
+				li {
+					+ li {
+						margin-top: vm(10);
+
+						@include desktop {
+							margin-top: vw(16);
+						}
+
+						@include desktop-xl {
+							margin-top: 16px;
+						}
+					}
+				}
+
+				&__key {
+					margin-bottom: vm(8);
+					font-weight: 700;
+					font-size: vm(18);
+
+					@include desktop {
+						margin-bottom: vw(8);
+						font-size: vw(18);
+					}
+
+					@include desktop-xl {
+						margin-bottom: 8px;
+						font-size: 18px;
+					}
+				}
+			}
+
+			&__link {
+				margin-top: vm(24);
+
+				@include desktop {
+					margin-top: vw(64);
+				}
+
+				@include desktop-xl {
+					margin-top: 64px;
+				}
+			}
+
+			&.is-active {
+				display: block;
+			}
+
+			@include desktop {
+				position: absolute;
+				right: vw(56);
+				bottom: 0;
+				z-index: 5;
+				padding: vw(48) vw(40) vw(40);
+				width: vw(400);
+			}
+
+			@include desktop-xl {
+				right: 56px;
+				padding: 48px 40px 40px;
+				width: 400px;
+			}
+		}
+
+		.is-show-list & {
+			display: none;
+		}
+
+		@include desktop {
+			height: vw(704);
+		}
+
+		@include desktop-xl {
+			height: 704px;
+		}
+	}
+
+	&__list {
+		display: none;
+		border-top: solid 1px #d1d8e1;
+
+		&__message {
+			border-bottom: solid 1px #d1d8e1;
+			padding: vm(20) 0;
+			font-weight: 600;
+
+			a {
+				text-decoration: underline;
+			}
+
+			@include desktop {
+				padding: vw(50) 0;
+				font-size: vw(18);
+			}
+
+			@include desktop-xl {
+				padding: 50px 0;
+				font-size: 18px;
+			}
+		}
+
+		&__item {
+			position: relative;
+			z-index: 5;
+			padding: vm(20) 0;
+			height: 100%;
+
+			&__left {
+				@include desktop {
+					width: vw(450);
+				}
+
+				@include desktop-xl {
+					width: 450px;
+				}
+			}
+
+			&__right {
+				margin-top: vm(16);
+
+				@include desktop {
+					margin-top: 0;
+					width: vw(385);
+				}
+
+				@include desktop-xl {
+					width: 385px;
+				}
+			}
+
+			&__key {
+				margin-bottom: vm(8);
+				font-weight: 700;
+
+				@include desktop {
+					margin-bottom: vw(8);
+					font-size: vw(18);
+				}
+
+				@include desktop-xl {
+					margin-bottom: 8px;
+					font-size: 18px;
+				}
+			}
+
+			&__link {
+				@include mobile {
+					margin-top: vm(24);
+				}
+			}
+
+			& + & {
+				border-top: solid 1px #d1d8e1;
+			}
+
+			@include desktop {
+				display: flex;
+				justify-content: space-between;
+				padding: vw(50) 0;
+			}
+
+			@include desktop-xl {
+				padding: 50px 0;
+			}
+		}
+
+		.is-show-list & {
+			display: block;
+		}
+	}
+
+	&.is-loading {
+		opacity: 0.5;
+		pointer-events: none;
+	}
+}

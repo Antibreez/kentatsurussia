@@ -1,0 +1,229 @@
+.table {
+	table {
+		border-collapse: collapse;
+		width: 100%;
+		box-sizing: border-box;
+
+		tr {
+			border-bottom: 1px solid $color-iron;
+		}
+
+		th {
+			padding: vm(16);
+			font-weight: 400;
+			text-align: left;
+			color: $color-bombay;
+
+			&.th-width-120 {
+				@include desktop {
+					width: vw(120);
+				}
+
+				@include desktop-xl {
+					width: 120px;
+				}
+			}
+
+			&.th-width-135-mob {
+				@include mobile {
+					min-width: vm(135);
+				}
+			}
+
+			&.th-width-155-mob {
+				@include mobile {
+					min-width: vm(155);
+				}
+			}
+
+			@include desktop {
+				padding: vw(16);
+			}
+
+			@include desktop-xl {
+				padding: 16px;
+			}
+		}
+
+		td {
+			padding: vm(16);
+
+			@include desktop {
+				padding: vw(16);
+			}
+
+			@include desktop-xl {
+				padding: 16px;
+			}
+		}
+	}
+
+	&__sort {
+		position: relative;
+		padding-right: vm(32);
+
+		&::after {
+			content: "";
+			position: absolute;
+			right: 0;
+			top: vm(-3);
+			width: vm(24);
+			height: vm(24);
+			background: url("../images/sort.svg") 50% 50% no-repeat;
+			background-size: cover;
+
+			@include desktop {
+				top: vw(-5);
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				top: -5px;
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		@include desktop {
+			padding-right: vw(32);
+		}
+
+		@include desktop-xl {
+			padding-right: 32px;
+		}
+	}
+
+	&__check {
+		display: flex;
+		margin: 0;
+
+		label {
+			padding: 0;
+			width: vm(24);
+			height: vm(24);
+
+			@include desktop {
+				width: vw(24);
+				height: vw(24);
+			}
+
+			@include desktop-xl {
+				width: 24px;
+				height: 24px;
+			}
+		}
+	}
+
+	&__status {
+		display: inline-block;
+		border-radius: vm(80);
+		padding: vm(4) vm(12) vm(2);
+		font-size: vm(12);
+		text-align: center;
+		background: $color-iron;
+
+		&--new {
+			color: $color-white;
+			background: #1ed77e;
+		}
+
+		&--canceled {
+			color: $color-white;
+			background: $color-red-orange;
+		}
+
+		@include desktop {
+			border-radius: vw(80);
+			padding: vw(4) vw(12) vw(2);
+			font-size: vw(12);
+		}
+
+		@include desktop-xl {
+			border-radius: 80px;
+			padding: 4px 12px 2px;
+			font-size: 12px;
+		}
+	}
+
+	&__close {
+		position: relative;
+		display: inline-block;
+		vertical-align: middle;
+		outline: none;
+		border: none;
+		padding: 0;
+		width: vm(24);
+		height: vm(24);
+		background: transparent;
+
+		&::before,
+		&::after {
+			content: "";
+			position: absolute;
+			left: 50%;
+			top: 50%;
+			width: vm(12);
+			height: vm(2);
+			background: $color-cod-gray;
+			transform: translate(-50%, -50%) rotate(45deg);
+
+			@include desktop {
+				width: vw(12);
+				height: vw(2);
+			}
+
+			@include desktop-xl {
+				width: 12px;
+				height: 2px;
+			}
+		}
+
+		&::after {
+			transform: translate(-50%, -50%) rotate(-45deg);
+		}
+
+		@include desktop {
+			width: vw(24);
+			height: vw(24);
+		}
+
+		@include desktop-xl {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+	@include mobile {
+		overflow: auto;
+		margin-bottom: vm(-24);
+		padding-bottom: vm(24);
+
+		&::-webkit-scrollbar {
+			width: 2px;
+			height: 2px;
+			background-color: transparent;
+		}
+
+		&::-webkit-scrollbar-track {
+			background-color: $color-bombay;
+		}
+
+		&::-webkit-scrollbar-thumb {
+			background-color: $color-cod-gray;
+			opacity: 0;
+		}
+	}
+}
+
+.table--option {
+	table {
+		tr {
+			transition: $duration-normal;
+
+			&:hover {
+				background: $color-concrete;
+			}
+		}
+	}
+}

@@ -1,0 +1,46 @@
+.button {
+	display: inline-block;
+	outline: none;
+	border: none;
+	padding: vm(22) vm(39);
+	font-weight: 700;
+	font-size: vm(18);
+	text-align: center;
+	color: $color-white;
+	background: $color-pomegranate;
+
+	&:hover {
+		color: $color-white;
+		background: $color-crimson;
+	}
+
+	&:disabled,
+	&.is-disabled {
+		color: $color-bombay;
+		background: $color-concrete;
+		pointer-events: none;
+	}
+
+	@include desktop {
+		padding: vw(22) vw(39);
+		font-size: vw(18);
+	}
+
+	@include desktop-xl {
+		padding: 22px 39px;
+		font-size: 18px;
+	}
+}
+
+.button--black {
+	background: $color-black;
+
+	&:hover {
+		background: $color-pomegranate;
+	}
+}
+
+.button--gray {
+	color: $color-bombay;
+	background: $color-concrete;
+}

@@ -1,0 +1,45 @@
+.container
+	.breadcrumbs.breadcrumbs--margin
+		ul
+			li: a(href="#") О бренде
+			li Объекты
+
+	.page-objects
+		.page-objects__intro
+			.page-objects__intro__content
+				h1.page-objects__intro__title
+					| Kentatsu в&nbsp;России
+				.page-objects__intro__text
+					| Оборудование торговой марки Kentatsu представлено на&nbsp;российском рынке с&nbsp;2005&nbsp;года. За&nbsp;эти годы плодотворной работы бренд заслужил доверие у&nbsp;профессиональных климатических компаний. Оборудование Kentatsu надёжно служит на&nbsp;объектах различного назначения по&nbsp;всей стране.
+			.page-objects__intro__image
+				img(src="./images/objects.png" alt="")
+
+		form.page-objects__filter(action="#" data-filter="objects" data-target-list="objects-list")
+			.page-objects__filter__select
+				.input(data-app="select")
+					.input__field
+						select(name="types-1")
+							option(value="1") Все типы обьектов
+							option(value="2") Аэропорты
+							option(value="3") Банки
+							option(value="4") Бизнес-центры и офисы
+							option(value="5") Гостиницы
+							option(value="6") Аэропорты
+							option(value="7") Банки
+							option(value="8") Бизнес-центры и офисы
+							option(value="9") Гостиницы
+			.page-objects__filter__select
+				.input(data-app="select")
+					.input__field
+						select(name="types-2")
+							option(value="1") Все типы оборудования
+							option(value="2") Kentatsu DX PRO
+							option(value="3") Kentatsu DX PRO IV
+							option(value="4") DX Pro II Kentatsu
+							option(value="5") Kentatsu DX PRO IV
+							option(value="6") Kentatsu DX PRO
+							option(value="7") Kentatsu DX PRO IV
+							option(value="8") DX Pro II Kentatsu
+							option(value="9") Kentatsu DX PRO IV
+
+		.page-objects__row(data-list="objects-list" data-ajax="objects-load.html" data-target-filter="objects")

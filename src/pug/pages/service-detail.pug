@@ -1,0 +1,47 @@
+.container
+	.breadcrumbs.breadcrumbs--margin
+		ul
+			li: a(href="#") Главная
+			li: a(href="#") Поддержка
+			li: a(href="#") Обслуживание и ремонт
+			li Авторизованные сервисные центры
+
+	.top-menu-list
+		ul
+			li: a(href="#") Поддержка
+			li: a(href="#") Гарантия
+			li.is-active Обслуживание и ремонт
+			li: a(href="#") Техническая поддержка
+
+	.page-service-detail(data-app="service-detail")
+		h1.page-title.page-service-detail__title
+			| Авторизованные сервисные центры
+		form.page-service-detail__filter(action="./ajax/service-detail.json" method="get")
+			.page-service-detail__filter__region
+				.page-service-detail__filter__region__label
+					| Регион:
+				.page-service-detail__filter__select
+					.input(data-app="select")
+						.input__field
+							select(name="city")
+								option(value="1") Москва
+								option(value="2") Москва 2
+								option(value="3") Москва 3
+								option(value="4") Москва 4
+								option(value="5") Москва 5
+			.page-service-detail__filter__select
+				.input(data-app="select")
+					.input__field
+						select()
+							option(value="1") Сервис по направлениям
+							option(value="2") Сервис по направлениям 2
+							option(value="3") Сервис по направлениям 3
+							option(value="4") Сервис по направлениям 4
+							option(value="5") Сервис по направлениям 5
+			.page-service-detail__filter__type
+				a(href="#" data-off="Показать списком" data-on="Показать на карте") Показать списком
+		.page-service-detail__map-container
+			.page-service-detail__map( data-lat=55.755829 data-lng=37.617627 data-pin="./images/map-pin.svg" data-pin-active="./images/map-pin-active.svg")
+			.page-service-detail__map-list
+
+		.page-service-detail__list
