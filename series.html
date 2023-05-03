@@ -1,0 +1,667 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Kentatsu">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kentatsu">
+		<title>Kentatsu</title>
+		<link rel="icon" href="./images/favicon.png">
+		<link rel="stylesheet" href="./css/main.css?v=1683104815806">
+		<script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-NXNJM8W');</script>
+	</head>
+	<body>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNJM8W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<div class="main">
+			<header class="header" data-app="header">
+				<div class="container">
+					<div class="header__logo"><a href="#"><img src="./images/logo.svg" alt=""></a></div>
+					<div class="header__menu for-desktop">
+						<ul>
+							<li><a href="#">Каталог</a>
+								<ul>
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">О бренде</a></li>
+							<li><a href="#">Партнерам</a>
+								<ul>
+									<li><a href="#">Дилерам</a></li>
+									<li><a href="#">Заказчикам</a></li>
+									<li><a href="#">Проектировщикам</a></li>
+									<li><a href="#">Девелоперам</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Поддержка</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header__location for-desktop"><a class="header__location__current" href="#">
+							<svg>
+								<use xlink:href="./images/sprites.svg#location"></use>
+							</svg>Москва</a>
+						<div class="header__location__confirm for-desktop">
+							<div class="header__location__confirm__title">Ваш город Москва?</div>
+							<div class="header__location__confirm__footer">
+								<button class="header__location__confirm__yes" type="button">Да</button>
+								<button class="header__location__confirm__no" type="button">Нет</button>
+							</div>
+						</div>
+						<div class="header__location__change" data-param="change-city">
+							<div class="header__location__change__title">Выбор города</div>
+							<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+								<div class="input__field input__field--search">
+									<select data-placeholder="Выберите город">
+										<option label=" "></option>
+									</select>
+								</div>
+							</div>
+							<div class="header__location__change__list">
+								<ul>
+									<li><a href="?change-city=Москва">Москва</a></li>
+									<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+									<li><a href="?change-city=Казань">Казань</a></li>
+									<li><a href="?change-city=Калининград">Калининград</a></li>
+									<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+									<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+									<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><a class="header__search-open for-desktop" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search"></use>
+						</svg></a>
+					<form class="header__search for-desktop" action="search.html">
+						<input class="header__search__field" type="text" name="q" autocomplete="off" placeholder="Поиск">
+						<button class="header__search__submit" type="submit">
+							<svg>
+								<use xlink:href="./images/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<button class="header__burger for-mobile" type="button"><i></i><i></i><i></i></button>
+				</div>
+			</header>
+			<div class="mobile-menu for-mobile" data-app="mobile-menu">
+				<div class="mobile-menu__list">
+					<ul>
+						<li><a href="#">Каталог</a>
+							<button class="mobile-menu__list__plus" type="button"></button>
+							<ul class="mobile-menu__list__drop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">О бренде</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Поддержка</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu__location"><a class="mobile-menu__location__current" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#location"></use>
+						</svg>Москва</a>
+					<div class="header__location__change" data-param="change-city">
+						<div class="header__location__change__title">Выбор города</div>
+						<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+							<div class="input__field input__field--search">
+								<select data-placeholder="Выберите город">
+									<option label=" "></option>
+								</select>
+							</div>
+						</div>
+						<div class="header__location__change__list">
+							<ul>
+								<li><a href="?change-city=Москва">Москва</a></li>
+								<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+								<li><a href="?change-city=Казань">Казань</a></li>
+								<li><a href="?change-city=Калининград">Калининград</a></li>
+								<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+								<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+								<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="mobile-menu__search" action="#" method="get">
+					<input class="mobile-menu__search__field" type="text" name="q" placeholder="Поиск">
+					<button class="mobile-menu__search__submit" type="submit">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search-2"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="breadcrumbs breadcrumbs--margin">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">Каталог</a></li>
+							<li>Кондиционирование</li>
+						</ul>
+					</div>
+					<div class="top-menu" data-app="top-menu">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide">
+									<div class="top-menu__item"><a class="link-arrow" href="#">Весь каталог</a>
+										<button class="top-menu__item__arrow for-mobile" type="button"></button>
+										<div class="top-menu__item__drop">
+											<ul>
+												<li><a href="#">Бытовые кондиционеры</a></li>
+												<li><a href="#">Мультисистемы</a></li>
+												<li><a href="#">Коммерческие кондиционеры</a></li>
+												<li><a href="#">DX PRO системы</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="top-menu__item"><a class="link-arrow" href="#">Кондиционирование</a>
+										<button class="top-menu__item__arrow for-mobile" type="button"></button>
+										<div class="top-menu__item__drop">
+											<ul>
+												<li><a href="#">Кондиционирование</a></li>
+												<li><a href="#">Кондиционирование</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="top-menu__item"><a class="link-arrow" href="#">Бытовые кондиционеры</a>
+										<button class="top-menu__item__arrow for-mobile" type="button"></button>
+										<div class="top-menu__item__drop">
+											<ul>
+												<li><a href="#">Бытовые кондиционеры</a></li>
+												<li><a href="#">Бытовые кондиционеры</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="top-menu__item"><a class="link-arrow" href="#">Страница серии SEMPAI</a>
+										<button class="top-menu__item__arrow for-mobile" type="button"></button>
+										<div class="top-menu__item__drop">
+											<ul>
+												<li><a href="#">Страница серии SEMPAI</a></li>
+												<li><a href="#">Страница серии SEMPAI</a></li>
+											</ul>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide">
+									<div class="top-menu__item"><a href="#">Инверторный кондиционер Kentatsu KSGP26HZRN1</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="page-series">
+						<div class="page-series__intro">
+							<div class="page-series__intro__content">
+								<h1 class="h3 page-series__intro__title">Серия <span>SEMPAI</span></h1>
+								<div class="page-series__intro__text">Кондиционеры серии SEMPAI включают в&nbsp;себя современные технологии энергоэффективности, комфорта и&nbsp;заботы об&nbsp;окружающей среде. Кондиционер выполнен в&nbsp;технологичном дизайне, имеет низкий уровень шума и&nbsp;интеллектуальное управление.</div>
+							</div><a class="video page-series__intro__video event-video" href="https://www.youtube.com/watch?v=o9_sMktrcKQ&amp;ab_channel=%D0%90%D0%92%D0%93%D0%A3%D0%A1%D0%A2-%D0%BA%D0%BB%D0%B8%D0%BC%D0%B0%D1%82" data-fancybox>
+								<div class="video__image"><img src="./images/video.jpg" alt=""></div>
+								<div class="video__play">
+									<svg>
+										<use xlink:href="./images/sprites.svg#play"></use>
+									</svg>
+								</div></a>
+						</div>
+						<div class="page-series__tech">
+							<div class="h1 page-series__tech__title">Современные технологии энергоэффективности, комфорта и&nbsp;забота об&nbsp;окружающей среде</div>
+							<div class="page-series__tech__row">
+								<div class="page-series__tech__col">
+									<div class="page-series__tech__item">
+										<div class="page-series__tech__item__image"><img src="./images/series-tech.jpg" alt=""></div>
+										<div class="page-series__tech__item__text">Современные FULL&nbsp;DC инвенторные технологии</div>
+									</div>
+								</div>
+								<div class="page-series__tech__col">
+									<div class="page-series__tech__item">
+										<div class="page-series__tech__item__image"><img src="./images/series-tech-2.jpg" alt=""></div>
+										<div class="page-series__tech__item__text">Самодиагностика и&nbsp;автоматическая защита</div>
+									</div>
+								</div>
+								<div class="page-series__tech__col">
+									<div class="page-series__tech__item">
+										<div class="page-series__tech__item__image"><img src="./images/series-tech-3.jpg" alt=""></div>
+										<div class="page-series__tech__item__text">Работа в&nbsp;составе мультисистемы</div>
+									</div>
+								</div>
+								<div class="page-series__tech__col">
+									<div class="page-series__tech__item">
+										<div class="page-series__tech__item__image"><img src="./images/series-tech-4.jpg" alt=""></div>
+										<div class="page-series__tech__item__text">Технология Easy climate pro</div>
+									</div>
+								</div>
+							</div>
+							<div class="page-series__tech__slider" data-app="series-slider">
+								<div class="swiper-container">
+									<div class="swiper-wrapper">
+										<div class="swiper-slide">
+											<div class="page-series__tech__product">
+												<div class="page-series__tech__product__image"><img src="./images/series-tech-5.png" alt=""></div>
+												<div class="page-series__tech__product__content">
+													<div class="page-series__tech__product__top">
+														<div class="h4 page-series__tech__product__title"><a href="#">KSGP35HZRN1</a></div>
+														<div class="page-series__tech__product__price">52 700 ₽</div>
+													</div>
+													<div class="page-series__tech__product__text">SEMPAI</div>
+													<div class="page-series__tech__product__info">
+														<ul>
+															<li>
+																<div class="page-series__tech__product__info__label">Для помещения площадью, м2</div><span>25</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Мощность (охлаждение),кВт</div><span>0,6</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Сезонная энергоэффективность, SEER</div><span>4,55/А+++</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Теплопроизводительность, кВт</div><span>3,14</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Мощность (обогрев), кВт</div><span>0,69</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Холодопроизводительность, кВт</div><span>2,73</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="page-series__tech__product">
+												<div class="page-series__tech__product__image"><img src="./images/series-tech-5.png" alt=""></div>
+												<div class="page-series__tech__product__content">
+													<div class="page-series__tech__product__top">
+														<div class="h4 page-series__tech__product__title"><a href="#">KSGP35HZRN1</a></div>
+														<div class="page-series__tech__product__price">52 700 ₽</div>
+													</div>
+													<div class="page-series__tech__product__text">SEMPAI</div>
+													<div class="page-series__tech__product__info">
+														<ul>
+															<li>
+																<div class="page-series__tech__product__info__label">Для помещения площадью, м2</div><span>25</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Мощность (охлаждение),кВт</div><span>0,6</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Сезонная энергоэффективность, SEER</div><span>4,55/А+++</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Теплопроизводительность, кВт</div><span>3,14</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Мощность (обогрев), кВт</div><span>0,69</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Холодопроизводительность, кВт</div><span>2,73</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+										<div class="swiper-slide">
+											<div class="page-series__tech__product">
+												<div class="page-series__tech__product__image"><img src="./images/series-tech-5.png" alt=""></div>
+												<div class="page-series__tech__product__content">
+													<div class="page-series__tech__product__top">
+														<div class="h4 page-series__tech__product__title"><a href="#">KSGP35HZRN1</a></div>
+														<div class="page-series__tech__product__price">52 700 ₽</div>
+													</div>
+													<div class="page-series__tech__product__text">SEMPAI</div>
+													<div class="page-series__tech__product__info">
+														<ul>
+															<li>
+																<div class="page-series__tech__product__info__label">Для помещения площадью, м2</div><span>25</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Мощность (охлаждение),кВт</div><span>0,6</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Сезонная энергоэффективность, SEER</div><span>4,55/А+++</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Теплопроизводительность, кВт</div><span>3,14</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Мощность (обогрев), кВт</div><span>0,69</span>
+															</li>
+															<li>
+																<div class="page-series__tech__product__info__label">Холодопроизводительность, кВт</div><span>2,73</span>
+															</li>
+														</ul>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<button class="arrow-prev" type="button"></button>
+								<button class="arrow-next" type="button"></button>
+							</div>
+							<div class="page-series__tech__button"><a class="button button--black" href="#" target="_blank">Все характеристики серии</a></div>
+						</div>
+						<div class="page-series__development">
+							<div class="page-series__development__title">Самая передовая разработка KENTATSU</div>
+							<div class="page-series__development__text">включившая в&nbsp;себя современные технологии энергоэффективности, комфорта и&nbsp;заботы об&nbsp;окружающей среде. Кондиционер выполнен в&nbsp;технологичном дизайне, имеет низкий уровень шума и&nbsp;интеллектуальное управление.</div>
+							<div class="page-series__development__tag" data-app="series-tag">
+								<ul>
+									<li><a class="button-tag js-goto" href="#desing">Дизайн</a></li>
+									<li><a class="button-tag js-goto" href="#comfort">Комфорт</a></li>
+									<li><a class="button-tag js-goto" href="#">Чистый воздух вашего дома</a></li>
+									<li><a class="button-tag js-goto" href="#care">Забота о здоровье</a></li>
+									<li><a class="button-tag js-goto" href="#efficacy">Энергоэффективность</a></li>
+									<li><a class="button-tag js-goto" href="#reliability">Надёжность</a></li>
+									<li><a class="button-tag js-goto" href="#app">Управление</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="h4 page-series__subtitle" id="desing">Дизайн</div>
+						<div class="page-series__desing">
+							<div class="page-series__desing__content">
+								<div class="h2 page-series__desing__title">Классический японский дизайн в&nbsp;формате &laquo;EASY CLIMATE PRO&raquo;</div>
+								<div class="page-series__desing__text">Внутренние блоки отличаются стильным дизайном, который несомненно впишется в&nbsp;любой интерьер, а&nbsp;качество сборки всегда соответствует самому высокому уровню.</div>
+							</div>
+							<div class="page-series__desing__image"><img src="./images/series-desing.jpg" alt=""></div>
+						</div>
+						<div class="h4 page-series__subtitle" id="comfort">Комфорт</div>
+						<div class="page-series__comfort">
+							<div class="page-series__comfort__image"><img src="./images/series-comfort.jpg" alt=""></div>
+							<div class="page-series__comfort__content">
+								<div class="h2 page-series__comfort__title">Объёмный 3D воздушный поток</div>
+								<div class="page-series__comfort__text">Обеспечивает наилучшую циркуляцию воздуха в&nbsp;помещении за&nbsp;счет согласованных качаний заслонок и&nbsp;жалюзи.</div>
+							</div>
+						</div>
+						<div class="page-series__comfort page-series__comfort--black">
+							<div class="page-series__comfort__content">
+								<div class="h2 page-series__comfort__title">Рекордно низкий уровень шума</div>
+								<div class="page-series__comfort__text">Всего 20,5 дБ</div>
+							</div>
+							<div class="page-series__comfort__image"><img src="./images/series-comfort-2.jpg" alt=""></div>
+						</div>
+						<div class="h4 page-series__subtitle" id="care">Забота о здоровье</div>
+						<div class="page-series__care">
+							<div class="page-series__care__image"><img src="./images/series-care.jpg" alt=""></div>
+							<div class="page-series__care__content">
+								<div class="h2 page-series__care__title">Биполярный ионизатор и&nbsp;многоступенчатая очистка воздуха</div>
+								<div class="page-series__care__text">Cистема очистки воздуха включает фильтр предварительной очистки, фотокаталитический фильтр и&nbsp;биполярный ионизатор, генерирующий положительные и&nbsp;отрицательные ионы. Генератор ионов высвобождают положительные и&nbsp;отрицательные ионы, удаляя запах, пыль, дым и&nbsp;частицы пыльцы, обеспечивая свежий и&nbsp;здоровый воздух. Средняя степень стерилизации достигает&nbsp;99%.</div>
+								<div class="page-series__care__icon"><img src="./images/benefits/bipolar-ionizer.svg" alt=""></div>
+							</div>
+						</div>
+						<div class="page-series__care page-series__care--red">
+							<div class="page-series__care__content">
+								<div class="h2 page-series__care__title">Многоступенчатая очистка воздуха</div>
+								<div class="page-series__care__text">Блок использует биполярный ионизатор &mdash;лучшую в&nbsp;мире систему фильтрации воздуха в&nbsp;кондиционере. В&nbsp;высоковольтном стримерном разряде гарантированно уничтожаются аллергены (споры плесени, пыльца, клещи&minus;сапрофиты, аллергены домашних животных). Современный генератор ионов, который высвобождает положительные и&nbsp;отрицательные ионы, удаляя запах, пыль, дым и&nbsp;частицы пыльцы, обеспечивая свежий и&nbsp;здоровый воздух. Средняя степень стерилизации может достигать&nbsp;99%.</div>
+							</div>
+							<div class="page-series__care__image"><img src="./images/series-care-2.jpg" alt=""></div>
+						</div>
+						<div class="page-series__care page-series__care--black">
+							<div class="page-series__care__image"><img src="./images/series-care-3.jpg" alt=""></div>
+							<div class="page-series__care__content">
+								<div class="h2 page-series__care__title">Автоматическая очистка испарителя</div>
+								<div class="page-series__care__text">Внутренние блоки отличаются стильным дизайном, который несомненно впишется в&nbsp;любой интерьер, а&nbsp;качество сборки всегда соответствует самому высокому уровню.</div>
+								<div class="page-series__care__icon"><img src="./images/benefits/cleaning.svg" alt=""></div>
+							</div>
+						</div>
+						<div class="h4 page-series__subtitle" id="reliability">Японская надежность</div>
+						<div class="page-series__reliability">
+							<div class="page-series__reliability__row">
+								<div class="page-series__reliability__col">
+									<div class="page-series__reliability__item">
+										<div class="h2 page-series__reliability__item__title"><a href="#">Самодиагностика и&nbsp;автоматическая защита</a></div>
+										<div class="page-series__reliability__item__row">
+											<div class="page-series__reliability__item__icon"><img src="./images/benefits/self-test.svg" alt=""></div>
+											<div class="page-series__reliability__item__text">Микропроцессор кондиционера Kentatsu, который может определить неисправность кондиционера и&nbsp;отобразить на&nbsp;табло индикации внутреннего блока факт ее&nbsp;появления. Основываясь на&nbsp;информации от&nbsp;световых индикаторов, пользователь получает информацию о&nbsp;виде неисправности.</div>
+										</div>
+									</div>
+								</div>
+								<div class="page-series__reliability__col">
+									<div class="page-series__reliability__item">
+										<div class="h2 page-series__reliability__item__title"><a href="#">Антикоррозийное покрытие Golden Fin</a></div>
+										<div class="page-series__reliability__item__row">
+											<div class="page-series__reliability__item__icon"><img src="./images/benefits/anti-corrosion.svg" alt=""></div>
+											<div class="page-series__reliability__item__text">Микропроцессор кондиционера Kentatsu, который может определить неисправность кондиционера и&nbsp;отобразить на&nbsp;табло индикации внутреннего блока факт ее&nbsp;появления. Основываясь на&nbsp;информации от&nbsp;световых индикаторов, пользователь получает информацию о&nbsp;виде неисправности.</div>
+										</div>
+									</div>
+								</div>
+								<div class="page-series__reliability__col">
+									<div class="page-series__reliability__item">
+										<div class="h2 page-series__reliability__item__title"><a href="#">Защита от&nbsp;нестабильности электропитания</a></div>
+										<div class="page-series__reliability__item__row">
+											<div class="page-series__reliability__item__icon"><img src="./images/benefits/power-instability.svg" alt=""></div>
+											<div class="page-series__reliability__item__text">В&nbsp;кондиционер изначально встроен стабилизатор напряжения, он&nbsp;не&nbsp;только сбережет ваши средства, но&nbsp;и&nbsp;окажется практически незаме ним в&nbsp;сельской местности, в&nbsp;многоквартирных домах, в&nbsp;промышленных районах крупных городов.</div>
+										</div>
+									</div>
+								</div>
+								<div class="page-series__reliability__col">
+									<div class="page-series__reliability__item">
+										<div class="h2 page-series__reliability__item__title"><a href="#">Антикоррозийное покрытие Golden Fin</a></div>
+										<div class="page-series__reliability__item__row">
+											<div class="page-series__reliability__item__icon"><img src="./images/benefits/protection.svg" alt=""></div>
+											<div class="page-series__reliability__item__text">В&nbsp;случае обнаружения процессором наружного блока утечки фреона в&nbsp;кондиционере, датчик, находящийся во&nbsp;внутреннем блоке, подаст звуковой сигнал. Таким образом пользователь сможет своевременно выключить кондиционер и&nbsp;обратиться в&nbsp;сервисную компанию.</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="h4 page-series__subtitle" id="efficacy">Энергоэффективность</div>
+						<div class="page-series__efficacy page-series__efficacy--red">
+							<div class="page-series__efficacy__image"><img src="./images/series-efficacy.jpg" alt=""></div>
+							<div class="page-series__efficacy__content">
+								<div class="h2 page-series__efficacy__title">Максимальная энергоэффективность</div>
+								<div class="page-series__efficacy__text">Это высочайший уровень разработки, позволивший соединить преимущества самого экологичного хладагента R32 и&nbsp;новейшие достижения в&nbsp;области инверторных компрессорных технологий для достижения лучших в&nbsp;мире показателей в&nbsp;области энергосбережения.</div>
+								<div class="page-series__efficacy__icon"><img src="./images/benefits/eco-friendly.svg" alt=""></div>
+							</div>
+						</div>
+						<div class="page-series__efficacy">
+							<div class="page-series__efficacy__content">
+								<div class="h2 page-series__efficacy__title">Экологичный хладагент R-32</div>
+								<div class="page-series__efficacy__text">Современные кондиционеры Kentatsu SEMPAI работают на&nbsp;озонобезопасном фреоне R32, который отражает степень воздействия парниковых газов на&nbsp;глобальное потепление, тем самым оказывая значительно меньшее негативное влияние на&nbsp;окружающую среду.</div>
+								<div class="page-series__efficacy__icon"><img src="./images/benefits/r-32.svg" alt=""></div>
+							</div>
+							<div class="page-series__efficacy__image"><img src="./images/series-efficacy-2.jpg" alt=""></div>
+						</div>
+						<div class="h4 page-series__subtitle" id="app">Управление</div>
+						<div class="page-series__app">
+							<div class="page-series__app__image"><img src="./images/series-app.jpg" alt="">
+								<div class="page-series__app__image__wifi"><img src="./images/wifi.jpg" alt=""></div>
+							</div>
+							<div class="page-series__app__content">
+								<div class="h1 page-series__app__title">Технология EASY CLIMATE PRO</div>
+								<div class="page-series__app__row">
+									<div class="page-series__app__text">Возможность управления со&nbsp;смартфона или&nbsp;ПК при помощи мобильного приложения Daichi Comfort и&nbsp;Wi-Fi-контроллера. Одно мобильное приложение может контролировать все объекты и&nbsp;помещения.</div>
+									<div class="page-series__app__daichi">
+										<div class="page-series__app__daichi__image"><img src="./images/daichi-2.jpg" alt=""></div>
+										<div class="page-series__app__daichi__content">
+											<div class="page-series__app__daichi__title">Daichi Comfort</div>
+											<div class="page-series__app__daichi__text">Скачайте в App Store или Google Play</div>
+											<div class="page-series__app__daichi__list">
+												<ul>
+													<li><a class="page-series__app__daichi__app-store" href="#"><img src="./images/app-store.svg" alt=""></a></li>
+													<li><a class="page-series__app__daichi__google-play" href="#"><img src="./images/google-play.svg" alt=""></a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="page-series__console">
+							<div class="page-series__console__image" style="background-image:url(./images/series-console.jpg)"></div>
+							<div class="page-series__console__content">
+								<div class="h1 page-series__console__title">Пульт управления</div>
+								<div class="page-series__console__text">Удобный беспроводной пульт дистанционного управления. С&nbsp;LCD-дисплеем для запуска, остановки и&nbsp;регулирования режимов работы кондиционера.</div>
+								<div class="page-series__console__desc">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean euismod bibendum laoreet. Proin gravida dolor sit amet lacus accumsan et&nbsp;viverra justo commodo. Proin sodales pulvinar sic tempor. Sociis natoque penatibus et&nbsp;magnis dis parturient montes, nascetur ridiculus mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus pronin sapien nunc accuan eget</div>
+							</div>
+						</div>
+						<div class="page-series__range">
+							<div class="h4 page-series__range__subtitle">Серия SEMPAI</div>
+							<div class="page-title page-series__range__title">Самое лучшее для Вашего комфорта</div>
+							<div class="page-series__range__image"><img src="./images/series-range.png" alt=""></div>
+							<div class="page-series__range__button"><a class="button" href="#">Где купить</a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer" data-app="footer">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<div class="footer__contacts__left">
+								<div class="footer__logo"><a href="#"><img src="./images/logo-light.svg" alt=""></a></div>
+								<div class="footer__address">Россия, Москва,<br>ул. Адмирала Макарова, д. 8</div>
+								<ul class="footer__contacts__menu for-desktop">
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="footer__contacts__right">
+								<div class="footer__phone"><a href="tel:+74957373733">8 495 737 37 33</a></div>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__catalog for-mobile"><a class="footer__catalog__label" href="#">Каталог</a>
+								<ul class="footer__catalog__list">
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</div>
+							<ul>
+								<li><a href="#">О бренде</a></li>
+								<li><a href="#">Стать партнером</a></li>
+								<li><a href="#">Технологии</a></li>
+								<li><a href="#">Поддержка и гарантия</a></li>
+								<li><a href="#">Где купить</a></li>
+							</ul>
+							<ul class="for-desktop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="footer__contacts__menu for-mobile">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+					<div class="footer__bottom">
+						<ul class="footer__bottom__menu">
+							<li>© Daichi 2021.</li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Пользовательское соглашение</a></li>
+							<li><a href="#">Управление cookie</a></li>
+						</ul>
+						<div class="footer__dev">Разработано в <a href="https://itech-group.ru/" target="_blank">ITECH</a></div>
+					</div>
+				</div>
+			</footer>
+			<div class="is-hidden">
+				<form class="modal modal-form" id="callback" action="./ajax/callback.json" method="get" data-app="form" data-event="Feedback">
+					<div class="h3 modal-form__title">Обратная связь</div>
+					<div class="modal-form__text">Оставьте ваши контактные данные, и&nbsp;наш специалист свяжется с вами в течение 30 минут</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Ваше имя</div>
+								<div class="input__field">
+									<input type="text" name="firstname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Фамилия</div>
+								<div class="input__field">
+									<input type="text" name="surname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Email</div>
+						<div class="input__field">
+							<input type="email" name="email" data-validation="{&quot;regex&quot;:[&quot;^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$&quot;,&quot;i&quot;],&quot;maxlength&quot;:254,&quot;messages&quot;:{&quot;regex&quot;:&quot;Неверный или некорректный e-mail адрес.&quot;}}" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Телефон</div>
+						<div class="input__field">
+							<input type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Текст</div>
+						<div class="input__field">
+							<textarea name="text" data-validation="{&quot;maxlength&quot;:300}" required></textarea>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="checkbox" required><i></i><span>Разрешаю обработку <a class="link-text" href="#">персональных данных</a></span>
+						</label>
+					</div>
+					<div class="modal-form__button">
+						<button class="button" type="submit">Отправить</button>
+					</div>
+				</form>
+			</div><a class="up" href="#" data-app="up"></a>
+			<div class="cookies" data-app="cookies">
+				<div class="cookies__container">
+					<div class="cookies__text">На&nbsp;сайте используются cookie-файлы, которые помогают показывать Вам самую актуальную информацию. Продолжая пользоваться сайтом, Вы&nbsp;даете согласие на&nbsp;использование ваших Метаданных и&nbsp;cookie-файлов. <a class="link-text" href="#">Побробнее о&nbsp;правилах использования cookie и&nbsp;Условиях сбора и&nbsp;обработки персональных данных</a>.</div>
+					<div class="cookies__button">
+						<button class="button button--black" type="button">Согласен</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1683104815806"></script>
+		<script src="./js/main.js?v=1683104815806"></script>
+	</body>
+</html>

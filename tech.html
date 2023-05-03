@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Kentatsu">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kentatsu">
+		<title>Kentatsu</title>
+		<link rel="icon" href="./images/favicon.png">
+		<link rel="stylesheet" href="./css/main.css?v=1683104816936">
+		<script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-NXNJM8W');</script>
+	</head>
+	<body>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNJM8W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<div class="main">
+			<header class="header" data-app="header">
+				<div class="container">
+					<div class="header__logo"><a href="#"><img src="./images/logo.svg" alt=""></a></div>
+					<div class="header__menu for-desktop">
+						<ul>
+							<li><a href="#">Каталог</a>
+								<ul>
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">О бренде</a></li>
+							<li><a href="#">Партнерам</a>
+								<ul>
+									<li><a href="#">Дилерам</a></li>
+									<li><a href="#">Заказчикам</a></li>
+									<li><a href="#">Проектировщикам</a></li>
+									<li><a href="#">Девелоперам</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Поддержка</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header__location for-desktop"><a class="header__location__current" href="#">
+							<svg>
+								<use xlink:href="./images/sprites.svg#location"></use>
+							</svg>Москва</a>
+						<div class="header__location__confirm for-desktop">
+							<div class="header__location__confirm__title">Ваш город Москва?</div>
+							<div class="header__location__confirm__footer">
+								<button class="header__location__confirm__yes" type="button">Да</button>
+								<button class="header__location__confirm__no" type="button">Нет</button>
+							</div>
+						</div>
+						<div class="header__location__change" data-param="change-city">
+							<div class="header__location__change__title">Выбор города</div>
+							<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+								<div class="input__field input__field--search">
+									<select data-placeholder="Выберите город">
+										<option label=" "></option>
+									</select>
+								</div>
+							</div>
+							<div class="header__location__change__list">
+								<ul>
+									<li><a href="?change-city=Москва">Москва</a></li>
+									<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+									<li><a href="?change-city=Казань">Казань</a></li>
+									<li><a href="?change-city=Калининград">Калининград</a></li>
+									<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+									<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+									<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><a class="header__search-open for-desktop" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search"></use>
+						</svg></a>
+					<form class="header__search for-desktop" action="search.html">
+						<input class="header__search__field" type="text" name="q" autocomplete="off" placeholder="Поиск">
+						<button class="header__search__submit" type="submit">
+							<svg>
+								<use xlink:href="./images/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<button class="header__burger for-mobile" type="button"><i></i><i></i><i></i></button>
+				</div>
+			</header>
+			<div class="mobile-menu for-mobile" data-app="mobile-menu">
+				<div class="mobile-menu__list">
+					<ul>
+						<li><a href="#">Каталог</a>
+							<button class="mobile-menu__list__plus" type="button"></button>
+							<ul class="mobile-menu__list__drop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">О бренде</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Поддержка</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu__location"><a class="mobile-menu__location__current" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#location"></use>
+						</svg>Москва</a>
+					<div class="header__location__change" data-param="change-city">
+						<div class="header__location__change__title">Выбор города</div>
+						<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+							<div class="input__field input__field--search">
+								<select data-placeholder="Выберите город">
+									<option label=" "></option>
+								</select>
+							</div>
+						</div>
+						<div class="header__location__change__list">
+							<ul>
+								<li><a href="?change-city=Москва">Москва</a></li>
+								<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+								<li><a href="?change-city=Казань">Казань</a></li>
+								<li><a href="?change-city=Калининград">Калининград</a></li>
+								<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+								<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+								<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="mobile-menu__search" action="#" method="get">
+					<input class="mobile-menu__search__field" type="text" name="q" placeholder="Поиск">
+					<button class="mobile-menu__search__submit" type="submit">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search-2"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li>Технологии</li>
+						</ul>
+					</div>
+					<div class="page-tech">
+						<div class="page-tech__intro">
+							<div class="page-tech__intro__content">
+								<h1 class="page-tech__intro__title">Современные технологии KENTATSU</h1>
+								<div class="page-tech__intro__text">Вся продукция Kentatsu разрабатывается так, чтобы в&nbsp;наибольшей степени соответствовать реальным потребностям пользователя: быть экономичной, удобной в&nbsp;эксплуатации, а&nbsp;главное&nbsp;&mdash; создавать идеальный комфорт в&nbsp;любом помещении.</div>
+							</div>
+						</div>
+						<div class="page-tech__list">
+							<div class="page-tech__list__row">
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__inner">
+											<div class="page-tech__item__content">
+												<div class="page-tech__item__number">01</div>
+												<div class="h4 page-tech__item__title">Высокие показатели энергоэффективности</div>
+												<div class="page-tech__item__text">Благодаря совместной работе инженеров и&nbsp;промышленных дизайнеров сплит-система SEMPAI обладает превосходными показателями энергоэффективности.</div>
+											</div>
+											<div class="table page-tech__item__table">
+												<table>
+													<thead>
+														<tr>
+															<th class="th-width-120">Kentatsu Sempai</th>
+															<th>2,5 кВт</th>
+															<th>3,5 кВт</th>
+															<th>5,3 кВт</th>
+															<th>7,0 кВт</th>
+														</tr>
+													</thead>
+													<tbody>
+														<tr>
+															<td>SEER</td>
+															<td><span>8.6</span>
+																<div class="page-tech__item__table__class">A+++</div>
+															</td>
+															<td><span>8.5</span>
+																<div class="page-tech__item__table__class">A+++</div>
+															</td>
+															<td><span>8.5</span>
+																<div class="page-tech__item__table__class">A+++</div>
+															</td>
+															<td><span>8.5</span>
+																<div class="page-tech__item__table__class">A+++</div>
+															</td>
+														</tr>
+														<tr>
+															<td>SCOP</td>
+															<td><span>4.6</span>
+																<div class="page-tech__item__table__class page-tech__item__table__class--2">A++</div>
+															</td>
+															<td><span>4.6</span>
+																<div class="page-tech__item__table__class page-tech__item__table__class--2">A++</div>
+															</td>
+															<td><span>4.6</span>
+																<div class="page-tech__item__table__class page-tech__item__table__class--1">A+</div>
+															</td>
+															<td><span>4.2</span>
+																<div class="page-tech__item__table__class page-tech__item__table__class--1">A+</div>
+															</td>
+														</tr>
+													</tbody>
+												</table>
+											</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__image"><img src="./images/tech.jpg" alt=""></div>
+										<div class="page-tech__item__content">
+											<div class="page-tech__item__number">02</div>
+											<div class="h4 page-tech__item__title">Объемный воздушный поток</div>
+											<div class="page-tech__item__text">Объемный воздушный поток обеспечивает наилучшее перемешивание воздуха в&nbsp;помещении, предотвращая образование застойных зон и&nbsp;неравномерного температурного фона. Такой поток образуется путем сложения перемещений воздухораспределительных устройств кондиционера&nbsp;&mdash; горизонтальных заслонок и&nbsp;вертикальных жалюзи. Постоянное изменение направления подачи воздуха в&nbsp;помещение, закономерностью которого можно управлять, исключает сквозняки и&nbsp;позволяет создать эффект морского бриза.</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__image"><img src="./images/tech-2.jpg" alt=""></div>
+										<div class="page-tech__item__content">
+											<div class="page-tech__item__number">03</div>
+											<div class="h4 page-tech__item__title">Защита от&nbsp;нестабильности электропитания</div>
+											<div class="page-tech__item__text">Работает при сильных просадках напряжения: 80 ~ 264&nbsp;В.</div>
+											<div class="page-tech__item__desc">В&nbsp;режиме охлаждения 27/19 &deg;C&nbsp;/ 35/24 &deg;C</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__pic">
+											<div class="page-tech__item__pic__image" style="background-image:url(./images/tech-3.jpg)"></div>
+											<div class="page-tech__item__content">
+												<div class="page-tech__item__number">04</div>
+												<div class="h4 page-tech__item__title">Биполярный ионизатор</div>
+												<div class="page-tech__item__text">Современный генератор ионов, который высвобождает положительные и&nbsp;отрицательные ионы, удаляя запах, пыль, дым и&nbsp;частицы пыльцы, обеспечивая свежий и&nbsp;здоровый воздух.</div>
+											</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__image"><img src="./images/tech-4.jpg" alt=""></div>
+										<div class="page-tech__item__content">
+											<div class="page-tech__item__number">05</div>
+											<div class="h4 page-tech__item__title">Обнаружение утечки хладагента</div>
+											<div class="page-tech__item__text">При утечке фреона, во&nbsp;избежание перегрузки компрессора или его повреждения, кондиционер останавливается, а&nbsp;на&nbsp;панели блока и&nbsp;на&nbsp;пульте управления появляется код ошибки</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__image"><img src="./images/tech-5.jpg" alt=""></div>
+										<div class="page-tech__item__content">
+											<div class="page-tech__item__number">06</div>
+											<div class="h4 page-tech__item__title">Высокоэффективные компрессора</div>
+											<div class="page-tech__item__text">Подобно бегуну, бегущему к&nbsp;финишу, эта технология позволяет компрессору достигать максимальной частоты вращения в&nbsp;мгновение ока (65&nbsp;Гц за&nbsp;6&nbsp;секунд с&nbsp;момента запуска).</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__inner page-tech__item__inner--wifi">
+											<div class="page-tech__item__content">
+												<div class="page-tech__item__number">07</div>
+												<div class="h4 page-tech__item__title">Управление через Wi-Fi</div>
+												<div class="page-tech__item__text">Возможность управления со&nbsp;смартфона или&nbsp;ПК при помощи мобильного приложения Daichi Comfort и&nbsp;Wi-Fi-контроллера. Опция</div>
+												<div class="page-tech__item__app">
+													<div class="page-tech__item__app__list">
+														<ul>
+															<li>
+																<div class="page-tech__item__app__daichi"><img src="./images/daichi.svg" alt=""></div>
+															</li>
+															<li><span class="page-tech__item__app__app-store js-link" data-href="#" data-target="_blank"><img src="./images/app-store.svg" alt=""></span></li>
+															<li><span class="page-tech__item__app__google-play js-link" data-href="#" data-target="_blank"><img src="./images/google-play.svg" alt=""></span></li>
+														</ul>
+													</div>
+													<div class="h4 page-tech__item__app__title">Daichi Comfort</div>
+													<div class="page-tech__item__app__text">Скачайте в&nbsp;App Store или Google Play.</div>
+												</div>
+											</div>
+											<div class="page-tech__item__list">
+												<div class="page-tech__item__list__title">Расширенный диапазон функций управления в&nbsp;мобильном приложении Daichi Comfort:</div>
+												<div class="page-text-list">
+													<ul>
+														<li>Возможность управления через интернет из&nbsp;любой точки мира, в&nbsp;том числе с&nbsp;помощью голосового помощника</li>
+														<li>Персонализированные настройки, использование заранее заданных режимов и&nbsp;пользовательских сценариев</li>
+														<li>Установка таймеров, составление расписаний</li>
+														<li>Включение/отключение на&nbsp;основе данных геолокации</li>
+														<li>Одно мобильное приложение может контролировать все объекты и&nbsp;помещения</li>
+													</ul>
+												</div>
+											</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__image"><img src="./images/tech-6.jpg" alt=""></div>
+										<div class="page-tech__item__content">
+											<div class="page-tech__item__number">08</div>
+											<div class="h4 page-tech__item__title">Классический японский дизайн</div>
+											<div class="page-tech__item__text">Лицевая панель выполнена из&nbsp;матового пластика приятного на&nbsp;ощупь.</div>
+										</div></a></div>
+								<div class="page-tech__list__col"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__image"><img src="./images/tech-7.jpg" alt=""></div>
+										<div class="page-tech__item__content">
+											<div class="page-tech__item__number">09</div>
+											<div class="h4 page-tech__item__title">Антикоррозийное покрытие GOLDEN FIN</div>
+											<div class="page-tech__item__text">Защищает теплообменник от&nbsp;негативного воздействия влаги, соли, агрессивных загрязнителей воздуха, абразивных частиц. Также препятствует размножению бактерий и&nbsp;улучшает теплообмен.</div>
+										</div></a></div>
+								<div class="page-tech__list__col page-tech__list__col--half"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__inner">
+											<div class="page-tech__item__number">10</div>
+											<div class="page-tech__item__inner__image"><img src="./images/tech-8.jpg" alt=""></div>
+											<div class="page-tech__item__content">
+												<div class="h4 page-tech__item__title">Технология &laquo;EASY CLIMATE&raquo; и&nbsp;&laquo;EASY CLIMATE PRO&raquo;</div>
+												<div class="page-tech__item__text">Модели YUMO и&nbsp;SEMPAI. Никогда разборка внутреннего блока не&nbsp;была такой простой операцией.</div>
+											</div>
+										</div></a></div>
+								<div class="page-tech__list__col page-tech__list__col--half"><a class="page-tech__item" href="#">
+										<div class="page-tech__item__inner">
+											<div class="page-tech__item__number">11</div>
+											<div class="page-tech__item__inner__image"><img src="./images/tech-9.jpg" alt=""></div>
+											<div class="page-tech__item__content">
+												<div class="h4 page-tech__item__title">Мощная обдувка теплообменника</div>
+												<div class="page-tech__item__text">Мощная продувка теплообменника наружного блока <br> избавляет устройство от&nbsp;налипшего пуха, грязи и&nbsp;налета.</div>
+											</div>
+										</div></a></div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer" data-app="footer">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<div class="footer__contacts__left">
+								<div class="footer__logo"><a href="#"><img src="./images/logo-light.svg" alt=""></a></div>
+								<div class="footer__address">Россия, Москва,<br>ул. Адмирала Макарова, д. 8</div>
+								<ul class="footer__contacts__menu for-desktop">
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="footer__contacts__right">
+								<div class="footer__phone"><a href="tel:+74957373733">8 495 737 37 33</a></div>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__catalog for-mobile"><a class="footer__catalog__label" href="#">Каталог</a>
+								<ul class="footer__catalog__list">
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</div>
+							<ul>
+								<li><a href="#">О бренде</a></li>
+								<li><a href="#">Стать партнером</a></li>
+								<li><a href="#">Технологии</a></li>
+								<li><a href="#">Поддержка и гарантия</a></li>
+								<li><a href="#">Где купить</a></li>
+							</ul>
+							<ul class="for-desktop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="footer__contacts__menu for-mobile">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+					<div class="footer__bottom">
+						<ul class="footer__bottom__menu">
+							<li>© Daichi 2021.</li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Пользовательское соглашение</a></li>
+							<li><a href="#">Управление cookie</a></li>
+						</ul>
+						<div class="footer__dev">Разработано в <a href="https://itech-group.ru/" target="_blank">ITECH</a></div>
+					</div>
+				</div>
+			</footer>
+			<div class="is-hidden">
+				<form class="modal modal-form" id="callback" action="./ajax/callback.json" method="get" data-app="form" data-event="Feedback">
+					<div class="h3 modal-form__title">Обратная связь</div>
+					<div class="modal-form__text">Оставьте ваши контактные данные, и&nbsp;наш специалист свяжется с вами в течение 30 минут</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Ваше имя</div>
+								<div class="input__field">
+									<input type="text" name="firstname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Фамилия</div>
+								<div class="input__field">
+									<input type="text" name="surname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Email</div>
+						<div class="input__field">
+							<input type="email" name="email" data-validation="{&quot;regex&quot;:[&quot;^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$&quot;,&quot;i&quot;],&quot;maxlength&quot;:254,&quot;messages&quot;:{&quot;regex&quot;:&quot;Неверный или некорректный e-mail адрес.&quot;}}" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Телефон</div>
+						<div class="input__field">
+							<input type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Текст</div>
+						<div class="input__field">
+							<textarea name="text" data-validation="{&quot;maxlength&quot;:300}" required></textarea>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="checkbox" required><i></i><span>Разрешаю обработку <a class="link-text" href="#">персональных данных</a></span>
+						</label>
+					</div>
+					<div class="modal-form__button">
+						<button class="button" type="submit">Отправить</button>
+					</div>
+				</form>
+			</div><a class="up" href="#" data-app="up"></a>
+			<div class="cookies" data-app="cookies">
+				<div class="cookies__container">
+					<div class="cookies__text">На&nbsp;сайте используются cookie-файлы, которые помогают показывать Вам самую актуальную информацию. Продолжая пользоваться сайтом, Вы&nbsp;даете согласие на&nbsp;использование ваших Метаданных и&nbsp;cookie-файлов. <a class="link-text" href="#">Побробнее о&nbsp;правилах использования cookie и&nbsp;Условиях сбора и&nbsp;обработки персональных данных</a>.</div>
+					<div class="cookies__button">
+						<button class="button button--black" type="button">Согласен</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1683104816936"></script>
+		<script src="./js/main.js?v=1683104816936"></script>
+	</body>
+</html>

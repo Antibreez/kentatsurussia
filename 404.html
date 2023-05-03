@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Kentatsu">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kentatsu">
+		<title>Kentatsu</title>
+		<link rel="icon" href="./images/favicon.png">
+		<link rel="stylesheet" href="./css/main.css?v=1683104812331">
+		<script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-NXNJM8W');</script>
+	</head>
+	<body>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNJM8W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<div class="main">
+			<header class="header" data-app="header">
+				<div class="container">
+					<div class="header__logo"><a href="#"><img src="./images/logo.svg" alt=""></a></div>
+					<div class="header__menu for-desktop">
+						<ul>
+							<li><a href="#">Каталог</a>
+								<ul>
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">О бренде</a></li>
+							<li><a href="#">Партнерам</a>
+								<ul>
+									<li><a href="#">Дилерам</a></li>
+									<li><a href="#">Заказчикам</a></li>
+									<li><a href="#">Проектировщикам</a></li>
+									<li><a href="#">Девелоперам</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Поддержка</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header__location for-desktop"><a class="header__location__current" href="#">
+							<svg>
+								<use xlink:href="./images/sprites.svg#location"></use>
+							</svg>Москва</a>
+						<div class="header__location__confirm for-desktop">
+							<div class="header__location__confirm__title">Ваш город Москва?</div>
+							<div class="header__location__confirm__footer">
+								<button class="header__location__confirm__yes" type="button">Да</button>
+								<button class="header__location__confirm__no" type="button">Нет</button>
+							</div>
+						</div>
+						<div class="header__location__change" data-param="change-city">
+							<div class="header__location__change__title">Выбор города</div>
+							<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+								<div class="input__field input__field--search">
+									<select data-placeholder="Выберите город">
+										<option label=" "></option>
+									</select>
+								</div>
+							</div>
+							<div class="header__location__change__list">
+								<ul>
+									<li><a href="?change-city=Москва">Москва</a></li>
+									<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+									<li><a href="?change-city=Казань">Казань</a></li>
+									<li><a href="?change-city=Калининград">Калининград</a></li>
+									<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+									<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+									<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><a class="header__search-open for-desktop" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search"></use>
+						</svg></a>
+					<form class="header__search for-desktop" action="search.html">
+						<input class="header__search__field" type="text" name="q" autocomplete="off" placeholder="Поиск">
+						<button class="header__search__submit" type="submit">
+							<svg>
+								<use xlink:href="./images/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<button class="header__burger for-mobile" type="button"><i></i><i></i><i></i></button>
+				</div>
+			</header>
+			<div class="mobile-menu for-mobile" data-app="mobile-menu">
+				<div class="mobile-menu__list">
+					<ul>
+						<li><a href="#">Каталог</a>
+							<button class="mobile-menu__list__plus" type="button"></button>
+							<ul class="mobile-menu__list__drop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">О бренде</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Поддержка</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu__location"><a class="mobile-menu__location__current" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#location"></use>
+						</svg>Москва</a>
+					<div class="header__location__change" data-param="change-city">
+						<div class="header__location__change__title">Выбор города</div>
+						<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+							<div class="input__field input__field--search">
+								<select data-placeholder="Выберите город">
+									<option label=" "></option>
+								</select>
+							</div>
+						</div>
+						<div class="header__location__change__list">
+							<ul>
+								<li><a href="?change-city=Москва">Москва</a></li>
+								<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+								<li><a href="?change-city=Казань">Казань</a></li>
+								<li><a href="?change-city=Калининград">Калининград</a></li>
+								<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+								<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+								<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="mobile-menu__search" action="#" method="get">
+					<input class="mobile-menu__search__field" type="text" name="q" placeholder="Поиск">
+					<button class="mobile-menu__search__submit" type="submit">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search-2"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="content content--404">
+				<div class="page-not-found">
+					<div class="container">
+						<div class="breadcrumbs breadcrumbs--margin">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li>404</li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-not-found__container">
+						<div class="page-not-found__image" style="background-image:url(./images/404.jpg)"></div>
+						<h1 class="page-not-found__title">Страница не найдена</h1>
+						<div class="page-not-found__text">Вернитесь на главную или воспользуйтесь каталогом</div>
+						<div class="page-not-found__button"><a class="button" href="#">На главную</a></div>
+						<div class="page-not-found__link"><a class="link-arrow" href="#">В каталог</a></div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1683104812331"></script>
+		<script src="./js/main.js?v=1683104812331"></script>
+	</body>
+</html>

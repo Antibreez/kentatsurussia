@@ -1,0 +1,574 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Kentatsu">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kentatsu">
+		<title>Kentatsu</title>
+		<link rel="icon" href="./images/favicon.png">
+		<link rel="stylesheet" href="./css/main.css?v=1683104814077">
+		<script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-NXNJM8W');</script>
+	</head>
+	<body>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNJM8W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<div class="main">
+			<header class="header" data-app="header">
+				<div class="container">
+					<div class="header__logo"><a href="#"><img src="./images/logo.svg" alt=""></a></div>
+					<div class="header__menu for-desktop">
+						<ul>
+							<li><a href="#">Каталог</a>
+								<ul>
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">О бренде</a></li>
+							<li><a href="#">Партнерам</a>
+								<ul>
+									<li><a href="#">Дилерам</a></li>
+									<li><a href="#">Заказчикам</a></li>
+									<li><a href="#">Проектировщикам</a></li>
+									<li><a href="#">Девелоперам</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Поддержка</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header__location for-desktop"><a class="header__location__current" href="#">
+							<svg>
+								<use xlink:href="./images/sprites.svg#location"></use>
+							</svg>Москва</a>
+						<div class="header__location__confirm for-desktop">
+							<div class="header__location__confirm__title">Ваш город Москва?</div>
+							<div class="header__location__confirm__footer">
+								<button class="header__location__confirm__yes" type="button">Да</button>
+								<button class="header__location__confirm__no" type="button">Нет</button>
+							</div>
+						</div>
+						<div class="header__location__change" data-param="change-city">
+							<div class="header__location__change__title">Выбор города</div>
+							<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+								<div class="input__field input__field--search">
+									<select data-placeholder="Выберите город">
+										<option label=" "></option>
+									</select>
+								</div>
+							</div>
+							<div class="header__location__change__list">
+								<ul>
+									<li><a href="?change-city=Москва">Москва</a></li>
+									<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+									<li><a href="?change-city=Казань">Казань</a></li>
+									<li><a href="?change-city=Калининград">Калининград</a></li>
+									<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+									<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+									<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><a class="header__search-open for-desktop" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search"></use>
+						</svg></a>
+					<form class="header__search for-desktop" action="search.html">
+						<input class="header__search__field" type="text" name="q" autocomplete="off" placeholder="Поиск">
+						<button class="header__search__submit" type="submit">
+							<svg>
+								<use xlink:href="./images/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<button class="header__burger for-mobile" type="button"><i></i><i></i><i></i></button>
+				</div>
+			</header>
+			<div class="mobile-menu for-mobile" data-app="mobile-menu">
+				<div class="mobile-menu__list">
+					<ul>
+						<li><a href="#">Каталог</a>
+							<button class="mobile-menu__list__plus" type="button"></button>
+							<ul class="mobile-menu__list__drop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">О бренде</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Поддержка</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu__location"><a class="mobile-menu__location__current" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#location"></use>
+						</svg>Москва</a>
+					<div class="header__location__change" data-param="change-city">
+						<div class="header__location__change__title">Выбор города</div>
+						<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+							<div class="input__field input__field--search">
+								<select data-placeholder="Выберите город">
+									<option label=" "></option>
+								</select>
+							</div>
+						</div>
+						<div class="header__location__change__list">
+							<ul>
+								<li><a href="?change-city=Москва">Москва</a></li>
+								<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+								<li><a href="?change-city=Казань">Казань</a></li>
+								<li><a href="?change-city=Калининград">Калининград</a></li>
+								<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+								<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+								<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="mobile-menu__search" action="#" method="get">
+					<input class="mobile-menu__search__field" type="text" name="q" placeholder="Поиск">
+					<button class="mobile-menu__search__submit" type="submit">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search-2"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="page-household">
+					<div class="container">
+						<div class="breadcrumbs breadcrumbs--margin">
+							<ul>
+								<li><a href="#">Главная</a></li>
+								<li><a href="#">Каталог</a></li>
+								<li>Кондиционирование</li>
+							</ul>
+						</div>
+						<div class="top-menu" data-app="top-menu">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="top-menu__item"><a class="link-arrow" href="#">Весь каталог</a>
+											<button class="top-menu__item__arrow for-mobile" type="button"></button>
+											<div class="top-menu__item__drop">
+												<ul>
+													<li><a href="#">Бытовые кондиционеры</a></li>
+													<li><a href="#">Мультисистемы</a></li>
+													<li><a href="#">Коммерческие кондиционеры</a></li>
+													<li><a href="#">DX PRO системы</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="top-menu__item"><a class="link-arrow" href="#">Кондиционирование</a>
+											<button class="top-menu__item__arrow for-mobile" type="button"></button>
+											<div class="top-menu__item__drop">
+												<ul>
+													<li><a href="#">Кондиционирование</a></li>
+													<li><a href="#">Кондиционирование</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="top-menu__item"><a class="link-arrow" href="#">Бытовые кондиционеры</a>
+											<button class="top-menu__item__arrow for-mobile" type="button"></button>
+											<div class="top-menu__item__drop">
+												<ul>
+													<li><a href="#">Бытовые кондиционеры</a></li>
+													<li><a href="#">Бытовые кондиционеры</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="top-menu__item"><a class="link-arrow" href="#">Страница серии SEMPAI</a>
+											<button class="top-menu__item__arrow for-mobile" type="button"></button>
+											<div class="top-menu__item__drop">
+												<ul>
+													<li><a href="#">Страница серии SEMPAI</a></li>
+													<li><a href="#">Страница серии SEMPAI</a></li>
+												</ul>
+											</div>
+										</div>
+									</div>
+									<div class="swiper-slide">
+										<div class="top-menu__item"><a href="#">Инверторный кондиционер Kentatsu KSGP26HZRN1</a></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<h1 class="page-title">Бытовые кондиционеры</h1>
+						<div class="page-household__tag">
+							<ul>
+								<li><a class="button-tag" href="#">SEMPAI</a></li>
+								<li><a class="button-tag" href="#">YUMO</a></li>
+								<li><a class="button-tag" href="#">KANAMI INVERTER</a></li>
+								<li><a class="button-tag" href="#">BRAVO INVERTER</a></li>
+								<li><a class="button-tag" href="#">ICHI</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="page-household__intro">
+						<div class="page-household__intro__image" style="background-image:url(./images/household.jpg)"></div>
+						<div class="container">
+							<div class="page-household__intro__content">
+								<div class="h1 page-household__intro__title">Бытовые кондиционеры</div>
+								<div class="page-household__intro__text">Надежно. Рационально. Ничего лишнего</div>
+								<div class="page-household__intro__benefits">
+									<ul>
+										<li>Биполярный ионизатор</li>
+										<li>Классический японский дизайн</li>
+										<li>Встроенный Wi-Fi интерфейс</li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="container">
+						<div class="page-household__row">
+							<div class="page-household__col">
+								<div class="page-household__item">
+									<h2 class="page-household__item__title"><a href="#">YUMO</a></h2>
+									<div class="page-household__item__slider" data-app="household-slider">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+											</div>
+										</div>
+										<button class="arrow-prev" type="button"></button>
+										<button class="arrow-next" type="button"></button>
+									</div>
+									<div class="page-household__item__subtitle">Комфортный климат и стильный дизайн</div>
+									<div class="page-household__item__text">Серия сочетает все передовые технологии, повышающие уровень комфорта. Этот кондиционер с&nbsp;легкостью создаст комфортный климат в&nbsp;помещении, а&nbsp;его стильный дизайн удачно впишется в&nbsp;интерьер.</div>
+									<div class="page-household__item__benefits">
+										<div class="page-household__item__benefits__row">
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/refresh.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/box.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/certificate.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="page-household__item__buttons"><a class="button" href="#">Подробнее</a><a class="button button--black" href="#">Где купить</a></div>
+								</div>
+							</div>
+							<div class="page-household__col">
+								<div class="page-household__item">
+									<h2 class="page-household__item__title"><a href="#">SEMPAI</a></h2>
+									<div class="page-household__item__slider" data-app="household-slider">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+											</div>
+										</div>
+										<button class="arrow-prev" type="button"></button>
+										<button class="arrow-next" type="button"></button>
+									</div>
+									<div class="page-household__item__subtitle">Комфортный климат и стильный дизайн</div>
+									<div class="page-household__item__text">Кондиционеры серии SEMPAI включают в&nbsp;себя современные технологии энергоэффективности, комфорта и&nbsp;заботы об&nbsp;окружающей среде.<br>Кондиционер выполнен в&nbsp;технологичном дизайне, имеет низкий уровень шума и&nbsp;интеллектуальное управление.</div>
+									<div class="page-household__item__benefits">
+										<div class="page-household__item__benefits__row">
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/refresh.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/box.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/certificate.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="page-household__item__buttons"><a class="button" href="#">Подробнее</a><a class="button button--black" href="#">Где купить</a></div>
+								</div>
+							</div>
+							<div class="page-household__col">
+								<div class="page-household__item">
+									<h2 class="page-household__item__title"><a href="#">KANAMI INVERTER</a></h2>
+									<div class="page-household__item__slider" data-app="household-slider">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+											</div>
+										</div>
+										<button class="arrow-prev" type="button"></button>
+										<button class="arrow-next" type="button"></button>
+									</div>
+									<div class="page-household__item__subtitle">Комфортный климат и стильный дизайн</div>
+									<div class="page-household__item__text">Забота об&nbsp;окружающей среде и&nbsp;технологии, повышающие уровень комфорта. Применение экологичного хладагента R32, DC-инверторных компрессоров, технология объемного воздушного потока&nbsp;&mdash; все это в&nbsp;полной мере отвечает высоким современным стандартам.</div>
+									<div class="page-household__item__benefits">
+										<div class="page-household__item__benefits__row">
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/refresh.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/box.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/certificate.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="page-household__item__buttons"><a class="button" href="#">Подробнее</a><a class="button button--black" href="#">Где купить</a></div>
+								</div>
+							</div>
+							<div class="page-household__col">
+								<div class="page-household__item">
+									<h2 class="page-household__item__title"><a href="#">YUMO</a></h2>
+									<div class="page-household__item__slider" data-app="household-slider">
+										<div class="swiper-container">
+											<div class="swiper-wrapper">
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+												<div class="swiper-slide">
+													<div class="page-household__item__slider__image"><img src="./images/household-item.png" alt=""></div>
+												</div>
+											</div>
+										</div>
+										<button class="arrow-prev" type="button"></button>
+										<button class="arrow-next" type="button"></button>
+									</div>
+									<div class="page-household__item__subtitle">Комфортный климат и стильный дизайн</div>
+									<div class="page-household__item__text">Комфорт и&nbsp;экономия расходов на&nbsp;электроэнергию<br>Кондиционеры серии Bravo Inverter безупречно оправдывают свое наименование. Уровень сезонной энергоэффективности инверторных кондиционеров BRAVO соответствует классу &laquo;А++&raquo;</div>
+									<div class="page-household__item__benefits">
+										<div class="page-household__item__benefits__row">
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/refresh.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/box.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+											<div class="page-household__item__benefits__col">
+												<div class="page-household__item__benefits__item">
+													<div class="page-household__item__benefits__item__icon"><img src="./images/icons/certificate.svg" alt></div>
+													<div class="page-household__item__benefits__item__text">Ключевое преимущество</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="page-household__item__buttons"><a class="button" href="#">Подробнее</a><a class="button button--black" href="#">Где купить</a></div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer" data-app="footer">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<div class="footer__contacts__left">
+								<div class="footer__logo"><a href="#"><img src="./images/logo-light.svg" alt=""></a></div>
+								<div class="footer__address">Россия, Москва,<br>ул. Адмирала Макарова, д. 8</div>
+								<ul class="footer__contacts__menu for-desktop">
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="footer__contacts__right">
+								<div class="footer__phone"><a href="tel:+74957373733">8 495 737 37 33</a></div>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__catalog for-mobile"><a class="footer__catalog__label" href="#">Каталог</a>
+								<ul class="footer__catalog__list">
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</div>
+							<ul>
+								<li><a href="#">О бренде</a></li>
+								<li><a href="#">Стать партнером</a></li>
+								<li><a href="#">Технологии</a></li>
+								<li><a href="#">Поддержка и гарантия</a></li>
+								<li><a href="#">Где купить</a></li>
+							</ul>
+							<ul class="for-desktop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="footer__contacts__menu for-mobile">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+					<div class="footer__bottom">
+						<ul class="footer__bottom__menu">
+							<li>© Daichi 2021.</li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Пользовательское соглашение</a></li>
+							<li><a href="#">Управление cookie</a></li>
+						</ul>
+						<div class="footer__dev">Разработано в <a href="https://itech-group.ru/" target="_blank">ITECH</a></div>
+					</div>
+				</div>
+			</footer>
+			<div class="is-hidden">
+				<form class="modal modal-form" id="callback" action="./ajax/callback.json" method="get" data-app="form" data-event="Feedback">
+					<div class="h3 modal-form__title">Обратная связь</div>
+					<div class="modal-form__text">Оставьте ваши контактные данные, и&nbsp;наш специалист свяжется с вами в течение 30 минут</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Ваше имя</div>
+								<div class="input__field">
+									<input type="text" name="firstname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Фамилия</div>
+								<div class="input__field">
+									<input type="text" name="surname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Email</div>
+						<div class="input__field">
+							<input type="email" name="email" data-validation="{&quot;regex&quot;:[&quot;^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$&quot;,&quot;i&quot;],&quot;maxlength&quot;:254,&quot;messages&quot;:{&quot;regex&quot;:&quot;Неверный или некорректный e-mail адрес.&quot;}}" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Телефон</div>
+						<div class="input__field">
+							<input type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Текст</div>
+						<div class="input__field">
+							<textarea name="text" data-validation="{&quot;maxlength&quot;:300}" required></textarea>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="checkbox" required><i></i><span>Разрешаю обработку <a class="link-text" href="#">персональных данных</a></span>
+						</label>
+					</div>
+					<div class="modal-form__button">
+						<button class="button" type="submit">Отправить</button>
+					</div>
+				</form>
+			</div><a class="up" href="#" data-app="up"></a>
+			<div class="cookies" data-app="cookies">
+				<div class="cookies__container">
+					<div class="cookies__text">На&nbsp;сайте используются cookie-файлы, которые помогают показывать Вам самую актуальную информацию. Продолжая пользоваться сайтом, Вы&nbsp;даете согласие на&nbsp;использование ваших Метаданных и&nbsp;cookie-файлов. <a class="link-text" href="#">Побробнее о&nbsp;правилах использования cookie и&nbsp;Условиях сбора и&nbsp;обработки персональных данных</a>.</div>
+					<div class="cookies__button">
+						<button class="button button--black" type="button">Согласен</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1683104814077"></script>
+		<script src="./js/main.js?v=1683104814077"></script>
+	</body>
+</html>

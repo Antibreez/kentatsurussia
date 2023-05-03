@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Kentatsu">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kentatsu">
+		<title>Kentatsu</title>
+		<link rel="icon" href="./images/favicon.png">
+		<link rel="stylesheet" href="./css/main.css?v=1683104813410">
+		<script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-NXNJM8W');</script>
+	</head>
+	<body>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNJM8W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<div class="main">
+			<header class="header" data-app="header">
+				<div class="container">
+					<div class="header__logo"><a href="#"><img src="./images/logo.svg" alt=""></a></div>
+					<div class="header__menu for-desktop">
+						<ul>
+							<li><a href="#">Каталог</a>
+								<ul>
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">О бренде</a></li>
+							<li><a href="#">Партнерам</a>
+								<ul>
+									<li><a href="#">Дилерам</a></li>
+									<li><a href="#">Заказчикам</a></li>
+									<li><a href="#">Проектировщикам</a></li>
+									<li><a href="#">Девелоперам</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Поддержка</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header__location for-desktop"><a class="header__location__current" href="#">
+							<svg>
+								<use xlink:href="./images/sprites.svg#location"></use>
+							</svg>Москва</a>
+						<div class="header__location__confirm for-desktop">
+							<div class="header__location__confirm__title">Ваш город Москва?</div>
+							<div class="header__location__confirm__footer">
+								<button class="header__location__confirm__yes" type="button">Да</button>
+								<button class="header__location__confirm__no" type="button">Нет</button>
+							</div>
+						</div>
+						<div class="header__location__change" data-param="change-city">
+							<div class="header__location__change__title">Выбор города</div>
+							<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+								<div class="input__field input__field--search">
+									<select data-placeholder="Выберите город">
+										<option label=" "></option>
+									</select>
+								</div>
+							</div>
+							<div class="header__location__change__list">
+								<ul>
+									<li><a href="?change-city=Москва">Москва</a></li>
+									<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+									<li><a href="?change-city=Казань">Казань</a></li>
+									<li><a href="?change-city=Калининград">Калининград</a></li>
+									<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+									<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+									<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><a class="header__search-open for-desktop" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search"></use>
+						</svg></a>
+					<form class="header__search for-desktop" action="search.html">
+						<input class="header__search__field" type="text" name="q" autocomplete="off" placeholder="Поиск">
+						<button class="header__search__submit" type="submit">
+							<svg>
+								<use xlink:href="./images/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<button class="header__burger for-mobile" type="button"><i></i><i></i><i></i></button>
+				</div>
+			</header>
+			<div class="mobile-menu for-mobile" data-app="mobile-menu">
+				<div class="mobile-menu__list">
+					<ul>
+						<li><a href="#">Каталог</a>
+							<button class="mobile-menu__list__plus" type="button"></button>
+							<ul class="mobile-menu__list__drop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">О бренде</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Поддержка</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu__location"><a class="mobile-menu__location__current" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#location"></use>
+						</svg>Москва</a>
+					<div class="header__location__change" data-param="change-city">
+						<div class="header__location__change__title">Выбор города</div>
+						<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+							<div class="input__field input__field--search">
+								<select data-placeholder="Выберите город">
+									<option label=" "></option>
+								</select>
+							</div>
+						</div>
+						<div class="header__location__change__list">
+							<ul>
+								<li><a href="?change-city=Москва">Москва</a></li>
+								<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+								<li><a href="?change-city=Казань">Казань</a></li>
+								<li><a href="?change-city=Калининград">Калининград</a></li>
+								<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+								<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+								<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="mobile-menu__search" action="#" method="get">
+					<input class="mobile-menu__search__field" type="text" name="q" placeholder="Поиск">
+					<button class="mobile-menu__search__submit" type="submit">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search-2"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="breadcrumbs breadcrumbs--margin">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li>Управление cookie</li>
+						</ul>
+					</div>
+					<h1 class="page-title">Управление cookie</h1>
+					<div class="page-text">
+						<p>Каждый веб-разработчик знает, что такое текст-&laquo;рыба&raquo;. Текст этот, несмотря на&nbsp;название, не&nbsp;имеет никакого отношения к&nbsp;обитателям водоемов. Используется он&nbsp;веб-дизайнерами для вставки на&nbsp;интернет-страницы и&nbsp;демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и&nbsp;т.д. Так как цель применения такого текста исключительно демонстрационная, то&nbsp;и&nbsp;смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на&nbsp;руку при оценке качества восприятия макета.</p>
+						<p>Самым известным &laquo;рыбным&raquo; текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в&nbsp;книгопечатании еще в&nbsp;XVI&nbsp;веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из&nbsp;его трактата &laquo;О&nbsp;пределах добра и&nbsp;зла&raquo; средневековый книгопечатник вырвал отдельные фразы и&nbsp;слова, получив текст-&laquo;рыбу&raquo;, широко используемый и&nbsp;по&nbsp;сей день. Конечно, возникают некоторые вопросы, связанные с&nbsp;использованием Lorem ipsum на&nbsp;сайтах и&nbsp;проектах, ориентированных на&nbsp;кириллический контент&nbsp;&mdash; написание символов на&nbsp;латыни и&nbsp;на&nbsp;кириллице значительно различается</p>
+						<p>Каждый веб-разработчик знает, что такое текст-&laquo;рыба&raquo;. Текст этот, несмотря на&nbsp;название, не&nbsp;имеет никакого отношения к&nbsp;обитателям водоемов. Используется он&nbsp;веб-дизайнерами для вставки на&nbsp;интернет-страницы и&nbsp;демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и&nbsp;т.д. Так как цель применения такого текста исключительно демонстрационная, то&nbsp;и&nbsp;смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на&nbsp;руку при оценке качества восприятия макета.</p>
+						<p>Каждый веб-разработчик знает, что такое текст-&laquo;рыба&raquo;. Текст этот, несмотря на&nbsp;название, не&nbsp;имеет никакого отношения к&nbsp;обитателям водоемов. Используется он&nbsp;веб-дизайнерами для вставки на&nbsp;интернет-страницы и&nbsp;демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и&nbsp;т.д. Так как цель применения такого текста исключительно демонстрационная, то&nbsp;и&nbsp;смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на&nbsp;руку при оценке качества восприятия макета.</p>
+						<p>Самым известным &laquo;рыбным&raquo; текстом является знаменитый Lorem ipsum. Считается, что впервые его применили в&nbsp;книгопечатании еще в&nbsp;XVI&nbsp;веке. Своим появлением Lorem ipsum обязан древнеримскому философу Цицерону, ведь именно из&nbsp;его трактата &laquo;О&nbsp;пределах добра и&nbsp;зла&raquo; средневековый книгопечатник вырвал отдельные фразы и&nbsp;слова, получив текст-&laquo;рыбу&raquo;, широко используемый и&nbsp;по&nbsp;сей день. Конечно, возникают некоторые вопросы, связанные с&nbsp;использованием Lorem ipsum на&nbsp;сайтах и&nbsp;проектах, ориентированных на&nbsp;кириллический контент&nbsp;&mdash; написание символов на&nbsp;латыни и&nbsp;на&nbsp;кириллице значительно различается</p>
+						<p>Каждый веб-разработчик знает, что такое текст-&laquo;рыба&raquo;. Текст этот, несмотря на&nbsp;название, не&nbsp;имеет никакого отношения к&nbsp;обитателям водоемов. Используется он&nbsp;веб-дизайнерами для вставки на&nbsp;интернет-страницы и&nbsp;демонстрации внешнего вида контента, просмотра шрифтов, абзацев, отступов и&nbsp;т.д. Так как цель применения такого текста исключительно демонстрационная, то&nbsp;и&nbsp;смысловую нагрузку ему нести совсем необязательно. Более того, нечитабельность текста сыграет на&nbsp;руку при оценке качества восприятия макета.</p>
+					</div>
+				</div>
+			</div>
+			<footer class="footer" data-app="footer">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<div class="footer__contacts__left">
+								<div class="footer__logo"><a href="#"><img src="./images/logo-light.svg" alt=""></a></div>
+								<div class="footer__address">Россия, Москва,<br>ул. Адмирала Макарова, д. 8</div>
+								<ul class="footer__contacts__menu for-desktop">
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="footer__contacts__right">
+								<div class="footer__phone"><a href="tel:+74957373733">8 495 737 37 33</a></div>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__catalog for-mobile"><a class="footer__catalog__label" href="#">Каталог</a>
+								<ul class="footer__catalog__list">
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</div>
+							<ul>
+								<li><a href="#">О бренде</a></li>
+								<li><a href="#">Стать партнером</a></li>
+								<li><a href="#">Технологии</a></li>
+								<li><a href="#">Поддержка и гарантия</a></li>
+								<li><a href="#">Где купить</a></li>
+							</ul>
+							<ul class="for-desktop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="footer__contacts__menu for-mobile">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+					<div class="footer__bottom">
+						<ul class="footer__bottom__menu">
+							<li>© Daichi 2021.</li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Пользовательское соглашение</a></li>
+							<li><a href="#">Управление cookie</a></li>
+						</ul>
+						<div class="footer__dev">Разработано в <a href="https://itech-group.ru/" target="_blank">ITECH</a></div>
+					</div>
+				</div>
+			</footer>
+			<div class="is-hidden">
+				<form class="modal modal-form" id="callback" action="./ajax/callback.json" method="get" data-app="form" data-event="Feedback">
+					<div class="h3 modal-form__title">Обратная связь</div>
+					<div class="modal-form__text">Оставьте ваши контактные данные, и&nbsp;наш специалист свяжется с вами в течение 30 минут</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Ваше имя</div>
+								<div class="input__field">
+									<input type="text" name="firstname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Фамилия</div>
+								<div class="input__field">
+									<input type="text" name="surname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Email</div>
+						<div class="input__field">
+							<input type="email" name="email" data-validation="{&quot;regex&quot;:[&quot;^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$&quot;,&quot;i&quot;],&quot;maxlength&quot;:254,&quot;messages&quot;:{&quot;regex&quot;:&quot;Неверный или некорректный e-mail адрес.&quot;}}" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Телефон</div>
+						<div class="input__field">
+							<input type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Текст</div>
+						<div class="input__field">
+							<textarea name="text" data-validation="{&quot;maxlength&quot;:300}" required></textarea>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="checkbox" required><i></i><span>Разрешаю обработку <a class="link-text" href="#">персональных данных</a></span>
+						</label>
+					</div>
+					<div class="modal-form__button">
+						<button class="button" type="submit">Отправить</button>
+					</div>
+				</form>
+			</div><a class="up" href="#" data-app="up"></a>
+			<div class="cookies" data-app="cookies">
+				<div class="cookies__container">
+					<div class="cookies__text">На&nbsp;сайте используются cookie-файлы, которые помогают показывать Вам самую актуальную информацию. Продолжая пользоваться сайтом, Вы&nbsp;даете согласие на&nbsp;использование ваших Метаданных и&nbsp;cookie-файлов. <a class="link-text" href="#">Побробнее о&nbsp;правилах использования cookie и&nbsp;Условиях сбора и&nbsp;обработки персональных данных</a>.</div>
+					<div class="cookies__button">
+						<button class="button button--black" type="button">Согласен</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1683104813410"></script>
+		<script src="./js/main.js?v=1683104813410"></script>
+	</body>
+</html>

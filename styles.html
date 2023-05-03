@@ -1,0 +1,880 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width">
+		<meta property="og:type" content="website">
+		<meta property="og:locale" content="ru_RU">
+		<meta property="og:title" content="Kentatsu">
+		<meta name="twitter:card" content="summary_large_image">
+		<meta name="twitter:title" content="Kentatsu">
+		<title>Kentatsu</title>
+		<link rel="icon" href="./images/favicon.png">
+		<link rel="stylesheet" href="./css/main.css?v=1683104816346">
+		<script>(function(w,d,s,l,i){w[l] = w[l] || [];w[l].push({'gtm.start': new Date().getTime(), event: 'gtm.js'});var f = d.getElementsByTagName(s)[0], j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : '';j.async = true;j.src = 'https://www.googletagmanager.com/gtm.js?id=' + i + dl;f.parentNode.insertBefore(j, f);})(window,document,'script','dataLayer','GTM-NXNJM8W');</script>
+	</head>
+	<body>
+		<noscript>
+			<iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NXNJM8W" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+		</noscript>
+		<div class="main">
+			<header class="header" data-app="header">
+				<div class="container">
+					<div class="header__logo"><a href="#"><img src="./images/logo.svg" alt=""></a></div>
+					<div class="header__menu for-desktop">
+						<ul>
+							<li><a href="#">Каталог</a>
+								<ul>
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</li>
+							<li><a href="#">О бренде</a></li>
+							<li><a href="#">Партнерам</a>
+								<ul>
+									<li><a href="#">Дилерам</a></li>
+									<li><a href="#">Заказчикам</a></li>
+									<li><a href="#">Проектировщикам</a></li>
+									<li><a href="#">Девелоперам</a></li>
+								</ul>
+							</li>
+							<li><a href="#">Поддержка</a></li>
+							<li><a href="#">Где купить</a></li>
+							<li><a href="#">Контакты</a></li>
+						</ul>
+					</div>
+					<div class="header__location for-desktop"><a class="header__location__current" href="#">
+							<svg>
+								<use xlink:href="./images/sprites.svg#location"></use>
+							</svg>Москва</a>
+						<div class="header__location__confirm for-desktop">
+							<div class="header__location__confirm__title">Ваш город Москва?</div>
+							<div class="header__location__confirm__footer">
+								<button class="header__location__confirm__yes" type="button">Да</button>
+								<button class="header__location__confirm__no" type="button">Нет</button>
+							</div>
+						</div>
+						<div class="header__location__change" data-param="change-city">
+							<div class="header__location__change__title">Выбор города</div>
+							<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+								<div class="input__field input__field--search">
+									<select data-placeholder="Выберите город">
+										<option label=" "></option>
+									</select>
+								</div>
+							</div>
+							<div class="header__location__change__list">
+								<ul>
+									<li><a href="?change-city=Москва">Москва</a></li>
+									<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+									<li><a href="?change-city=Казань">Казань</a></li>
+									<li><a href="?change-city=Калининград">Калининград</a></li>
+									<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+									<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+									<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+								</ul>
+							</div>
+						</div>
+					</div><a class="header__search-open for-desktop" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search"></use>
+						</svg></a>
+					<form class="header__search for-desktop" action="search.html">
+						<input class="header__search__field" type="text" name="q" autocomplete="off" placeholder="Поиск">
+						<button class="header__search__submit" type="submit">
+							<svg>
+								<use xlink:href="./images/sprites.svg#search"></use>
+							</svg>
+						</button>
+					</form>
+					<button class="header__burger for-mobile" type="button"><i></i><i></i><i></i></button>
+				</div>
+			</header>
+			<div class="mobile-menu for-mobile" data-app="mobile-menu">
+				<div class="mobile-menu__list">
+					<ul>
+						<li><a href="#">Каталог</a>
+							<button class="mobile-menu__list__plus" type="button"></button>
+							<ul class="mobile-menu__list__drop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</li>
+						<li><a href="#">О бренде</a></li>
+						<li><a href="#">Партнерам</a></li>
+						<li><a href="#">Поддержка</a></li>
+						<li><a href="#">Где купить</a></li>
+						<li><a href="#">Контакты</a></li>
+					</ul>
+				</div>
+				<div class="mobile-menu__location"><a class="mobile-menu__location__current" href="#">
+						<svg>
+							<use xlink:href="./images/sprites.svg#location"></use>
+						</svg>Москва</a>
+					<div class="header__location__change" data-param="change-city">
+						<div class="header__location__change__title">Выбор города</div>
+						<div class="header__location__change__field input" data-app="select-location" data-ajax="./ajax/location.json">
+							<div class="input__field input__field--search">
+								<select data-placeholder="Выберите город">
+									<option label=" "></option>
+								</select>
+							</div>
+						</div>
+						<div class="header__location__change__list">
+							<ul>
+								<li><a href="?change-city=Москва">Москва</a></li>
+								<li><a href="?change-city=Петербург">Санкт-Петербург</a></li>
+								<li><a href="?change-city=Казань">Казань</a></li>
+								<li><a href="?change-city=Калининград">Калининград</a></li>
+								<li><a href="?change-city=Ростов-на-Дону">Ростов-на-Дону</a></li>
+								<li><a href="?change-city=Новосибирск">Новосибирск</a></li>
+								<li><a href="?change-city=Екатеринбург">Екатеринбург</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<form class="mobile-menu__search" action="#" method="get">
+					<input class="mobile-menu__search__field" type="text" name="q" placeholder="Поиск">
+					<button class="mobile-menu__search__submit" type="submit">
+						<svg>
+							<use xlink:href="./images/sprites.svg#search-2"></use>
+						</svg>
+					</button>
+				</form>
+			</div>
+			<div class="content">
+				<div class="container">
+					<div class="breadcrumbs">
+						<ul>
+							<li><a href="#">Главная</a></li>
+							<li><a href="#">О компании</a></li>
+							<li>Страница стилей</li>
+						</ul>
+					</div>
+					<h1 class="page-title page-title--border">Заголовок страницы H1+</h1>
+					<div class="styles-slider slider" data-app="slider">
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide" data-mod="light">
+									<div class="slider__item">
+										<div class="slider__item__image" style="background-image:url(./images/slider.jpg)"></div>
+										<div class="slider__item__content">
+											<h1 class="slider__item__title">Технологии Функиональность Надежность</h1>
+											<div class="h4 slider__item__text">Климатическое оборудование KENTATSU</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-mod="dark">
+									<div class="slider__item">
+										<div class="slider__item__image" style="background-image:url(./images/slider-dark.jpg)"></div>
+										<div class="slider__item__content">
+											<h1 class="slider__item__title">Технологии Функиональность Надежность</h1>
+											<div class="h4 slider__item__text">Климатическое оборудование KENTATSU</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-mod="light">
+									<div class="slider__item">
+										<div class="slider__item__image" style="background-image:url(./images/slider.jpg)"></div>
+										<div class="slider__item__content">
+											<h1 class="slider__item__title">Технологии Функиональность Надежность</h1>
+											<div class="h4 slider__item__text">Климатическое оборудование KENTATSU</div>
+										</div>
+									</div>
+								</div>
+								<div class="swiper-slide" data-mod="dark">
+									<div class="slider__item">
+										<div class="slider__item__image" style="background-image:url(./images/slider-dark.jpg)"></div>
+										<div class="slider__item__content">
+											<h1 class="slider__item__title">Технологии Функиональность Надежность</h1>
+											<div class="h4 slider__item__text">Климатическое оборудование KENTATSU</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="slider__pager"></div>
+					</div>
+					<div class="styles-content">
+						<h1>Заголовок страницы H1 в несколько строк</h1>
+						<div class="page-subtext">Философия бренда основывается на том, чтобы техника соответствовала реальным потребностям: была надежной, экономичной, удобной, а главное — создавала идеальный комфорт в любом помещении.</div>
+						<div class="page-text">Философия бренда основывается на том, чтобы техника соответствовала реальным потребностям: была надежной, экономичной, удобной, а главное — создавала идеальный комфорт в любом помещении.</div>
+						<h2>Заголовок страницы H2</h2>
+						<div class="page-text">Философия бренда основывается на том, чтобы техника соответствовала реальным потребностям: была надежной, экономичной, удобной, а главное — создавала идеальный комфорт в любом помещении.</div>
+						<h3>Заголовок страницы H3 в несколько строчек и нумерованный список</h3>
+						<div class="page-text">Философия бренда основывается на том, чтобы техника соответствовала реальным потребностям: была надежной, экономичной, удобной, а главное — создавала идеальный комфорт в любом помещении.</div>
+						<h4>Заголовок страницы H4</h4>
+						<div class="page-text">Философия бренда основывается на том, чтобы техника соответствовала реальным потребностям: была надежной, экономичной, удобной, а главное — создавала идеальный комфорт в любом помещении. <a class="link-text" href="#">Ссылка в тексте</a>.</div>
+					</div>
+					<div class="styles-page-quote page-quote">
+						<div class="page-quote__text">Незаметный и комфортный климат в доме — гармония и уют. Тропическое настроение в любую погоду. Изящество и легкость в вашем пространстве. Низкий уровень шума создает комфортный звуковой фон, который не мешает во время сна или отдыха.</div>
+						<div class="page-quote__signature">Подпись автора цитаты</div>
+					</div>
+					<div class="styles-list">
+						<div class="h2">Списки</div>
+						<div class="h3">Маркированный список</div>
+						<div class="page-text-list">
+							<ul>
+								<li>Не следует открывать окна и двери при включенной сплит-системе
+									<ul>
+										<li>Не следует открывать окна и двери при включенной сплит-системе</li>
+									</ul>
+								</li>
+								<li>Обеспечьте ежегодное техническое обслуживание кондиционера</li>
+								<li>Не направляйте холодный воздух</li>
+							</ul>
+						</div>
+						<div class="h3">Нумерованный список</div>
+						<div class="page-text-list">
+							<ol>
+								<li>Не следует открывать окна и двери при включенной сплит-системе
+									<ol>
+										<li>Не следует открывать окна и двери при включенной сплит-системе</li>
+									</ol>
+								</li>
+								<li>Не направляйте холодный воздух на человека</li>
+								<li>Обеспечьте ежегодное техническое обслуживание кондиционера</li>
+							</ol>
+						</div>
+					</div>
+					<div class="h2">Изображение в центре</div>
+					<div class="styles-image">
+						<div class="page-image"><img src="./images/styles-image.jpg" alt=""></div>
+						<div class="page-text">Обеспечьте ежегодное техническое обслуживание кондиционера. Требование, актуальное для автомобильного транспорта, применимо и по отношению к сплит-системам. Даже при отсутствии явных проблем устройство может нуждаться в очистке внутреннего и внешнего блоков, дозаправке хладагента. Если обращаться к специалистам в профилактических целях, интервала в 12 месяцев вполне достаточно, тогда как в случае с явными нарушениями функциональности откладывать звонок в сервис не рекомендуется. К факторам риска относятся конденсат в помещении, шумовое загрязнение, самопроизвольное выключение, недостаточное охлаждение, устойчивый неприятный запах.<br><br>Даже бюджетная модель Кентатсу сохраняет работоспособность в течение 8-10 лет, когда владелец своевременно заботится о чистке комплектующих и техническом обслуживании, а также соблюдает правила эксплуатации устройства (как общие, так и указанные в приложенной производителем индивидуальной инструкции).</div>
+					</div>
+					<div class="h2">Кнопки, ссылки, пагинация</div>
+					<div class="styles-buttons">
+						<div class="styles-buttons__left">
+							<div class="styles-buttons__item"><a class="button" href="#">Кнопка 1</a><a class="button is-disabled" href="#">Кнопка 1</a></div>
+							<div class="styles-buttons__item"><a class="button button--black" href="#">Кнопка 2</a><a class="button is-disabled" href="#">Кнопка 2</a></div>
+						</div>
+						<div class="styles-buttons__right">
+							<div class="navigation">
+								<ul>
+									<li><a class="is-active" href="#">1</a></li>
+									<li><a href="#">2</a></li>
+									<li><a href="#">3</a></li>
+									<li>...</li>
+									<li><a href="#">16</a></li>
+								</ul>
+							</div>
+							<div class="styles-buttons__links">
+								<div class="styles-buttons__links__row">
+									<div class="styles-buttons__links__item"><a href="#">Ссылка на раздел</a></div>
+									<div class="styles-buttons__links__item"><a class="link-icon" href="#">
+											<svg>
+												<use xlink:href="./images/sprites.svg#bookmark"></use>
+											</svg>Ссылка</a></div>
+								</div><a class="link-arrow" href="#">Ссылка, которая открывается в новом окне</a>
+							</div>
+						</div>
+					</div>
+					<div class="h2">Аккордеон</div>
+					<div class="styles-accordion accordion" data-app="accordion">
+						<div class="accordion__item">
+							<div class="accordion__item__header">
+								<div class="h3 accordion__item__title">Заголовок 1</div>
+								<div class="accordion__item__header__plus"></div>
+							</div>
+							<div class="accordion__item__content">
+								<div class="accordion__item__text">Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия. Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия.</div>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__item__header">
+								<div class="h3 accordion__item__title">Заголовок 2</div>
+								<div class="accordion__item__header__plus"></div>
+							</div>
+							<div class="accordion__item__content">
+								<div class="accordion__item__text">Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия. Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия.</div>
+							</div>
+						</div>
+						<div class="accordion__item">
+							<div class="accordion__item__header">
+								<div class="h3 accordion__item__title">Заголовок 3</div>
+								<div class="accordion__item__header__plus"></div>
+							</div>
+							<div class="accordion__item__content">
+								<div class="accordion__item__text">Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия. Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия.</div>
+							</div>
+						</div>
+						<div class="accordion__item is-disabled">
+							<div class="accordion__item__header">
+								<div class="h3 accordion__item__title">Неактивно</div>
+								<div class="accordion__item__header__plus"></div>
+							</div>
+							<div class="accordion__item__content">
+								<div class="accordion__item__text">Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия. Если действия важны и часто используются, не убирайте их в меню. Пользователь не сможет найти их. Ему придется постоянно открывать меню, чтобы выполнить действия.</div>
+							</div>
+						</div>
+					</div>
+					<div class="h2">Табы</div>
+					<div class="styles-tab tab" data-app="tab">
+						<div class="tab__list">
+							<ul>
+								<li><a class="is-active" href="#" data-tab="tab-1">Дизайн</a></li>
+								<li><a href="#" data-tab="tab-2">Забота о здоровье</a></li>
+								<li><a href="#" data-tab="tab-3"> Комфорт</a></li>
+							</ul>
+						</div>
+						<div class="tab__content">
+							<div class="tab__item is-active" data-tab="tab-1">Не следует открывать окна и двери при включенной сплит-системе. Приток свежего воздуха, безусловно, необходим. Но кондиционер, вынужденный постоянно охлаждать поступающие извне теплые потоки, не может достигнуть запрограммированных пользователем параметров и работает на полную мощность длительное время. Подобный подход способен сократить срок эксплуатации изделия на несколько лет.<br><br>Не направляйте холодный воздух на человека. Данный вопрос следует решить уже на этапе монтажа устройства. Сама сплит-система не относится к причинам возникновения простудных заболеваний, а только ее неправильное использования. Потоки кондиционера должны быть направлены в сторону от спальных, рабочих мест.</div>
+							<div class="tab__item" data-tab="tab-2">2 Не следует открывать окна и двери при включенной сплит-системе. Приток свежего воздуха, безусловно, необходим. Но кондиционер, вынужденный постоянно охлаждать поступающие извне теплые потоки, не может достигнуть запрограммированных пользователем параметров и работает на полную мощность длительное время. Подобный подход способен сократить срок эксплуатации изделия на несколько лет.<br><br>Не направляйте холодный воздух на человека. Данный вопрос следует решить уже на этапе монтажа устройства. Сама сплит-система не относится к причинам возникновения простудных заболеваний, а только ее неправильное использования. Потоки кондиционера должны быть направлены в сторону от спальных, рабочих мест.</div>
+							<div class="tab__item" data-tab="tab-3">3 Не следует открывать окна и двери при включенной сплит-системе. Приток свежего воздуха, безусловно, необходим. Но кондиционер, вынужденный постоянно охлаждать поступающие извне теплые потоки, не может достигнуть запрограммированных пользователем параметров и работает на полную мощность длительное время. Подобный подход способен сократить срок эксплуатации изделия на несколько лет.<br><br>Не направляйте холодный воздух на человека. Данный вопрос следует решить уже на этапе монтажа устройства. Сама сплит-система не относится к причинам возникновения простудных заболеваний, а только ее неправильное использования. Потоки кондиционера должны быть направлены в сторону от спальных, рабочих мест.</div>
+						</div>
+					</div>
+					<div class="h2">Галерея</div>
+					<div class="styles-gallery gallery" data-app="gallery">
+						<div class="gallery__preview">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="gallery__preview__item"><img src="./images/gallery.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__preview__item"><img src="./images/gallery.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__preview__item"><img src="./images/gallery.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__preview__item"><img src="./images/gallery.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__preview__item"><a href="https://www.youtube.com/watch?v=o9_sMktrcKQ&amp;ab_channel=%D0%90%D0%92%D0%93%D0%A3%D0%A1%D0%A2-%D0%BA%D0%BB%D0%B8%D0%BC%D0%B0%D1%82" data-fancybox><img src="./images/gallery.jpg" alt="">
+												<div class="gallery__preview__item__play">
+													<svg>
+														<use xlink:href="./images/sprites.svg#play"></use>
+													</svg>
+												</div></a></div>
+									</div>
+								</div>
+							</div>
+							<button class="arrow-prev" type="button"></button>
+							<button class="arrow-next" type="button"></button>
+						</div>
+						<div class="gallery__thumbs">
+							<div class="swiper-container">
+								<div class="swiper-wrapper">
+									<div class="swiper-slide">
+										<div class="gallery__thumbs__item"><img src="./images/gallery-2.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__thumbs__item"><img src="./images/gallery-3.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__thumbs__item"><img src="./images/gallery-4.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__thumbs__item"><img src="./images/gallery-5.jpg" alt=""></div>
+									</div>
+									<div class="swiper-slide">
+										<div class="gallery__thumbs__item"><img src="./images/gallery-6.jpg" alt="">
+											<div class="gallery__thumbs__item__play">
+												<svg>
+													<use xlink:href="./images/sprites.svg#play"></use>
+												</svg>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="h2">Видео</div><a class="video styles-video" href="https://www.youtube.com/watch?v=o9_sMktrcKQ&amp;ab_channel=%D0%90%D0%92%D0%93%D0%A3%D0%A1%D0%A2-%D0%BA%D0%BB%D0%B8%D0%BC%D0%B0%D1%82" data-fancybox>
+						<div class="video__image"><img src="./images/video.jpg" alt=""></div>
+						<div class="video__play">
+							<svg>
+								<use xlink:href="./images/sprites.svg#play"></use>
+							</svg>
+						</div></a>
+					<div class="styles-table">
+						<div class="h2">Таблицы и теги</div>
+						<div class="page-text">Дизайн таблиц строится из отдельных блоков-ячеек и заголовков, которые могут включать в себя текст, иконки и другие компоненты. Каждая ячейка-компонент может быть настроена и это даёт максимальную гибкость в стилизации таблицы.</div>
+						<div class="table">
+							<table>
+								<thead>
+									<tr>
+										<th class="th-width-155-mob">Для помещения площадью, м2</th>
+										<th>Мощность (охлаждение),кВт</th>
+										<th>Сезонная энергоэффективность, SEER</th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>25</td>
+										<td>0,6</td>
+										<td>0,6</td>
+									</tr>
+									<tr>
+										<td>25, 26, 30, 32, 36, 40</td>
+										<td>0,8</td>
+										<td>0,69; 0,73; 0,84;</td>
+									</tr>
+									<tr>
+										<td>100</td>
+										<td>1,0</td>
+										<td>0,73</td>
+									</tr>
+									<tr>
+										<td>150</td>
+										<td>0,6</td>
+										<td>0,6</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div class="table table--option">
+							<table>
+								<thead>
+									<tr>
+										<th></th>
+										<th class="th-width-135-mob"><a class="table__sort" href="#">№ заказа</a></th>
+										<th class="th-width-135-mob"><a class="table__sort" href="#">Сумма, ₽</a></th>
+										<th><a class="table__sort" href="#">Статус</a></th>
+										<th></th>
+									</tr>
+								</thead>
+								<tbody>
+									<tr>
+										<td>
+											<div class="checkbox table__check">
+												<label>
+													<input type="checkbox"><i></i>
+												</label>
+											</div>
+										</td>
+										<td>284897</td>
+										<td>64 200</td>
+										<td><span class="table__status table__status--new">Новый</span></td>
+										<td>
+											<button class="table__close" type="button"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="checkbox table__check">
+												<label>
+													<input type="checkbox"><i></i>
+												</label>
+											</div>
+										</td>
+										<td>254896</td>
+										<td>68 400</td>
+										<td><span class="table__status table__status--canceled">Отменен</span></td>
+										<td>
+											<button class="table__close" type="button"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="checkbox table__check">
+												<label>
+													<input type="checkbox"><i></i>
+												</label>
+											</div>
+										</td>
+										<td>264895</td>
+										<td>89 600</td>
+										<td><span class="table__status">Завершен</span></td>
+										<td>
+											<button class="table__close" type="button"></button>
+										</td>
+									</tr>
+									<tr>
+										<td>
+											<div class="checkbox table__check">
+												<label>
+													<input type="checkbox"><i></i>
+												</label>
+											</div>
+										</td>
+										<td>234894</td>
+										<td>75 480</td>
+										<td><span class="table__status">Завершен</span></td>
+										<td>
+											<button class="table__close" type="button"></button>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div><a class="button-tag" href="#">Kentatsu</a><a class="button-tag button-tag--close" href="#">Kentatsu</a>
+					</div>
+					<div class="h2">Поля и формы</div>
+					<div class="styles-form">
+						<div class="styles-form__item">
+							<form class="form" action="#" method="get" data-app="form">
+								<div class="input">
+									<div class="input__label">Введите текст</div>
+									<div class="input__field">
+										<input type="text" placeholder="Иван Иванов">
+									</div>
+								</div>
+								<div class="input">
+									<div class="input__label">Введите E-mail</div>
+									<div class="input__field">
+										<input type="email" name="email" data-validation="{&quot;regex&quot;:[&quot;^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$&quot;,&quot;i&quot;],&quot;maxlength&quot;:254}" required>
+									</div>
+								</div>
+								<div class="input">
+									<div class="input__label">Доплнительный E-mail</div>
+									<div class="input__field">
+										<input type="email" name="more-email" disabled>
+									</div>
+								</div>
+								<div class="input">
+									<div class="input__label">Телефон</div>
+									<div class="input__field">
+										<input type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel">
+									</div>
+								</div>
+								<div class="input" data-app="select">
+									<div class="input__label">Тема сообщения</div>
+									<div class="input__field">
+										<select>
+											<option value="1">Вариант 1</option>
+											<option value="2">Вариант 2</option>
+											<option value="3">Вариант 3</option>
+											<option value="4">Вариант 4</option>
+											<option value="5">Вариант 5</option>
+											<option value="6">Вариант 6</option>
+										</select>
+									</div>
+								</div>
+								<div class="input">
+									<div class="input__label">Сообщение</div>
+									<div class="input__field">
+										<textarea placeholder="Подсказка"></textarea>
+									</div>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"><i></i><span>Вы согласны с <a class="link-text" href="#">правилами обработки данных</a></span>
+									</label>
+								</div>
+								<button class="button" type="submit">Отправить форму</button>
+							</form>
+						</div>
+						<div class="styles-form__item">
+							<form class="form" action="#" method="get" data-app="form">
+								<div class="input">
+									<div class="input__label">Телефон</div>
+									<div class="input__field is-loading">
+										<input type="tel" placeholder="+7 905 123-45-67">
+									</div>
+								</div>
+								<div class="input">
+									<div class="input__label">Пароль</div>
+									<div class="input__field">
+										<input type="password"><a class="input__field__eye" href="#"></a>
+									</div>
+								</div>
+								<div class="input">
+									<div class="input__label">Дата</div>
+									<div class="input__field">
+										<svg class="input__field__calendar">
+											<use xlink:href="./images/sprites.svg#calendar"></use>
+										</svg>
+										<input type="text" data-app="calendar" name="date" autocomplete="off" placeholder="__.__.____">
+									</div>
+								</div>
+								<div class="multiple-file" data-app="multiple-file" data-max="4">
+									<div class="multiple-file__label">Прикрепить документ</div>
+									<template class="multiple-file__template">
+										<div class="multiple-file__item">
+											<label class="multiple-file__item__upload">
+												<input type="file" name="file[]" data-validate="{&quot;size&quot;:5}">
+												<div class="multiple-file__item__upload__row">
+													<div class="multiple-file__item__upload__title">Выберите файл или&nbsp;перетащите его сюда</div>
+													<div class="multiple-file__item__upload__icon">
+														<svg>
+															<use xlink:href="./images/sprites.svg#upload"></use>
+														</svg>
+													</div>
+												</div>
+												<div class="multiple-file__item__upload__info">Файлы .jpg,.png. Макс. размер 5 Мб</div>
+												<div class="multiple-file__item__upload__error"></div>
+											</label>
+											<div class="multiple-file__item__file">
+												<div class="multiple-file__item__file__name"></div>
+												<button class="multiple-file__item__file__remove" type="button"></button>
+											</div>
+										</div>
+									</template>
+									<div class="multiple-file__list"></div>
+								</div>
+							</form>
+						</div>
+						<div class="styles-form__item">
+							<div class="styles-form__item__left">
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" checked><i></i><span>On</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox"><i></i><span>Off</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" checked disabled><i></i><span>Disabled on</span>
+									</label>
+								</div>
+								<div class="checkbox">
+									<label>
+										<input type="checkbox" disabled><i></i><span>Disabled off</span>
+									</label>
+								</div>
+							</div>
+							<div class="styles-form__item__right">
+								<div class="radio">
+									<label>
+										<input type="radio" name="radio" checked><i></i><span>On</span>
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="radio" name="radio"><i></i><span>Off</span>
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="checkbox" checked disabled><i></i><span>Disabled on</span>
+									</label>
+								</div>
+								<div class="radio">
+									<label>
+										<input type="checkbox" disabled><i></i><span>Disabled off</span>
+									</label>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="news" data-app="news">
+						<div class="news__head">
+							<div class="h2 news__title">Листинг</div>
+						</div>
+						<div class="swiper-container">
+							<div class="swiper-wrapper">
+								<div class="swiper-slide"><a class="news__item" href="#">
+										<div class="news__item__image"><img src="./images/temp/1.jpg" alt=""></div>
+										<div class="news__item__content">
+											<div class="news__item__date">29.04.2021</div>
+											<div class="news__item__caption">
+												<div class="h4 news__item__title">Заголовок новости</div>
+												<div class="news__item__text">Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.</div>
+											</div>
+											<svg class="news__item__arrow">
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg>
+										</div></a></div>
+								<div class="swiper-slide"><a class="news__item" href="#">
+										<div class="news__item__image"><img src="./images/temp/2.jpg" alt=""></div>
+										<div class="news__item__content">
+											<div class="news__item__date">29.04.2021</div>
+											<div class="news__item__caption">
+												<div class="h4 news__item__title">Длиный заголовок новости  в несколько строчек: в две или даже три</div>
+												<div class="news__item__text">Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.</div>
+											</div>
+											<svg class="news__item__arrow">
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg>
+										</div></a></div>
+								<div class="swiper-slide"><a class="news__item" href="#">
+										<div class="news__item__image"><img src="./images/temp/3.jpg" alt=""></div>
+										<div class="news__item__content">
+											<div class="news__item__date">29.04.2021</div>
+											<div class="news__item__caption">
+												<div class="h4 news__item__title">Заголовок новости</div>
+												<div class="news__item__text">Климатическая техника Kentatsu органично вписывается в интерьер, занимает минимум места и имеет массу режимов работы и дополнительных функций.</div>
+											</div>
+											<svg class="news__item__arrow">
+												<use xlink:href="./images/sprites.svg#arrow-right"></use>
+											</svg>
+										</div></a></div>
+							</div>
+						</div>
+					</div>
+					<div class="styles-icons">
+						<div class="h2">Иконки</div>
+						<div class="page-text">Используются в интерфейсах.</div>
+						<div class="styles-icons__row">
+							<div class="styles-icons__item"><a class="file" href="#">
+									<div class="file__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#zip"></use>
+										</svg>
+									</div>
+									<div class="file__content">
+										<div class="file__name">Скачать иконки.zip</div>
+										<div class="file__info">2.4 МБ</div>
+									</div></a></div>
+							<div class="styles-icons__item"><a class="file" href="#">
+									<div class="file__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#pdf"></use>
+										</svg>
+									</div>
+									<div class="file__content">
+										<div class="file__name">Kentatsu. Инструкция по применению.pdf</div>
+										<div class="file__info">2.4 МБ</div>
+									</div></a><a class="file" href="#">
+									<div class="file__icon">
+										<svg>
+											<use xlink:href="./images/sprites.svg#download"></use>
+										</svg>
+									</div>
+									<div class="file__content">
+										<div class="file__name">Скачать иконки.zip</div>
+										<div class="file__info">2.4 МБ</div>
+									</div></a></div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<footer class="footer" data-app="footer">
+				<div class="container">
+					<div class="footer__top">
+						<div class="footer__contacts">
+							<div class="footer__contacts__left">
+								<div class="footer__logo"><a href="#"><img src="./images/logo-light.svg" alt=""></a></div>
+								<div class="footer__address">Россия, Москва,<br>ул. Адмирала Макарова, д. 8</div>
+								<ul class="footer__contacts__menu for-desktop">
+									<li><a href="#">Контакты</a></li>
+									<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+									<li><a href="#">Карта сайта</a></li>
+								</ul>
+							</div>
+							<div class="footer__contacts__right">
+								<div class="footer__phone"><a href="tel:+74957373733">8 495 737 37 33</a></div>
+							</div>
+						</div>
+						<div class="footer__menu">
+							<div class="footer__catalog for-mobile"><a class="footer__catalog__label" href="#">Каталог</a>
+								<ul class="footer__catalog__list">
+									<li><a href="#">Бытовые сплит-системы</a></li>
+									<li><a href="#">Мультисистемы</a></li>
+									<li><a href="#">Полупромышленные системы</a></li>
+									<li><a href="#">Системы VRF</a></li>
+									<li><a href="#">Вентиляционные установки</a></li>
+									<li><a href="#">Отопительные установки</a></li>
+									<li><a href="#">Фанкойлы</a></li>
+								</ul>
+							</div>
+							<ul>
+								<li><a href="#">О бренде</a></li>
+								<li><a href="#">Стать партнером</a></li>
+								<li><a href="#">Технологии</a></li>
+								<li><a href="#">Поддержка и гарантия</a></li>
+								<li><a href="#">Где купить</a></li>
+							</ul>
+							<ul class="for-desktop">
+								<li><a href="#">Бытовые сплит-системы</a></li>
+								<li><a href="#">Мультисистемы</a></li>
+								<li><a href="#">Полупромышленные системы</a></li>
+								<li><a href="#">Системы VRF</a></li>
+								<li><a href="#">Вентиляционные установки</a></li>
+								<li><a href="#">Отопительные установки</a></li>
+								<li><a href="#">Фанкойлы</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="footer__contacts__menu for-mobile">
+						<li><a href="#">Контакты</a></li>
+						<li><a href="#callback" data-fancybox>Обратная связь</a></li>
+						<li><a href="#">Карта сайта</a></li>
+					</ul>
+					<div class="footer__bottom">
+						<ul class="footer__bottom__menu">
+							<li>© Daichi 2021.</li>
+							<li><a href="#">Политика конфиденциальности</a></li>
+							<li><a href="#">Пользовательское соглашение</a></li>
+							<li><a href="#">Управление cookie</a></li>
+						</ul>
+						<div class="footer__dev">Разработано в <a href="https://itech-group.ru/" target="_blank">ITECH</a></div>
+					</div>
+				</div>
+			</footer>
+			<div class="is-hidden">
+				<form class="modal modal-form" id="callback" action="./ajax/callback.json" method="get" data-app="form" data-event="Feedback">
+					<div class="h3 modal-form__title">Обратная связь</div>
+					<div class="modal-form__text">Оставьте ваши контактные данные, и&nbsp;наш специалист свяжется с вами в течение 30 минут</div>
+					<div class="form__row">
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Ваше имя</div>
+								<div class="input__field">
+									<input type="text" name="firstname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+						<div class="form__col">
+							<div class="input">
+								<div class="input__label">Фамилия</div>
+								<div class="input__field">
+									<input type="text" name="surname" data-validation="{&quot;regex&quot;:[&quot;^[^\\d]+$&quot;,&quot;ig&quot;],&quot;maxlength&quot;:300,&quot;messages&quot;:{&quot;regex&quot;:&quot;Поле может содержать только буквы и символы&quot;}}" required>
+								</div>
+							</div>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Email</div>
+						<div class="input__field">
+							<input type="email" name="email" data-validation="{&quot;regex&quot;:[&quot;^\\b[A-Z0-9._%+-]+@[A-Z0-9.-]+\\.[A-Z]{2,6}\\b$&quot;,&quot;i&quot;],&quot;maxlength&quot;:254,&quot;messages&quot;:{&quot;regex&quot;:&quot;Неверный или некорректный e-mail адрес.&quot;}}" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Телефон</div>
+						<div class="input__field">
+							<input type="tel" data-app="mask" data-mask="+7(999) 999 99-99" name="tel" required>
+						</div>
+					</div>
+					<div class="input">
+						<div class="input__label">Текст</div>
+						<div class="input__field">
+							<textarea name="text" data-validation="{&quot;maxlength&quot;:300}" required></textarea>
+						</div>
+					</div>
+					<div class="checkbox">
+						<label>
+							<input type="checkbox" name="checkbox" required><i></i><span>Разрешаю обработку <a class="link-text" href="#">персональных данных</a></span>
+						</label>
+					</div>
+					<div class="modal-form__button">
+						<button class="button" type="submit">Отправить</button>
+					</div>
+				</form>
+			</div><a class="up" href="#" data-app="up"></a>
+			<div class="cookies" data-app="cookies">
+				<div class="cookies__container">
+					<div class="cookies__text">На&nbsp;сайте используются cookie-файлы, которые помогают показывать Вам самую актуальную информацию. Продолжая пользоваться сайтом, Вы&nbsp;даете согласие на&nbsp;использование ваших Метаданных и&nbsp;cookie-файлов. <a class="link-text" href="#">Побробнее о&nbsp;правилах использования cookie и&nbsp;Условиях сбора и&nbsp;обработки персональных данных</a>.</div>
+					<div class="cookies__button">
+						<button class="button button--black" type="button">Согласен</button>
+					</div>
+				</div>
+			</div>
+		</div>
+		<script>
+			if (!('IntersectionObserver' in window)) {
+				var script = document.createElement("script");
+				script.src = "https://raw.githubusercontent.com/w3c/IntersectionObserver/master/polyfill/intersection-observer.js";
+				document.getElementsByTagName('head')[0].appendChild(script);
+			}
+		</script>
+		<script src="./js/vendor.js?v=1683104816346"></script>
+		<script src="./js/main.js?v=1683104816346"></script>
+	</body>
+</html>
